@@ -1,0 +1,6 @@
+/.vs/*
+/Debug/*
+/html/*
+/latex/*
+*.vcxproj.filters
+*.vcxproj.user
