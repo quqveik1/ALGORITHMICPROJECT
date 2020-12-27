@@ -1,7 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include "Stuck.h"
-#include "Array.cpp"
 #include "Lib\Q_Locale.h"
 
 
@@ -13,9 +12,15 @@ int main (int argc, const char *argv[])
 {
 	setRussianLocale ();
 
-	Stack s1 (POSINFO(s1));
+	//Stack s1 (POSINFO(s1));
+	VAR(Stack, s1);
 
-	s1.unittest2 (2);
+	s1.push (10);
+	s1.push (7);
+	s1.push (8);
+	s1.stack[3] = 9;
+
+	s1.dump ();
 	//s1.push (1);
 	//s2.push (3); 
 

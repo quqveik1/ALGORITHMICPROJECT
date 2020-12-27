@@ -1,7 +1,8 @@
 #pragma once
 
 #include <assert.h>
-#include "Array.cpp"
+#include <conio.h>
+#include <Windows.h>
 
 #define _ASSERT_                          \
 {										  \
@@ -10,45 +11,85 @@
 		dump ();						  \
 		assert ("checkup failed:(" == 0); \
 	}									  \
-}										  \
+}
+#define POSINFO __FILE__, __LINE__, __FUNCSIG__
+#define VAR(type, name, ...)  type name ({POSINFO}, #name, ##__VA_ARGS__)
 
 void statText (const char *text, int stat[256]);
 void tenTo2 (unsigned int n);
 void charToAscii (char c);
+void setConsoleColor (unsigned color);
 
+
+struct PositionInfo
+{
+   const char *file = NULL;
+   const int line = NULL;
+   const char *function = NULL;
+
+   void printInfo ();
+};
 
 //! @mainpage
 //!			 Это описание библиотеки Stack
 
 struct Stack
 {
-	//! @brief Передняя канарейка
-	const int firstCanary = 0x7EF79D07;
-
-//!	@brief Пространство имен ошибок
-//!
-//!
-//! @note Если у вас вылезла ошибка гляньте сюда и поймите где вы накосячили
-//! 
-//! @usage @code dump (_OverFlow_);
-//!
-//!@endcode
+	//!	@brief Пространство имен ошибок
+	//!
+	//!
+	//! @note Если у вас вылезла ошибка гляньте сюда и поймите где вы накосячили
+	//! 
+	//! @usage @code dump (_OverFlow_);
+	//!
+	//!@endcode
 
 	enum errors
 	{
 		_OK_ = 0,
-		_OverFlow_ = 1111,
-		_MinusArrElement_ = -1, 
-		_CANARYERROR_ = 1001
+		_OVERFLOW_ = 1,
+		_MINUSARRELEMENT_ = 2, 
+		_CANARYERROR_ = 3, 
+		_NULLPTR_ = 4
+	};
+
+	enum Colors
+	{
+		_BLUE_ = 0x1,
+		_RED_  = 0xc, 
+		_CYAN_ = 0b00000011,
+		_LIGHTCYAN_ = 0b00001011,
+		_GRAY_ = 0b00001000
 	};
 
 	//!	@brief Конструктор класса Stack
 	//! @param _structPos Это нужно для запоминания места создания структуры и печати этого в dump()
 
-	Stack (PositionInfo _structPos);
+	Stack (PositionInfo _structPos, const char *_name);
+
+	void pop ();
+	void push (int num);
+	void print ();
+	void change (int num1, int num2);
+	void dumpOld (/*const char *name*/);
+	void dumpOld (const int cause);
+	void dump (PositionInfo posinfo = {}, const char *cause = NULL);
+	//void dump2 ();
+
+	void unittest (int kOfPush = 1);
+	void unittest2 (int kOfPush);
+	int checkup ();
+
+
+	//! @brief Передняя канарейка
+	const int firstCanary = 0x7EF79D07;
+
 
 	//! @brief Максимальный размер Стека
-	static const int MaxSize = 2;
+	static const int MaxSize = 5;
+	const int addPrintSize = 2;
+
+	const char *name;
 
 	//! @brief Это и есть главная чать Стека массив, где все хранится
 	int stack[MaxSize] = {};
@@ -56,26 +97,12 @@ struct Stack
 	//! @brief Позиция последнего элемента
 	int lastPos = -1;
 
-	
-	
-
 	//! @brief Информация о позиции и названии Стека для аварийной отладочной распечтки dump ();
 	PositionInfo structPos = {};
+	
 
-	void pop ();
-	void push (int num);
-	void print ();
-	void change (int num1, int num2);
-	void dump (/*const char *name*/);
-	int checkup ();
-	void dump (const int cause);
-
-	void unittest (int kOfPush = 1);
-	void unittest2 (int kOfPush);
 	//! @brief Задняя канарейка
 	const int lastCanary =  0x12345E84;
-
-
 };
 //!	@brief Структура для теста канареек
 //!
@@ -87,9 +114,9 @@ struct Stack
 
 struct StackTest
 {
-	int m1[1] = {};	
-	Stack s2;
-	int m2[1] = {};
+	int mRight[1] = {};	
+	Stack data;
+	int mLeft[1] = {};
 
 	//StackTest (PositionInfo _structPos);
 };
@@ -97,13 +124,13 @@ struct StackTest
 
 void Stack::unittest2 (int kOfPush)
 {
-	StackTest st1 {{}, {POSINFO(st1)}, {}};
-	st1.m1[0] = 2;
-	st1.m1[1] = 3;
+	StackTest testData {{}, {{POSINFO}, "testData.data"}, {}};
+	//st1.m1[0] = 2;
+	testData.mRight[5] = 1000;
 
-	st1.m2[-1] = 4;
+	//st1.m2[-1] = 4;
 
-	st1.s2.dump();
+	testData.data.dump ();
 
 }
 /*
@@ -125,8 +152,9 @@ StackTest::StackTest (PositionInfo _structPos) :
 //!             Stack s1 (__FILE__, __LINE__, __FUNCSIG__, #s1);
 //!@endcode
 
-Stack::Stack (PositionInfo _structPos) :
-	 structPos (_structPos) 
+Stack::Stack (PositionInfo _structPos, const char *_name) :
+	 structPos (_structPos),
+	 name	   (_name)
 { 		
 }
 
@@ -143,28 +171,32 @@ Stack::Stack (PositionInfo _structPos) :
 
 int Stack::checkup ()
 {
+	if (this == nullptr)
+	{
+		return _NULLPTR_; 	
+	}
 	if (lastPos > MaxSize -1)
 	{
-		dump (_OverFlow_);
-		assert (0 == 1);
+		return _OVERFLOW_;
+		//assert (0 == 1);
 	}
 
 	if (lastPos < -1)
 	{
-		dump (_MinusArrElement_);
-		assert (0 == 1);
+		return _MINUSARRELEMENT_;
+		//assert (0 == 1);
 		
 	}
 
 	if (firstCanary != 0x7EF79D07)
 	{
-		dump (_CANARYERROR_);
-		assert (0 == 1);	
+		return _CANARYERROR_;
+		//assert (0 == 1);	
 	}
 	if (lastCanary != 0x12345E84)
 	{
-		dump (_CANARYERROR_);
-		assert (0 == 1);
+		return _CANARYERROR_;
+		//assert (0 == 1);
 	}
 
 	return _OK_;
@@ -230,14 +262,203 @@ void Stack::push (int num)
 //! @usage @code s1.print ();
 //!
 //!@endcode
+  /*
+Stack [0x004C80] (OK) "s" "main.cpp (20)"
+{
+	firstCanary = 0xB84C
+
+	MaxSize     = 5
+	lastPos     = 3
+	stack [0x004CA0]
+	{
+       * [0] = 10
+	   * [1] = 20
+	   * [2] = 30
+		 [3] = -13
+		 [4] = 15
+	}
+
+	lastCanary = 0xB8CC
+}
+*/
+
+  /*
+Stack [0x004C80] (_LASTPOSNEGATIVE_) "s" "main.cpp (20)"
+{
+	firstCanary = 0xB84C
+
+	MaxSize     = 5
+	lastPos     = -1
+	stack [0x004CA0]
+	{
+		 [0] = 10
+	     [1] = 20
+	     [2] = 30
+		 [3] = -13
+		 [4] = 15
+	}
+
+	lastCanary = 0xB8CC
+
+*/
+
+void Stack::dump (PositionInfo posinfo, const char *cause)
+{
+	if (cause != NULL)
+	{
+		printf ("CAUSE: %s", cause);
+	}
+	int errorCode = checkup ();
+	printf ("\nStack [0x%p] ", this);
+	switch (errorCode)
+	{
+	case _OK_:
+		printf ("(_OK_) ");
+		break;
+	case _OVERFLOW_:
+		printf ("(_OVERFLOW_) ");
+		break;
+	case _MINUSARRELEMENT_:
+		printf ("(_MINUSARRELEMENT_) ");
+		break;
+	case _CANARYERROR_:
+		printf ("(_CANARYERROR_) ");
+		break;
+	case _NULLPTR_:
+		printf ("(_NULLPTR_) ");
+		break;
+
+	}
+
+	printf ("{%s} {%s (%d)} \n", "!!!!!!", structPos.function, structPos.line);
+	printf ("{\n"
+			"	firstCanary =  0x%x (%s)\n\n"
+			"	MaxSize = %d\n"
+			"	lastPos = %d\n"
+			"	stack [0x%p]\n"
+			"	{\n",
+		    firstCanary, (firstCanary == 0x7EF79D07)? "ok" : "ERROR", 
+			MaxSize,
+			lastPos,
+			stack
+		   );
+	for (int i = 0; i <= lastPos + addPrintSize; i++)
+	{
+		if (i < MaxSize)
+		{
+			if (i < lastPos)
+			{
+				printf ("		*[%d] = %d\n", i, stack[i]);
+			}
+			else 
+			{
+				printf ("		 [%d] = %d\n", i, stack[i]);
+			}
+		}
+	}
+
+	printf ("	}\n\n");
+	printf ("	lastCanary = 0x%x (%s)\n", lastCanary, (lastCanary == 0x12345E84)? "ok" : "ERROR");
+	printf ("}\n");
+
+
+
+}
+/*
+void Stack::dumpNew (const int cause)
+{
+	printf ("\nStack [0x%p] () ", this);
+	/*
+	switch (cause)
+	{
+	case _OK_:
+		printf ("(_OK_) ");
+		break;
+	case _OVERFLOW_:
+		printf ("(_OVERFLOW_) ");
+		break;
+	case _MINUSARRELEMENT_:
+		printf ("(_MINUSARRELEMENT_) ");
+		break;
+	case _CANARYERROR_:
+		printf ("(_CANARYERROR_) ");
+		break;
+	case _NULLPTR_:
+		printf ("(_NULLPTR_) ");
+		break;
+
+	}
+	
+
+	printf ("{%s} {%s (%d)} \n", structPos.name, structPos.function, structPos.line);
+	printf ("{\n"
+			"	firstCanary =  0x%x\n\n"
+			"	MaxSize = %d\n"
+			"	lastPos = %d\n"
+			"	stack [0x%p]\n"
+			"	{\n",
+			(firstCanary == 0x7EF79D07)? "ok" : "ERROR", firstCanary,
+			MaxSize,
+			lastPos,
+			stack
+		   );
+	for (int i = 0; i <= lastPos + addPrintSize; i++)
+	{
+		if (i < MaxSize)
+		{
+			if (i < lastPos)
+			{
+				printf ("		*[%d] = %d\n", i, stack[i]);
+			}
+			else 
+			{
+				printf ("		 [%d] = %d\n", i, stack[i]);
+			}
+		}
+	}
+
+	printf ("	}\n\n");
+	printf ("	lastCanary (%s) = 0x%x\n", (lastCanary == 0x12345E84)? "ok" : "ERROR", lastCanary);
+	printf ("}\n");
+
+
+
+}
+*/
+  /*
+Stack [0x004C80] (_LASTPOSNEGATIVE_) "s" "main.cpp (20)"
+{
+	firstCanary = 0xB84C
+
+	MaxSize     = 5
+	lastPos     = -1
+	stack [0x004CA0]
+	{
+         [0] = 10
+	     [1] = 20
+	     [2] = 30
+		 [3] = -13
+		 [4] = 15
+	}
+
+	lastCanary = 0xB8CC
+
+*/
+
+
+void setConsoleColor (unsigned color)
+{
+	SetConsoleTextAttribute (GetStdHandle (STD_OUTPUT_HANDLE), (WORD) color);
+}
 
 void Stack::print ()
 {
 	//scheckup ();
 	setConsoleColor (_CYAN_);	
 	assert (stack);
-
-	printf ("[ ");
+	assert (this);
+	
+	printf ("\n%s = [ ", structPos);
 	for (int i = 0; i <= lastPos; i++)
 	{
 		assert (0 <= i && i < MaxSize);
@@ -287,7 +508,7 @@ void Stack::change (int num1, int num2)
 }
 
 
-void Stack::dump (/*const char *name*/)
+void Stack::dumpOld (/*const char *name*/)
 {
 	//printf ("%s = ", "sth:(");
 	checkup ();
@@ -313,7 +534,7 @@ void Stack::dump (/*const char *name*/)
 //!
 //!@endcode
 
-void Stack::dump (const int cause)
+void Stack::dumpOld (const int cause)
 {
 	setConsoleColor (_RED_);
 	printf ("ERROR:((((((((\n");
@@ -322,7 +543,7 @@ void Stack::dump (const int cause)
 	print ();
 
 	printf ("Adress: %p\n", this);
-	printf ("Canary1: %x, Canary2: %x", firstCanary, lastCanary);
+	printf ("Canary1: %x, Canary2: %x\n", firstCanary, lastCanary);
 	structPos.printInfo ();
 
 
@@ -421,3 +642,12 @@ void charToAscii (char c)
 }
 
 
+void PositionInfo::printInfo ()
+{
+	//!!!!!!if (name != NULL)
+	//!!!!!!	printf ("Name: [%s]\n",     name);
+
+	printf     ("File: [%s]\n",     file);
+	printf     ("Line: %d\n",       line);
+	printf     ("Func: [%s]\n", function);
+}

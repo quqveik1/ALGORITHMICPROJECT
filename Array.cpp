@@ -9,15 +9,7 @@ const int MAXARRAYSIZE = 100;
 
 
 //! @brief Стуктура сделанная для того чтобы детальные данные при вызове dump() было проще смотреть
-struct PositionInfo
-{
-   const char *file = NULL;
-   const int line = NULL;
-   const char *function = NULL;
-   const char *name = NULL;
 
-   void printInfo ();
-};
 
 //! @brief Пространство имен, чтобы было проще передавать метод распечатки
 
@@ -60,7 +52,8 @@ void fill123321var5 (int arr[], const int length);
 
 
 //! @brief Макрос для того, чтобы было удобно передавать данные на счет распечатки
-#define POSINFO(name) {__FILE__, __LINE__, __FUNCSIG__, #name}
+#define POSINFO {__FILE__, __LINE__, __FUNCSIG__}
+#define NAMEINFO
 //! @brief Макрос для того, чтобы распечатывать некие переменные
 #define printArr(name, length, ...) _printArr (name, length, POSINFO(name), ##__VA_ARGS__);
 #define $(x) assert (0 <= (x) && (x) < length); 
@@ -81,7 +74,7 @@ int main1 (int argc, const char *argv[])
 	//1 2 3 7 8 9 ..12 11 10 6 5 4
 	//printArr(arr, 10);
 	//printArr(arr, 10, _HORIZONTAL_);
-	printArr(arr, 10, _HORIZONTAL_  | _COLOR_);
+	//rintArr(arr, 10, _HORIZONTAL_  | _COLOR_);
 	//printArr(arr, 10, _HORIZONTAL_ | _COLOR_);
 
 	setConsoleColor (_GRAY_);
@@ -538,15 +531,7 @@ void _printArr (int arr[], const int length, PositionInfo info, const int mode)
 
 }
 
-void PositionInfo::printInfo ()
-{
-	if (name != NULL)
-		printf ("Name: [%s]\n",     name);
 
-	printf     ("File: [%s]\n",     file);
-	printf     ("Line: %d\n",       line);
-	printf     ("Func: [%s]\n", function);
-}
 
 void fillArithmeticProg (int arr[], const int length, const int firstNum, const int delta)
 {
