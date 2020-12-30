@@ -18,9 +18,11 @@ int main (int argc, const char *argv[])
 	s1.push (10);
 	s1.push (7);
 	s1.push (8);
-	s1.stack[3] = 9;
+	s1.stack[3] = 9; 
+	s1.unittest2 (3);
 
-	s1.dump ();
+
+	//s1.dump ();
 	//s1.push (1);
 	//s2.push (3); 
 

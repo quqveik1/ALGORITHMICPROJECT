@@ -12,8 +12,16 @@
 		assert ("checkup failed:(" == 0); \
 	}									  \
 }
-#define POSINFO __FILE__, __LINE__, __FUNCSIG__
-#define VAR(type, name, ...)  type name ({POSINFO}, #name, ##__VA_ARGS__)
+#define POSINFO {__FILE__, __LINE__, __FUNCSIG__}
+#define VAR(type, name, ...)  type name (POSINFO, #name, ##__VA_ARGS__)
+#define Verificator 								 \
+{												     \
+	if (checkup () != 0)							 \
+	{												 \
+		dump (POSINFO, "Verificator check failure"); \
+		assert (0 == 1);							 \
+	}											     \
+}												     \
 
 void statText (const char *text, int stat[256]);
 void tenTo2 (unsigned int n);
@@ -124,13 +132,15 @@ struct StackTest
 
 void Stack::unittest2 (int kOfPush)
 {
-	StackTest testData {{}, {{POSINFO}, "testData.data"}, {}};
+	StackTest testData {{}, {POSINFO, "testData.data"}, {}};
 	//st1.m1[0] = 2;
-	testData.mRight[5] = 1000;
+	testData.mRight[1] = 1000;
+	testData.data.push (3);
+	
 
 	//st1.m2[-1] = 4;
 
-	testData.data.dump ();
+	//testData.data.dump ();
 
 }
 /*
@@ -218,12 +228,12 @@ void Stack::pop ()
 	assert (stack);
 
 	//assert (checkup () == _OK_);
-	checkup ();
-
+	//checkup ();
+	Verificator
 	stack[lastPos]  = NULL;
 	lastPos--;
-
-	checkup ();
+	Verificator
+	//checkup ();
 }
 
 //!	@brief Добавляет новый элемент в стек
@@ -243,11 +253,12 @@ void Stack::push (int num)
 	assert (stack);
 	//assert (-2 < lastPos && lastPos < MaxSize - 1);
 
-	checkup ();
+	//checkup ();
+	Verificator
 	lastPos++;
-	checkup ();
+	Verificator
 	stack[lastPos] = num;
-	checkup ();
+	Verificator
 
 	//lastPos++;
 
@@ -306,8 +317,13 @@ void Stack::dump (PositionInfo posinfo, const char *cause)
 {
 	if (cause != NULL)
 	{
-		printf ("CAUSE: %s", cause);
+		printf ("Cause: %s\n", cause);
 	}
+	if (posinfo.line != NULL)
+	{
+		printf ("Called in file: [%s], function: [%s], line: [%d]", posinfo.file, posinfo.function, posinfo.line);	
+	}
+
 	int errorCode = checkup ();
 	printf ("\nStack [0x%p] ", this);
 	switch (errorCode)
@@ -330,7 +346,7 @@ void Stack::dump (PositionInfo posinfo, const char *cause)
 
 	}
 
-	printf ("{%s} {%s (%d)} \n", "!!!!!!", structPos.function, structPos.line);
+	printf ("{%s} {%s (%d)} \n", name, structPos.function, structPos.line);
 	printf ("{\n"
 			"	firstCanary =  0x%x (%s)\n\n"
 			"	MaxSize = %d\n"
