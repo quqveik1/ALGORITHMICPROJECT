@@ -1,3 +1,6 @@
+// | firstCanary | | name        | | MaxSize     | | stack                         | | lastPos     | | structPos | | lastCanary |
+//   07 9D F7 7E	 07 EE FF 00	 05 00 00 00	 78-9E 6F-1C 00-00 00-00 00-00	   02 00 00 00
+
 #pragma once
 
 #include <assert.h>
@@ -19,7 +22,7 @@
 	if (checkup () != 0)							 \
 	{												 \
 		dump (POSINFO, "Verificator check failure"); \
-		assert (0 == 1);							 \
+		assert (_OK_);							     \
 	}											     \
 }												     \
 
@@ -27,6 +30,7 @@ void statText (const char *text, int stat[256]);
 void tenTo2 (unsigned int n);
 void charToAscii (char c);
 void setConsoleColor (unsigned color);
+unsigned int hashCalc (const void *address, const size_t size);
 
 
 struct PositionInfo
@@ -35,7 +39,7 @@ struct PositionInfo
    const int line = NULL;
    const char *function = NULL;
 
-   void printInfo ();
+   void dump ();
 };
 
 //! @mainpage
@@ -58,7 +62,8 @@ struct Stack
 		_OVERFLOW_ = 1,
 		_MINUSARRELEMENT_ = 2, 
 		_CANARYERROR_ = 3, 
-		_NULLPTR_ = 4
+		_NULLPTR_ = 4,
+		_HASHERROR_ = 5
 	};
 
 	enum Colors
@@ -87,12 +92,17 @@ struct Stack
 	void unittest (int kOfPush = 1);
 	void unittest2 (int kOfPush);
 	int checkup ();
+	//bool hashCheck ();
+	void hashing (int array, int HASH);
+	unsigned int reHash ();
 
 
 	//! @brief Передняя канарейка
 	const int firstCanary = 0x7EF79D07;
 
-
+	//bool changes = false;
+	//int hashCopy = 0b0;
+	unsigned int hash;
 	//! @brief Максимальный размер Стека
 	static const int MaxSize = 5;
 	const int addPrintSize = 2;
@@ -101,7 +111,9 @@ struct Stack
 
 	//! @brief Это и есть главная чать Стека массив, где все хранится
 	int stack[MaxSize] = {};
-	
+
+
+
 	//! @brief Позиция последнего элемента
 	int lastPos = -1;
 
@@ -165,7 +177,18 @@ StackTest::StackTest (PositionInfo _structPos) :
 Stack::Stack (PositionInfo _structPos, const char *_name) :
 	 structPos (_structPos),
 	 name	   (_name)
-{ 		
+{ 
+	reHash ();	
+
+}
+
+
+unsigned int Stack::reHash ()
+{
+	unsigned int hashCopy = hash;
+	hash = 0;
+	hash = hashCalc (this, sizeof (*this));
+	return hashCopy;
 }
 
 
@@ -209,6 +232,14 @@ int Stack::checkup ()
 		//assert (0 == 1);
 	}
 
+	unsigned int oldHash = reHash ();
+	if (hash != oldHash)
+	{
+		//hash = oldHash;
+		return _HASHERROR_;
+	}
+	//hash = hashCopy;
+
 	return _OK_;
 
 }
@@ -232,6 +263,9 @@ void Stack::pop ()
 	Verificator
 	stack[lastPos]  = NULL;
 	lastPos--;
+
+	reHash ();
+	//changes = true;
 	Verificator
 	//checkup ();
 }
@@ -256,8 +290,9 @@ void Stack::push (int num)
 	//checkup ();
 	Verificator
 	lastPos++;
-	Verificator
 	stack[lastPos] = num;
+
+	reHash ();
 	Verificator
 
 	//lastPos++;
@@ -321,7 +356,9 @@ void Stack::dump (PositionInfo posinfo, const char *cause)
 	}
 	if (posinfo.line != NULL)
 	{
-		printf ("Called in file: [%s], function: [%s], line: [%d]", posinfo.file, posinfo.function, posinfo.line);	
+		printf ("Called: ");
+		posinfo.dump ();
+
 	}
 
 	int errorCode = checkup ();
@@ -343,10 +380,15 @@ void Stack::dump (PositionInfo posinfo, const char *cause)
 	case _NULLPTR_:
 		printf ("(_NULLPTR_) ");
 		break;
+	case _HASHERROR_:
+		printf ("(_HASHERROR_)");
+		break;
 
 	}
 
-	printf ("{%s} {%s (%d)} \n", name, structPos.function, structPos.line);
+	printf ("{%s} ", name);
+	structPos.dump ();
+	printf ("\n");
 	printf ("{\n"
 			"	firstCanary =  0x%x (%s)\n\n"
 			"	MaxSize = %d\n"
@@ -374,12 +416,113 @@ void Stack::dump (PositionInfo posinfo, const char *cause)
 	}
 
 	printf ("	}\n\n");
-	printf ("	lastCanary = 0x%x (%s)\n", lastCanary, (lastCanary == 0x12345E84)? "ok" : "ERROR");
+	printf ("	lastCanary = 0x%x (%s)\n\n", lastCanary, (lastCanary == 0x12345E84)? "ok" : "ERROR");
+	printf ("   hash (class) = %x\n", hash);
+	printf ("   hash (now) = %x\n", hash);
+	//int hash
+
 	printf ("}\n");
 
 
 
 }
+
+/*
+	hash    = 0000 0000 0000 0000
+	data[i] =           0110 0101
+			^ 0000 0000 0110 0101
+         1 >> 0000 0000 0011 0010 | 1
+			  1000 0000 0011 0010
+
+	data[i]	=			1110 0100
+			^ 1000 0000 1101 0110
+		 1 >> 0100 0000 0110 1011 | 0
+		      0100 0000 0110 1011
+
+
+
+*/
+
+unsigned int hashCalc (const void *address, const size_t size)
+{
+	/*
+	hashing (MaxSize, hashCopy);
+	hashing (addPrintSize, hashCopy);
+	//hashing (name);
+	for (int i = 0; i < MaxSize; i++)
+	{
+		assert (i < MaxSize && 0 <= i);
+		hashing (stack[i], hashCopy);
+	}
+	hashing (lastPos, hashCopy);
+	hashing (structPos.line, hashCopy);
+	 */
+	unsigned int HASH = NULL;
+
+	const unsigned char *addr = (const unsigned char*)(address);
+	
+	for (size_t i = 0; i < size; i++)
+	{
+		HASH ^= addr[i];
+
+		unsigned int lastBit= HASH & 0b1;
+
+		HASH >>= 1;
+		
+		HASH |= lastBit << 31;		
+	}
+
+	return HASH;
+
+		/*
+	if (hash == hashCopy)
+	{
+		if (changes == false)
+		{
+			return false;
+		} 
+		else 
+		{
+			changes = false;
+			return true;
+		}
+	}
+
+	if (hash != hashCopy)
+	{
+		if (changes == false)
+		{
+			return true;
+		} 
+		else 
+		{
+			changes = false;
+			return false;
+		}
+	}
+	*/
+
+}
+
+void Stack::hashing (int array, int HASH)
+{
+	HASH = HASH ^ array;
+	int lastNum = HASH & 0b1;
+	HASH = (HASH >> 1);
+
+
+	if (lastNum == 0)
+	{
+		HASH = HASH & 0b0111111111111111;
+	}
+
+	if (lastNum == 1)
+	{
+		HASH  = HASH | 0b1000000000000000;
+	}	
+}
+
+
 /*
 void Stack::dumpNew (const int cause)
 {
@@ -531,7 +674,7 @@ void Stack::dumpOld (/*const char *name*/)
 	print ();
 
 	printf ("Adress: %p\n", this);
-	structPos.printInfo ();
+	structPos.dump ();
 	checkup ();
 
 	
@@ -560,7 +703,7 @@ void Stack::dumpOld (const int cause)
 
 	printf ("Adress: %p\n", this);
 	printf ("Canary1: %x, Canary2: %x\n", firstCanary, lastCanary);
-	structPos.printInfo ();
+	structPos.dump ();
 
 
 	
@@ -658,12 +801,10 @@ void charToAscii (char c)
 }
 
 
-void PositionInfo::printInfo ()
+void PositionInfo::dump ()
 {
 	//!!!!!!if (name != NULL)
 	//!!!!!!	printf ("Name: [%s]\n",     name);
 
-	printf     ("File: [%s]\n",     file);
-	printf     ("Line: %d\n",       line);
-	printf     ("Func: [%s]\n", function);
+	printf     ("{File: [%s], Func: [%s], Line: [%d]}", file, function, line);
 }
