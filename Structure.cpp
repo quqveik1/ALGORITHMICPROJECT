@@ -13,13 +13,24 @@ int main (int argc, const char *argv[])
 	setRussianLocale ();
 
 	//Stack s1 (POSINFO(s1));
-	VAR(Stack, s1);
+	//VAR(Stack, s1);
 
-	s1.push (10);
-	s1.push (7);
-	s1.push (8);
-	s1.stack[3] = 9; 
-	s1.unittest2 (3);
+	//const char *s = "abc";
+	//printf ("%llx\n\n", hashCalc ("abc", 3));
+
+	//s1.push (10);
+	
+	StackTest st1 {{}, {POSINFO, "testData.data"}, {}};
+
+
+	st1.data.dump (st1.data.structPos, "FirstDump");
+	st1.mLeft [6+3] = 1235;
+	st1.data.dump (st1.data.structPos, "SecondDump");
+	//s1.push (7);
+	//s1.push (8);
+	//s1.stack[3] = 9;
+
+	//s1.unittestCanary (3);
 
 
 	//s1.dump ();

@@ -6,6 +6,10 @@
 #include <assert.h>
 #include <conio.h>
 #include <Windows.h>
+#include <stdlib.h>
+#include <stdint.h>
+
+
 
 #define _ASSERT_                          \
 {										  \
@@ -30,7 +34,8 @@ void statText (const char *text, int stat[256]);
 void tenTo2 (unsigned int n);
 void charToAscii (char c);
 void setConsoleColor (unsigned color);
-unsigned int hashCalc (const void *address, const size_t size);
+uint64_t hashCalc (const void *address, const size_t size);
+uint64_t hashing2 (int array, uint64_t HASH);
 
 
 struct PositionInfo
@@ -90,39 +95,39 @@ struct Stack
 	//void dump2 ();
 
 	void unittest (int kOfPush = 1);
-	void unittest2 (int kOfPush);
+	void unittestCanary (int kOfPush);
+	void unittestHash ();
 	int checkup ();
 	//bool hashCheck ();
-	void hashing (int array, int HASH);
-	unsigned int reHash ();
+	uint64_t reHash ();
+	uint64_t checkHash ();
 
-
-	//! @brief Передняя канарейка
-	const int firstCanary = 0x7EF79D07;
-
-	//bool changes = false;
-	//int hashCopy = 0b0;
-	unsigned int hash;
 	//! @brief Максимальный размер Стека
 	static const int MaxSize = 5;
-	const int addPrintSize = 2;
 
+	//! @brief Передняя канарейка [0]
+	const int firstCanary = 0x7EF79D07;
+
+	//! @brief Хэш класса [1, 2]
+	uint64_t hash;
+
+	//! @brief Кол-во переменных, которые будут выведены в dump () вне существующих элементов [3]
+	const int addPrintSize = 5;
+
+	//! @brief Название класса [4]
 	const char *name;
 
-	//! @brief Это и есть главная чать Стека массив, где все хранится
-	int stack[MaxSize] = {};
-
-
-
-	//! @brief Позиция последнего элемента
+	//! @brief Позиция последнего элемента [5]
 	int lastPos = -1;
 
-	//! @brief Информация о позиции и названии Стека для аварийной отладочной распечтки dump ();
+	//! @brief Это и есть главная чать Стека массив, где все хранится [6 - 10]
+	int stack[MaxSize] = {};
+
+	//! @brief Информация о позиции и названии Стека для аварийной отладочной распечтки dump (); [11 - 13]
 	PositionInfo structPos = {};
 	
-
-	//! @brief Задняя канарейка
-	const int lastCanary =  0x12345E84;
+	//! @brief Задняя канарейка [14]
+	const int lastCanary =  0x12345E84;	 
 };
 //!	@brief Структура для теста канареек
 //!
@@ -134,15 +139,35 @@ struct Stack
 
 struct StackTest
 {
-	int mRight[1] = {};	
+	int mLeft[1] = {};	
 	Stack data;
-	int mLeft[1] = {};
+	int mRight[1] = {};
 
 	//StackTest (PositionInfo _structPos);
 };
 
+void Stack::unittestHash ()
+{
+	/*
+	StackTest testData {{}, {POSINFO, "testData.data"}, {}};
+	
+	testData.data.push (1);
+	//testData.data.pop ();
+	testData.data.push (10);
+	testData.data.pop ();
+	testData.data.push (4538);
+	testData.mRight[7] = 1000;
+	testData.data.push (12);
+	//Verificator
+	//testData.data.push (12);
+	*/
 
-void Stack::unittest2 (int kOfPush)
+	
+
+}
+
+
+void Stack::unittestCanary (int kOfPush)
 {
 	StackTest testData {{}, {POSINFO, "testData.data"}, {}};
 	//st1.m1[0] = 2;
@@ -183,12 +208,21 @@ Stack::Stack (PositionInfo _structPos, const char *_name) :
 }
 
 
-unsigned int Stack::reHash ()
+uint64_t Stack::reHash ()
 {
-	unsigned int hashCopy = hash;
+	uint64_t oldHash = hash;
 	hash = 0;
 	hash = hashCalc (this, sizeof (*this));
-	return hashCopy;
+	return oldHash;
+}
+
+uint64_t Stack::checkHash ()
+{
+	uint64_t hashCopy = hash;
+	hash = 0;
+	uint64_t newHash = hashCalc (this, sizeof (*this));
+	hash = hashCopy;
+	return newHash;
 }
 
 
@@ -232,8 +266,8 @@ int Stack::checkup ()
 		//assert (0 == 1);
 	}
 
-	unsigned int oldHash = reHash ();
-	if (hash != oldHash)
+	//unsigned int oldHash = reHash ();
+	if (hash != checkHash ())
 	{
 		//hash = oldHash;
 		return _HASHERROR_;
@@ -366,22 +400,34 @@ void Stack::dump (PositionInfo posinfo, const char *cause)
 	switch (errorCode)
 	{
 	case _OK_:
+		SetConsoleTextAttribute (GetStdHandle (STD_OUTPUT_HANDLE), 0b1010);
 		printf ("(_OK_) ");
+		SetConsoleTextAttribute (GetStdHandle (STD_OUTPUT_HANDLE), 7);
 		break;
 	case _OVERFLOW_:
+		SetConsoleTextAttribute (GetStdHandle (STD_OUTPUT_HANDLE), 0b1101);
 		printf ("(_OVERFLOW_) ");
+		SetConsoleTextAttribute (GetStdHandle (STD_OUTPUT_HANDLE), 7);
 		break;
 	case _MINUSARRELEMENT_:
+		SetConsoleTextAttribute (GetStdHandle (STD_OUTPUT_HANDLE), 0b1101);
 		printf ("(_MINUSARRELEMENT_) ");
+		SetConsoleTextAttribute (GetStdHandle (STD_OUTPUT_HANDLE), 7);
 		break;
 	case _CANARYERROR_:
+		SetConsoleTextAttribute (GetStdHandle (STD_OUTPUT_HANDLE), 0b1101);
 		printf ("(_CANARYERROR_) ");
+		SetConsoleTextAttribute (GetStdHandle (STD_OUTPUT_HANDLE), 7);
 		break;
 	case _NULLPTR_:
+		SetConsoleTextAttribute (GetStdHandle (STD_OUTPUT_HANDLE), 0b1101);
 		printf ("(_NULLPTR_) ");
+		SetConsoleTextAttribute (GetStdHandle (STD_OUTPUT_HANDLE), 7);
 		break;
 	case _HASHERROR_:
+		SetConsoleTextAttribute (GetStdHandle (STD_OUTPUT_HANDLE), 0b1101);
 		printf ("(_HASHERROR_)");
+		SetConsoleTextAttribute (GetStdHandle (STD_OUTPUT_HANDLE), 7);
 		break;
 
 	}
@@ -402,6 +448,10 @@ void Stack::dump (PositionInfo posinfo, const char *cause)
 		   );
 	for (int i = 0; i <= lastPos + addPrintSize; i++)
 	{
+		if (i >= MaxSize) break;
+
+		assert (0 <= i && i < MaxSize);
+
 		if (i < MaxSize)
 		{
 			if (i < lastPos)
@@ -417,8 +467,8 @@ void Stack::dump (PositionInfo posinfo, const char *cause)
 
 	printf ("	}\n\n");
 	printf ("	lastCanary = 0x%x (%s)\n\n", lastCanary, (lastCanary == 0x12345E84)? "ok" : "ERROR");
-	printf ("   hash (class) = %x\n", hash);
-	printf ("   hash (now) = %x\n", hash);
+	printf ("   hash (class) = %llx\n", hash);
+	printf ("   hash (now)   = %llx\n", checkHash ());
 	//int hash
 
 	printf ("}\n");
@@ -443,7 +493,7 @@ void Stack::dump (PositionInfo posinfo, const char *cause)
 
 */
 
-unsigned int hashCalc (const void *address, const size_t size)
+uint64_t hashCalc (const void *address, const size_t size)
 {
 	/*
 	hashing (MaxSize, hashCopy);
@@ -457,19 +507,23 @@ unsigned int hashCalc (const void *address, const size_t size)
 	hashing (lastPos, hashCopy);
 	hashing (structPos.line, hashCopy);
 	 */
-	unsigned int HASH = NULL;
+	uint64_t HASH = 0;
 
 	const unsigned char *addr = (const unsigned char*)(address);
 	
 	for (size_t i = 0; i < size; i++)
 	{
+		assert (i < size && 0 <= i);
 		HASH ^= addr[i];
 
-		unsigned int lastBit= HASH & 0b1;
+		uint64_t lastBit = HASH & 0b1;
+		//1000000000000000000000000000000000   << 31
+		//0000000000000000000000000000000000   << 1
+
 
 		HASH >>= 1;
 		
-		HASH |= lastBit << 31;		
+		HASH |= lastBit << 63;		
 	}
 
 	return HASH;
@@ -504,23 +558,19 @@ unsigned int hashCalc (const void *address, const size_t size)
 
 }
 
-void Stack::hashing (int array, int HASH)
+uint64_t hashing2 (int array, uint64_t HASH)
 {
-	HASH = HASH ^ array;
-	int lastNum = HASH & 0b1;
-	HASH = (HASH >> 1);
-
-
-	if (lastNum == 0)
-	{
-		HASH = HASH & 0b0111111111111111;
-	}
-
-	if (lastNum == 1)
-	{
-		HASH  = HASH | 0b1000000000000000;
-	}	
+	unsigned int Hashlast2Bit = HASH & 0b11;
+	HASH >>= 2;
+	HASH |= Hashlast2Bit << 62;
+	HASH ^= array;
+	Hashlast2Bit = HASH & 0b11;
+	HASH >>= 2;
+	HASH |= Hashlast2Bit << 62;
+	return HASH;
 }
+
+
 
 
 /*
