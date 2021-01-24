@@ -28,16 +28,43 @@
 		dump (POSINFO, "Verificator check failure"); \
 		assert (_OK_);							     \
 	}											     \
-}												     \
+}	
+														   \
+#define VerifyPtr(adress)								   \
+{														   \
+	if (checkPtr ((const int *) adress) != 1)							   \
+	{													   \
+		printf (" (Invalid adress {%s} = %p)", #adress, adress);\
+	}													   \
+														   \
+}														   
+
+#define safePrint(text, adress)								   \
+{															   \
+	int checkOk = checkPtr (adress);					       \
+	printf (" (checkOk = %x)\n ", checkOk);						\
+	if (!checkPtr (adress))							            \
+	{													        \
+		printf ("(Invalid adress {%s} = %p)", #adress, adress);\
+	}															\
+	else 														\
+	{															\
+		printf (text, adress);									\
+	}															\
+}																\
 
 void statText (const char *text, int stat[256]);
 void tenTo2 (unsigned int n);
 void charToAscii (char c);
 void setConsoleColor (unsigned color);
+void clearConsoleColor ();
 uint64_t hashCalc (const void *address, const size_t size);
 uint64_t hashing2 (int array, uint64_t HASH);
+int checkPtr (const void *adress);
 
-
+//! @brief Специальная структура для хранения местоположения классов
+//! @code PositionInfo structPos = {};
+//! @endcode
 struct PositionInfo
 {
    const char *file = NULL;
@@ -57,7 +84,7 @@ struct Stack
 	//!
 	//! @note Если у вас вылезла ошибка гляньте сюда и поймите где вы накосячили
 	//! 
-	//! @usage @code dump (_OverFlow_);
+	//! @usage @code dump (_OVERFLOW_);
 	//!
 	//!@endcode
 
@@ -71,13 +98,23 @@ struct Stack
 		_HASHERROR_ = 5
 	};
 
+	//!	@brief Пространство имен цветов
+	//!
+	//!
+	//! @note Подобранные цвета
+	//! 
+	//!
+	//!@endcode
+
 	enum Colors
 	{
 		_BLUE_ = 0x1,
 		_RED_  = 0xc, 
 		_CYAN_ = 0b00000011,
 		_LIGHTCYAN_ = 0b00001011,
-		_GRAY_ = 0b00001000
+		_GRAY_ = 0b00001000, 
+		_GREEN_ = 0xa, 
+		_ERROR_ = 0x3
 	};
 
 	//!	@brief Конструктор класса Stack
@@ -133,7 +170,7 @@ struct Stack
 //!
 //!
 //! 
-//! @usage @code StackTest st1 {{}, {POSINFO(st1)}, {}};
+//! @code StackTest st1 {{}, {POSINFO(st1)}, {}};
 //!
 //!@endcode
 
@@ -145,6 +182,16 @@ struct StackTest
 
 	//StackTest (PositionInfo _structPos);
 };
+
+//!	@brief Функция которыя тестирует Хэшфункции
+//!
+//!
+//! 
+//! 
+//! @code VAR (Stack, S1);
+//!		  S1.unittestHash ()
+//!
+//!@endcode
 
 void Stack::unittestHash ()
 {
@@ -166,7 +213,13 @@ void Stack::unittestHash ()
 
 }
 
-
+//!	@brief Функция для теста канареек
+//!
+//! @param kOfPush Кол-во раз, которое нужно подождать перед запретной операцией
+//! 
+//! @code s1.unittestCanary
+//!
+//!@endcode
 void Stack::unittestCanary (int kOfPush)
 {
 	StackTest testData {{}, {POSINFO, "testData.data"}, {}};
@@ -192,11 +245,12 @@ StackTest::StackTest (PositionInfo _structPos) :
 //!	@brief Конструктор класса
 //!
 //!	@param _structPos Это объект PositionInfo  
+//! @param _name Это название структуры
 //!
 //! @return НИЧЕГО и не надо:)
 //! 
-//! @usage @code 
-//!             Stack s1 (__FILE__, __LINE__, __FUNCSIG__, #s1);
+//! @code VAR (Stack, S1);
+//!				S1.unittestHash ()
 //!@endcode
 
 Stack::Stack (PositionInfo _structPos, const char *_name) :
@@ -207,6 +261,13 @@ Stack::Stack (PositionInfo _structPos, const char *_name) :
 
 }
 
+//!	@brief Функция для правильного подсчета и изменения хеша для класса
+//!
+//! 
+//! @code s1.reHash ();
+//!
+//!@endcode
+
 
 uint64_t Stack::reHash ()
 {
@@ -215,6 +276,13 @@ uint64_t Stack::reHash ()
 	hash = hashCalc (this, sizeof (*this));
 	return oldHash;
 }
+
+//!	@brief Функция для правильного подсчета, но не его изменения хеша для класса
+//!
+//! 
+//! @code s1.checkHash ();
+//!
+//!@endcode
 
 uint64_t Stack::checkHash ()
 {
@@ -382,11 +450,22 @@ Stack [0x004C80] (_LASTPOSNEGATIVE_) "s" "main.cpp (20)"
 
 */
 
+//!	@brief Функция для детального вывода информации о стеке
+//!
+//!	@param posinfo где вызвался dump
+//! @param cause причина вызова
+//!
+//! 
+//! @code s1.dump (POSINFO, "Canary");
+//!
+//!@endcode
+
 void Stack::dump (PositionInfo posinfo, const char *cause)
 {
 	if (cause != NULL)
 	{
-		printf ("Cause: %s\n", cause);
+		safePrint ("Cause: %s\n", cause);
+		//printf ("Cause: %s\n", cause);
 	}
 	if (posinfo.line != NULL)
 	{
@@ -396,44 +475,42 @@ void Stack::dump (PositionInfo posinfo, const char *cause)
 	}
 
 	int errorCode = checkup ();
-	printf ("\nStack [0x%p] ", this);
+	safePrint ("\nStack [0x%p] ", this);
+	//printf ("\nStack [0x%p] ", this);
 	switch (errorCode)
 	{
 	case _OK_:
-		SetConsoleTextAttribute (GetStdHandle (STD_OUTPUT_HANDLE), 0b1010);
+		setConsoleColor (_GREEN_);
 		printf ("(_OK_) ");
-		SetConsoleTextAttribute (GetStdHandle (STD_OUTPUT_HANDLE), 7);
 		break;
 	case _OVERFLOW_:
-		SetConsoleTextAttribute (GetStdHandle (STD_OUTPUT_HANDLE), 0b1101);
+		setConsoleColor (_ERROR_);	
 		printf ("(_OVERFLOW_) ");
-		SetConsoleTextAttribute (GetStdHandle (STD_OUTPUT_HANDLE), 7);
 		break;
 	case _MINUSARRELEMENT_:
-		SetConsoleTextAttribute (GetStdHandle (STD_OUTPUT_HANDLE), 0b1101);
+		setConsoleColor (_ERROR_);
 		printf ("(_MINUSARRELEMENT_) ");
-		SetConsoleTextAttribute (GetStdHandle (STD_OUTPUT_HANDLE), 7);
 		break;
 	case _CANARYERROR_:
-		SetConsoleTextAttribute (GetStdHandle (STD_OUTPUT_HANDLE), 0b1101);
+		setConsoleColor (_ERROR_);
 		printf ("(_CANARYERROR_) ");
-		SetConsoleTextAttribute (GetStdHandle (STD_OUTPUT_HANDLE), 7);
 		break;
 	case _NULLPTR_:
-		SetConsoleTextAttribute (GetStdHandle (STD_OUTPUT_HANDLE), 0b1101);
+		setConsoleColor (_ERROR_);
 		printf ("(_NULLPTR_) ");
-		SetConsoleTextAttribute (GetStdHandle (STD_OUTPUT_HANDLE), 7);
 		break;
 	case _HASHERROR_:
-		SetConsoleTextAttribute (GetStdHandle (STD_OUTPUT_HANDLE), 0b1101);
+		setConsoleColor (_ERROR_);
 		printf ("(_HASHERROR_)");
-		SetConsoleTextAttribute (GetStdHandle (STD_OUTPUT_HANDLE), 7);
 		break;
 
 	}
+	clearConsoleColor ();
 
-	printf ("{%s} ", name);
+	safePrint ("{%s} ", name);
+	//printf ("{%s} ", name);
 	structPos.dump ();
+	//VerifyPtr (stack);
 	printf ("\n");
 	printf ("{\n"
 			"	firstCanary =  0x%x (%s)\n\n"
@@ -492,6 +569,16 @@ void Stack::dump (PositionInfo posinfo, const char *cause)
 
 
 */
+
+//!	@brief Функция для подсчета хеша ЛЮБОГО объекта
+//!
+//!	@param adress адресс первого элемента стуктуры
+//! @param size размер этого объекта
+//!
+//! 
+//! @code s1.hashCalc (&s1, sizeof (*this));
+//!
+//!@endcode
 
 uint64_t hashCalc (const void *address, const size_t size)
 {
@@ -557,6 +644,7 @@ uint64_t hashCalc (const void *address, const size_t size)
 	*/
 
 }
+
 
 uint64_t hashing2 (int array, uint64_t HASH)
 {
@@ -654,11 +742,39 @@ Stack [0x004C80] (_LASTPOSNEGATIVE_) "s" "main.cpp (20)"
 
 */
 
+//!	@brief Функция для простого изменеия цвета консоли
+//!
+//!	@param color это цвет его можно передавать например ввиде пространств имен Colors, которые я объвлял на верху
+//!
+//! 
+//! @code setConsoleColor (_RED_);
+//!
+//!@endcode
 
 void setConsoleColor (unsigned color)
 {
 	SetConsoleTextAttribute (GetStdHandle (STD_OUTPUT_HANDLE), (WORD) color);
 }
+//!	@brief Функция для сброса цвета консоли к начальному черному
+//!
+//!
+//! 
+//! @code setConsoleColor ();
+//!
+//!@endcode
+
+void clearConsoleColor ()
+{
+	SetConsoleTextAttribute (GetStdHandle (STD_OUTPUT_HANDLE), 7);
+}
+
+//!	@brief Функция для простого вывода для новичков
+//!
+//!
+//! 
+//! @code print ();
+//!
+//!@endcode
 
 void Stack::print ()
 {
@@ -797,6 +913,15 @@ void Stack::unittest (int kOfPush)
 }
 
 
+//!	@brief Функция для вычисления самой популярнойй буквы текста
+//!
+//!	@param text это текст в котором нужно посчитать статистику
+//! @param stat Это масив размером 256 который содержит статистику каждой буквы
+//!
+//! 
+//! @code statText ("abbc", stat);
+//!
+//!@endcode
 
 void statText (char *text, int stat[256])
 {
@@ -831,6 +956,15 @@ void statText (char *text, int stat[256])
   */
 }
 
+//!	@brief Функция для вывода данного числа в двоичной формате
+//!
+//! @param n данное число для перевода
+//!
+//! 
+//! @code tenTo2 ();
+//!
+//!@endcode
+
 void tenTo2 (unsigned int n)
 {
 	for (int i = 7; i >= 0; i--)
@@ -850,11 +984,35 @@ void charToAscii (char c)
 
 }
 
+//!	@brief Функция для вывода информации о позиции об объекте
+//!
+//!
+//! 
+//! @code s1.structPos.dump ();
+//!
+//!@endcode
 
 void PositionInfo::dump ()
 {
 	//!!!!!!if (name != NULL)
 	//!!!!!!	printf ("Name: [%s]\n",     name);
 
+	//printf     ("{File: [%p], Func: [%p], Line: [%d]}", file, function, line);
+	VerifyPtr (file);
+	VerifyPtr (function);
+	
 	printf     ("{File: [%s], Func: [%s], Line: [%d]}", file, function, line);
+}
+
+int checkPtr (const void *adress)
+{
+	MEMORY_BASIC_INFORMATION MBI = {};
+
+	if (!VirtualQuery (adress, &MBI, sizeof (MBI))) return 0;
+
+	DWORD readRights = PAGE_READONLY | PAGE_READWRITE;
+
+	printf ("( %x )", MBI.Protect);
+	printf (" (Returnable val = %d)\n", MBI.Protect & readRights);
+	return (MBI.Protect & readRights);
 }
