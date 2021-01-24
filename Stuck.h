@@ -18,9 +18,13 @@
 		dump ();						  \
 		assert ("checkup failed:(" == 0); \
 	}									  \
-}
+}										  \
+
+
 #define POSINFO {__FILE__, __LINE__, __FUNCSIG__}
 #define VAR(type, name, ...)  type name (POSINFO, #name, ##__VA_ARGS__)
+
+
 #define Verificator 								 \
 {												     \
 	if (checkup () != 0)							 \
@@ -28,30 +32,30 @@
 		dump (POSINFO, "Verificator check failure"); \
 		assert (_OK_);							     \
 	}											     \
-}	
-														   \
-#define VerifyPtr(adress)								   \
-{														   \
-	if (checkPtr ((const int *) adress) != 1)							   \
-	{													   \
-		printf (" (Invalid adress {%s} = %p)", #adress, adress);\
-	}													   \
-														   \
-}														   
+}													 \
+														   
+#define VerifyPtr(adress)								         \
+{														         \
+	if (!checkPtr ((const int *) adress))			             \
+	{													         \
+		printf (" (Invalid adress {%s} = %p)", #adress, adress); \
+	}													         \
+}														   		 \
+															   
+#define safePrint(text, adress)								                               \
+{															                               \
+	if (!checkPtr (adress))							                                       \
+	{														                               \
+        printf ("(Returnable val = %d)::", checkPtr (adress));                             \
+		printf ("(Invalid adress {%s} = %p(%d))\n", #adress, adress, checkPtr (adress));   \
+	}															                           \
+	else 														                           \
+	{															                           \
+		printf (text, adress);									                           \
+	}															                           \
+}																                           \
 
-#define safePrint(text, adress)								   \
-{															   \
-	int checkOk = checkPtr (adress);					       \
-	printf (" (checkOk = %x)\n ", checkOk);						\
-	if (!checkPtr (adress))							            \
-	{													        \
-		printf ("(Invalid adress {%s} = %p)", #adress, adress);\
-	}															\
-	else 														\
-	{															\
-		printf (text, adress);									\
-	}															\
-}																\
+//printf (" (checkOk = %x)\n ", checkOk);
 
 void statText (const char *text, int stat[256]);
 void tenTo2 (unsigned int n);
@@ -95,7 +99,8 @@ struct Stack
 		_MINUSARRELEMENT_ = 2, 
 		_CANARYERROR_ = 3, 
 		_NULLPTR_ = 4,
-		_HASHERROR_ = 5
+		_HASHERROR_ = 5, 
+		_INVALIDPTR_ = 6
 	};
 
 	//!	@brief Пространство имен цветов
@@ -222,10 +227,12 @@ void Stack::unittestHash ()
 //!@endcode
 void Stack::unittestCanary (int kOfPush)
 {
+
 	StackTest testData {{}, {POSINFO, "testData.data"}, {}};
 	//st1.m1[0] = 2;
 	testData.mRight[1] = 1000;
 	testData.data.push (3);
+	kOfPush = 0;
 	
 
 	//st1.m2[-1] = 4;
@@ -310,6 +317,12 @@ int Stack::checkup ()
 	{
 		return _NULLPTR_; 	
 	}
+
+	if (!checkPtr (this))
+	{
+		return _INVALIDPTR_;
+	}
+
 	if (lastPos > MaxSize -1)
 	{
 		return _OVERFLOW_;
@@ -497,15 +510,21 @@ void Stack::dump (PositionInfo posinfo, const char *cause)
 		break;
 	case _NULLPTR_:
 		setConsoleColor (_ERROR_);
-		printf ("(_NULLPTR_) ");
+		printf ("(_NULLPTR_)\n");
 		break;
 	case _HASHERROR_:
 		setConsoleColor (_ERROR_);
 		printf ("(_HASHERROR_)");
 		break;
-
+	case _INVALIDPTR_:
+		setConsoleColor (_ERROR_);
+		printf ("(_INVALIDPTR_)\n");
+		break;
 	}
 	clearConsoleColor ();
+
+	if (errorCode == _INVALIDPTR_) return; //!!!!!!Все выход из дампа дальше распечатка невозможна
+	if (errorCode == _INVALIDPTR_) return; //!!!!!!Все выход из дампа дальше распечатка невозможна
 
 	safePrint ("{%s} ", name);
 	//printf ("{%s} ", name);
@@ -783,7 +802,8 @@ void Stack::print ()
 	assert (stack);
 	assert (this);
 	
-	printf ("\n%s = [ ", structPos);
+	//printf ("\n%s = [ ", structPos);
+	structPos.dump ();
 	for (int i = 0; i <= lastPos; i++)
 	{
 		assert (0 <= i && i < MaxSize);
@@ -1012,7 +1032,7 @@ int checkPtr (const void *adress)
 
 	DWORD readRights = PAGE_READONLY | PAGE_READWRITE;
 
-	printf ("( %x )", MBI.Protect);
-	printf (" (Returnable val = %d)\n", MBI.Protect & readRights);
+	//printf ("( %x )", MBI.Protect);
+	//printf (" (Returnable val = %d)\n", MBI.Protect & readRights);
 	return (MBI.Protect & readRights);
 }

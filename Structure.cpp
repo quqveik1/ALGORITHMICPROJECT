@@ -1,5 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS
-#include "TXLib.h"
+//#include "TXLib.h"
 #include <stdio.h>
 #include "Stuck.h"
 #include "Lib\Q_Locale.h"
@@ -20,6 +20,11 @@ int main (int argc, const char *argv[])
 	//printf ("%llx\n\n", hashCalc ("abc", 3));
 
 	//s1.push (10);
+
+	Stack *pStack = (Stack *) 0x1234; //= Stack (POSINFO, "pStack");
+	pStack->push (3);
+	pStack->dump ();   
+	delete pStack;
 	
 	StackTest st1 {{}, {POSINFO, "testData.data"}, {}};
 	//const char *str = "dfsfd";
