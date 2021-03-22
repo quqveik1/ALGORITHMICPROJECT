@@ -3,13 +3,14 @@
 #include <stdio.h>
 #include "Stuck.h"
 #include "Lib\Q_Locale.h"
+#include "Array.cpp"
 
 
 //------------------------------------
 
 //#define SETINFO(name) {__FILE__, __LINE__, __FUNCSIG__, #name}
 
-int main (int argc, const char *argv[])
+int main1 (int argc, const char *argv[])
 {
 	setRussianLocale ();
 
@@ -21,21 +22,24 @@ int main (int argc, const char *argv[])
 
 	//s1.push (10);
 
-	Stack *pStack = (Stack *) 0x1234; //= Stack (POSINFO, "pStack");
-	pStack->push (3);
-	pStack->dump ();   
-	delete pStack;
+	//Stack *pStack = (Stack *) 0x1234; //= Stack (POSINFO, "pStack");
+	//pStack->push (3);
+	//pStack->dump ();   
+	//delete pStack;
 	
-	StackTest st1 {{}, {POSINFO, "testData.data"}, {}};
+	///StackTest st1 {{}, {POSINFO, "testData.data"}, {}};
 	//const char *str = "dfsfd";
 	//$ (str);
 	//str = (const char *) 342453;
 	//$ (str);
 
 
-	st1.data.dump (st1.data.structPos, "FirstDump");
-	st1.mLeft [6+3] = 1235;
-	st1.data.dump (st1.data.structPos, "SecondDump");
+	//st1.data.dump (st1.data.structPos, "FirstDump");
+	//st1.mLeft [6+3] = 1235;
+	//st1.data.dump (st1.data.structPos, "SecondDump");
+	//VAR (Stack, s1);
+	//s1.pop ();
+	//s1.pop ();
 	//rintf ("%d ", checkPtr (0));
 	//const char *str = "fasdsa";
 	//printf (" %d", checkPtr (str));

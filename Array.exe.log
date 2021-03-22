@@ -1,0 +1,1510 @@
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe,
+
+ВНЕЗАПНО: Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00007FF92D5DD759 в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x000000000057D8E0 (64-bit), Flags: CMdRe0, Thread: 0x4880 (Main), GetLastError(): 187 (Не найдено указанное имя системного семафора). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF92D5DD759 in C:\Windows\System32\KERNELBASE.dll: RaiseException()
+# 2 0x00007FF92E3A1DC2 in C:\Windows\System32\msvcrt.dll: tanhf()
+# 3 0x00007FF92E3A164C in C:\Windows\System32\msvcrt.dll: tanhf()
+# 4 0x00007FF92E39EFB5 in C:\Windows\System32\msvcrt.dll: log10()
+
+# 5 0x000000000042EE93 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: humanRound() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Q_CoordinatSystem.h (186):
+
+    184:     * 
+    185:     */
+=>  186:     double exp = log10 (delta);
+    187:     double mantissa = delta / (pow (10, ceil (exp)));     
+    188:     //double mantissa = frexp (delta, &order);
+
+# 6 0x000000000042EC85 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: drawAxis() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Q_CoordinatSystem.h (142):
+
+    140: 
+    141:     
+=>  142:     Vector roundDelta = {(humanRound ((finishPosPix_.x - startPosPix_.x) * intepretK_.x) / nDelta.x), (humanRound ((finishPosPix_.y - startPosPix_.y) * intepretK_.y) / nDelta.y)};
+    143:     
+    144:     char t2[2] = {'1', '1'};
+
+# 7 0x000000000042F309 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: drawPar() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Array.cpp (218):
+
+    216: 	txLine (sys.x1, sys.y2 - halfy, sys.x2, sys.y2 - halfy);
+    217: 	 */
+=>  218: 	sys.drawAxis ({10, 10});
+    219: 
+    220: 	for (double x = 0; x < sys.startPosPix_.x + sys.scalePix_.x; x += 0.1)
+
+# 8 0x000000000042F20B in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: main() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Array.cpp (106):
+
+    104: 	//int arr[1000] = {};
+    105: 	//randomfill (arr, 1000);
+=>  106: 	drawPar (sys);
+    107: 	//drawBubleEfficiency (arr, 1000, sys);
+    108: 	//bubleSort (arr, 1000);
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in void coordinatSys::drawAxis(Vector) at C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h (139):
+
+    137: {
+    138:     txLine (nullCoor_.x, finishPosPix_.y, nullCoor_.x, startPosPix_.y);
+=>  139:     txLine (startPosPix_.x, nullCoor_.y, finishPosPix_.x, nullCoor_.y);
+    140: 
+    141:     
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Mar 21 2021 21:06:37, GNU g++ 9.2.0, std=201103L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Mar 21 2021 21:06:42
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00007FF92D5DD759 в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x000000000057D8E0 (64-bit), Flags: CMdRe0, Thread: 0x4880 (Main), GetLastError(): 187 (Не найдено указанное имя системного семафора). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF92D5DD759 in C:\Windows\System32\KERNELBASE.dll: RaiseException()
+# 2 0x00007FF92E3A1DC2 in C:\Windows\System32\msvcrt.dll: tanhf()
+# 3 0x00007FF92E3A164C in C:\Windows\System32\msvcrt.dll: tanhf()
+# 4 0x00007FF92E39EFB5 in C:\Windows\System32\msvcrt.dll: log10()
+
+# 5 0x000000000042EE93 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: humanRound() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Q_CoordinatSystem.h (186):
+
+    184:     * 
+    185:     */
+=>  186:     double exp = log10 (delta);
+    187:     double mantissa = delta / (pow (10, ceil (exp)));     
+    188:     //double mantissa = frexp (delta, &order);
+
+# 6 0x000000000042EC85 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: drawAxis() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Q_CoordinatSystem.h (142):
+
+    140: 
+    141:     
+=>  142:     Vector roundDelta = {(humanRound ((finishPosPix_.x - startPosPix_.x) * intepretK_.x) / nDelta.x), (humanRound ((finishPosPix_.y - startPosPix_.y) * intepretK_.y) / nDelta.y)};
+    143:     
+    144:     char t2[2] = {'1', '1'};
+
+# 7 0x000000000042F309 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: drawPar() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Array.cpp (218):
+
+    216: 	txLine (sys.x1, sys.y2 - halfy, sys.x2, sys.y2 - halfy);
+    217: 	 */
+=>  218: 	sys.drawAxis ({10, 10});
+    219: 
+    220: 	for (double x = 0; x < sys.startPosPix_.x + sys.scalePix_.x; x += 0.1)
+
+# 8 0x000000000042F20B in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: main() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Array.cpp (106):
+
+    104: 	//int arr[1000] = {};
+    105: 	//randomfill (arr, 1000);
+=>  106: 	drawPar (sys);
+    107: 	//drawBubleEfficiency (arr, 1000, sys);
+    108: 	//bubleSort (arr, 1000);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Mar 21 2021 21:06:37, GNU g++ 9.2.0, std=201103L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Mar 21 2021 21:06:42
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe,
+
+ВНЕЗАПНО: Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00007FF92D5DD759 в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x000000000057D8E0 (64-bit), Flags: CMdRe0, Thread: 0x54EC (Main), GetLastError(): 187 (Не найдено указанное имя системного семафора). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF92D5DD759 in C:\Windows\System32\KERNELBASE.dll: RaiseException()
+# 2 0x00007FF92E3A1DC2 in C:\Windows\System32\msvcrt.dll: tanhf()
+# 3 0x00007FF92E3A164C in C:\Windows\System32\msvcrt.dll: tanhf()
+# 4 0x00007FF92E39EFB5 in C:\Windows\System32\msvcrt.dll: log10()
+
+# 5 0x000000000042EEAF in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: humanRound() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Q_CoordinatSystem.h (187):
+
+    185:     */
+    186:     printf ("\n::%d::\n", delta);
+=>  187:     double exp = log10 (delta);
+    188:     double mantissa = delta / (pow (10, ceil (exp)));
+    189: 
+
+# 6 0x000000000042EC85 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: drawAxis() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Q_CoordinatSystem.h (142):
+
+    140: 
+    141: 
+=>  142:     Vector roundDelta = {(humanRound ((finishPosPix_.x - startPosPix_.x) * intepretK_.x) / nDelta.x), (humanRound ((finishPosPix_.y - startPosPix_.y) * intepretK_.y) / nDelta.y)};
+    143: 
+    144:     char t2[2] = {'1', '1'};
+
+# 7 0x000000000042F325 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: drawPar() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Array.cpp (218):
+
+    216: 	txLine (sys.x1, sys.y2 - halfy, sys.x2, sys.y2 - halfy);
+    217: 	 */
+=>  218: 	sys.drawAxis ({10, 10});
+    219: 
+    220: 	for (double x = 0; x < sys.startPosPix_.x + sys.scalePix_.x; x += 0.1)
+
+# 8 0x000000000042F227 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: main() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Array.cpp (106):
+
+    104: 	//int arr[1000] = {};
+    105: 	//randomfill (arr, 1000);
+=>  106: 	drawPar (sys);
+    107: 	//drawBubleEfficiency (arr, 1000, sys);
+    108: 	//bubleSort (arr, 1000);
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in void coordinatSys::drawAxis(Vector) at C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h (139):
+
+    137: {
+    138:     txLine (nullCoor_.x, finishPosPix_.y, nullCoor_.x, startPosPix_.y);
+=>  139:     txLine (startPosPix_.x, nullCoor_.y, finishPosPix_.x, nullCoor_.y);
+    140: 
+    141: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Mar 21 2021 21:15:57, GNU g++ 9.2.0, std=201103L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Mar 21 2021 21:16:01
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00007FF92D5DD759 в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x000000000057D8E0 (64-bit), Flags: CMdRe0, Thread: 0x54EC (Main), GetLastError(): 187 (Не найдено указанное имя системного семафора). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF92D5DD759 in C:\Windows\System32\KERNELBASE.dll: RaiseException()
+# 2 0x00007FF92E3A1DC2 in C:\Windows\System32\msvcrt.dll: tanhf()
+# 3 0x00007FF92E3A164C in C:\Windows\System32\msvcrt.dll: tanhf()
+# 4 0x00007FF92E39EFB5 in C:\Windows\System32\msvcrt.dll: log10()
+
+# 5 0x000000000042EEAF in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: humanRound() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Q_CoordinatSystem.h (187):
+
+    185:     */
+    186:     printf ("\n::%d::\n", delta);
+=>  187:     double exp = log10 (delta);
+    188:     double mantissa = delta / (pow (10, ceil (exp)));
+    189: 
+
+# 6 0x000000000042EC85 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: drawAxis() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Q_CoordinatSystem.h (142):
+
+    140: 
+    141: 
+=>  142:     Vector roundDelta = {(humanRound ((finishPosPix_.x - startPosPix_.x) * intepretK_.x) / nDelta.x), (humanRound ((finishPosPix_.y - startPosPix_.y) * intepretK_.y) / nDelta.y)};
+    143: 
+    144:     char t2[2] = {'1', '1'};
+
+# 7 0x000000000042F325 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: drawPar() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Array.cpp (218):
+
+    216: 	txLine (sys.x1, sys.y2 - halfy, sys.x2, sys.y2 - halfy);
+    217: 	 */
+=>  218: 	sys.drawAxis ({10, 10});
+    219: 
+    220: 	for (double x = 0; x < sys.startPosPix_.x + sys.scalePix_.x; x += 0.1)
+
+# 8 0x000000000042F227 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: main() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Array.cpp (106):
+
+    104: 	//int arr[1000] = {};
+    105: 	//randomfill (arr, 1000);
+=>  106: 	drawPar (sys);
+    107: 	//drawBubleEfficiency (arr, 1000, sys);
+    108: 	//bubleSort (arr, 1000);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Mar 21 2021 21:15:57, GNU g++ 9.2.0, std=201103L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Mar 21 2021 21:16:01
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe,
+
+ВНЕЗАПНО: Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00007FF92D5DD759 в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x000000000057D8E0 (64-bit), Flags: CMdRe0, Thread: 0x6604 (Main), GetLastError(): 187 (Не найдено указанное имя системного семафора). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF92D5DD759 in C:\Windows\System32\KERNELBASE.dll: RaiseException()
+# 2 0x00007FF92E3A1DC2 in C:\Windows\System32\msvcrt.dll: tanhf()
+# 3 0x00007FF92E3A164C in C:\Windows\System32\msvcrt.dll: tanhf()
+# 4 0x00007FF92E39EFB5 in C:\Windows\System32\msvcrt.dll: log10()
+
+# 5 0x000000000042F088 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: humanRound() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Q_CoordinatSystem.h (190):
+
+    188:     */
+    189:     printf ("\n::%d::\n", delta);
+=>  190:     double exp = log10 (delta);
+    191:     double mantissa = delta / (pow (10, ceil (exp)));
+    192: 
+
+# 6 0x000000000042EE15 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: drawAxis() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Q_CoordinatSystem.h (144):
+
+    142: 
+    143:     Vector roundDelta = {(humanRound (($ (finishPosPix_.x) - $ (startPosPix_.x)) * $ (intepretK_.x)) / $ (nDelta.x)),
+=>  144:                          (humanRound (($ (finishPosPix_.y) - $ (startPosPix_.y)) * $ (intepretK_.y)) / $ (nDelta.y))
+    145:                         };
+    146: 
+
+# 7 0x000000000042F4FD in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: drawPar() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Array.cpp (218):
+
+    216: 	txLine (sys.x1, sys.y2 - halfy, sys.x2, sys.y2 - halfy);
+    217: 	 */
+=>  218: 	sys.drawAxis ({10, 10});
+    219: 
+    220: 	for (double x = 0; x < sys.startPosPix_.x + sys.scalePix_.x; x += 0.1)
+
+# 8 0x000000000042F3FF in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: main() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Array.cpp (106):
+
+    104: 	//int arr[1000] = {};
+    105: 	//randomfill (arr, 1000);
+=>  106: 	drawPar (sys);
+    107: 	//drawBubleEfficiency (arr, 1000, sys);
+    108: 	//bubleSort (arr, 1000);
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in void coordinatSys::drawAxis(Vector) at C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h (139):
+
+    137: {
+    138:     txLine (nullCoor_.x, finishPosPix_.y, nullCoor_.x, startPosPix_.y);
+=>  139:     txLine (startPosPix_.x, nullCoor_.y, finishPosPix_.x, nullCoor_.y);
+    140: 
+    141: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Mar 21 2021 21:22:38, GNU g++ 9.2.0, std=201103L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Mar 21 2021 21:22:42
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00007FF92D5DD759 в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x000000000057D8E0 (64-bit), Flags: CMdRe0, Thread: 0x6604 (Main), GetLastError(): 187 (Не найдено указанное имя системного семафора). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF92D5DD759 in C:\Windows\System32\KERNELBASE.dll: RaiseException()
+# 2 0x00007FF92E3A1DC2 in C:\Windows\System32\msvcrt.dll: tanhf()
+# 3 0x00007FF92E3A164C in C:\Windows\System32\msvcrt.dll: tanhf()
+# 4 0x00007FF92E39EFB5 in C:\Windows\System32\msvcrt.dll: log10()
+
+# 5 0x000000000042F088 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: humanRound() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Q_CoordinatSystem.h (190):
+
+    188:     */
+    189:     printf ("\n::%d::\n", delta);
+=>  190:     double exp = log10 (delta);
+    191:     double mantissa = delta / (pow (10, ceil (exp)));
+    192: 
+
+# 6 0x000000000042EE15 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: drawAxis() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Q_CoordinatSystem.h (144):
+
+    142: 
+    143:     Vector roundDelta = {(humanRound (($ (finishPosPix_.x) - $ (startPosPix_.x)) * $ (intepretK_.x)) / $ (nDelta.x)),
+=>  144:                          (humanRound (($ (finishPosPix_.y) - $ (startPosPix_.y)) * $ (intepretK_.y)) / $ (nDelta.y))
+    145:                         };
+    146: 
+
+# 7 0x000000000042F4FD in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: drawPar() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Array.cpp (218):
+
+    216: 	txLine (sys.x1, sys.y2 - halfy, sys.x2, sys.y2 - halfy);
+    217: 	 */
+=>  218: 	sys.drawAxis ({10, 10});
+    219: 
+    220: 	for (double x = 0; x < sys.startPosPix_.x + sys.scalePix_.x; x += 0.1)
+
+# 8 0x000000000042F3FF in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: main() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Array.cpp (106):
+
+    104: 	//int arr[1000] = {};
+    105: 	//randomfill (arr, 1000);
+=>  106: 	drawPar (sys);
+    107: 	//drawBubleEfficiency (arr, 1000, sys);
+    108: 	//bubleSort (arr, 1000);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Mar 21 2021 21:22:38, GNU g++ 9.2.0, std=201103L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Mar 21 2021 21:22:42
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe,
+
+ВНЕЗАПНО: Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00007FF92D5DD759 в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x000000000057D8E0 (64-bit), Flags: CMdRe0, Thread: 0x984 (Main), GetLastError(): 187 (Не найдено указанное имя системного семафора). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF92D5DD759 in C:\Windows\System32\KERNELBASE.dll: RaiseException()
+# 2 0x00007FF92E3A1DC2 in C:\Windows\System32\msvcrt.dll: tanhf()
+# 3 0x00007FF92E3A164C in C:\Windows\System32\msvcrt.dll: tanhf()
+# 4 0x00007FF92E39EFB5 in C:\Windows\System32\msvcrt.dll: log10()
+
+# 5 0x000000000042F11C in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: humanRound() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Q_CoordinatSystem.h (190):
+
+    188:     */
+    189:     printf ("\n::%d::\n", delta);
+=>  190:     double exp = log10 (delta);
+    191:     double mantissa = delta / (pow (10, ceil (exp)));
+    192: 
+
+# 6 0x000000000042EEA9 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: drawAxis() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Q_CoordinatSystem.h (144):
+
+    142: 
+    143:     Vector roundDelta = {(humanRound ($ (($ (finishPosPix_.x) - $ (startPosPix_.x))) * $ (intepretK_.x)) / $ (nDelta.x)),
+=>  144:                          (humanRound ($ (($ (finishPosPix_.y) - $ (startPosPix_.y))) * $ (intepretK_.y)) / $ (nDelta.y))
+    145:                         };
+    146: 
+
+# 7 0x000000000042F591 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: drawPar() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Array.cpp (218):
+
+    216: 	txLine (sys.x1, sys.y2 - halfy, sys.x2, sys.y2 - halfy);
+    217: 	 */
+=>  218: 	sys.drawAxis ({10, 10});
+    219: 
+    220: 	for (double x = 0; x < sys.startPosPix_.x + sys.scalePix_.x; x += 0.1)
+
+# 8 0x000000000042F493 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: main() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Array.cpp (106):
+
+    104: 	//int arr[1000] = {};
+    105: 	//randomfill (arr, 1000);
+=>  106: 	drawPar (sys);
+    107: 	//drawBubleEfficiency (arr, 1000, sys);
+    108: 	//bubleSort (arr, 1000);
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in void coordinatSys::drawAxis(Vector) at C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h (139):
+
+    137: {
+    138:     txLine (nullCoor_.x, finishPosPix_.y, nullCoor_.x, startPosPix_.y);
+=>  139:     txLine (startPosPix_.x, nullCoor_.y, finishPosPix_.x, nullCoor_.y);
+    140: 
+    141: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Mar 21 2021 21:23:46, GNU g++ 9.2.0, std=201103L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Mar 21 2021 21:23:49
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00007FF92D5DD759 в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x000000000057D8E0 (64-bit), Flags: CMdRe0, Thread: 0x984 (Main), GetLastError(): 187 (Не найдено указанное имя системного семафора). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF92D5DD759 in C:\Windows\System32\KERNELBASE.dll: RaiseException()
+# 2 0x00007FF92E3A1DC2 in C:\Windows\System32\msvcrt.dll: tanhf()
+# 3 0x00007FF92E3A164C in C:\Windows\System32\msvcrt.dll: tanhf()
+# 4 0x00007FF92E39EFB5 in C:\Windows\System32\msvcrt.dll: log10()
+
+# 5 0x000000000042F11C in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: humanRound() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Q_CoordinatSystem.h (190):
+
+    188:     */
+    189:     printf ("\n::%d::\n", delta);
+=>  190:     double exp = log10 (delta);
+    191:     double mantissa = delta / (pow (10, ceil (exp)));
+    192: 
+
+# 6 0x000000000042EEA9 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: drawAxis() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Q_CoordinatSystem.h (144):
+
+    142: 
+    143:     Vector roundDelta = {(humanRound ($ (($ (finishPosPix_.x) - $ (startPosPix_.x))) * $ (intepretK_.x)) / $ (nDelta.x)),
+=>  144:                          (humanRound ($ (($ (finishPosPix_.y) - $ (startPosPix_.y))) * $ (intepretK_.y)) / $ (nDelta.y))
+    145:                         };
+    146: 
+
+# 7 0x000000000042F591 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: drawPar() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Array.cpp (218):
+
+    216: 	txLine (sys.x1, sys.y2 - halfy, sys.x2, sys.y2 - halfy);
+    217: 	 */
+=>  218: 	sys.drawAxis ({10, 10});
+    219: 
+    220: 	for (double x = 0; x < sys.startPosPix_.x + sys.scalePix_.x; x += 0.1)
+
+# 8 0x000000000042F493 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: main() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Array.cpp (106):
+
+    104: 	//int arr[1000] = {};
+    105: 	//randomfill (arr, 1000);
+=>  106: 	drawPar (sys);
+    107: 	//drawBubleEfficiency (arr, 1000, sys);
+    108: 	//bubleSort (arr, 1000);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Mar 21 2021 21:23:46, GNU g++ 9.2.0, std=201103L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Mar 21 2021 21:23:50
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe,
+
+ВНЕЗАПНО: Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00007FF92D5DD759 в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x000000000057D8E0 (64-bit), Flags: CMdRe0, Thread: 0x4060 (Main), GetLastError(): 187 (Не найдено указанное имя системного семафора). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF92D5DD759 in C:\Windows\System32\KERNELBASE.dll: RaiseException()
+# 2 0x00007FF92E3A1DC2 in C:\Windows\System32\msvcrt.dll: tanhf()
+# 3 0x00007FF92E3A164C in C:\Windows\System32\msvcrt.dll: tanhf()
+# 4 0x00007FF92E39EFB5 in C:\Windows\System32\msvcrt.dll: log10()
+
+# 5 0x000000000042F1A5 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: humanRound() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Q_CoordinatSystem.h (190):
+
+    188:     */
+    189:     printf ("\n::%d::\n", delta);
+=>  190:     double exp = log10 (delta);
+    191:     double mantissa = delta / (pow (10, ceil (exp)));
+    192: 
+
+# 6 0x000000000042EF04 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: drawAxis() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Q_CoordinatSystem.h (144):
+
+    142: 
+    143:     Vector roundDelta = {$(humanRound ($ (($ (finishPosPix_.x) - $ (startPosPix_.x))) * $ (intepretK_.x)) / $ (nDelta.x)),
+=>  144:                          $(humanRound ($ (($ (finishPosPix_.y) - $ (startPosPix_.y))) * $ (intepretK_.y)) / $ (nDelta.y))
+    145:                         };
+    146: 
+
+# 7 0x000000000042F61B in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: drawPar() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Array.cpp (218):
+
+    216: 	txLine (sys.x1, sys.y2 - halfy, sys.x2, sys.y2 - halfy);
+    217: 	 */
+=>  218: 	sys.drawAxis ({10, 10});
+    219: 
+    220: 	for (double x = 0; x < sys.startPosPix_.x + sys.scalePix_.x; x += 0.1)
+
+# 8 0x000000000042F51D in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: main() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Array.cpp (106):
+
+    104: 	//int arr[1000] = {};
+    105: 	//randomfill (arr, 1000);
+=>  106: 	drawPar (sys);
+    107: 	//drawBubleEfficiency (arr, 1000, sys);
+    108: 	//bubleSort (arr, 1000);
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in void coordinatSys::drawAxis(Vector) at C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h (139):
+
+    137: {
+    138:     txLine (nullCoor_.x, finishPosPix_.y, nullCoor_.x, startPosPix_.y);
+=>  139:     txLine (startPosPix_.x, nullCoor_.y, finishPosPix_.x, nullCoor_.y);
+    140: 
+    141: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Mar 21 2021 21:24:50, GNU g++ 9.2.0, std=201103L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Mar 21 2021 21:24:54
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00007FF92D5DD759 в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x000000000057D8E0 (64-bit), Flags: CMdRe0, Thread: 0x4060 (Main), GetLastError(): 187 (Не найдено указанное имя системного семафора). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF92D5DD759 in C:\Windows\System32\KERNELBASE.dll: RaiseException()
+# 2 0x00007FF92E3A1DC2 in C:\Windows\System32\msvcrt.dll: tanhf()
+# 3 0x00007FF92E3A164C in C:\Windows\System32\msvcrt.dll: tanhf()
+# 4 0x00007FF92E39EFB5 in C:\Windows\System32\msvcrt.dll: log10()
+
+# 5 0x000000000042F1A5 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: humanRound() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Q_CoordinatSystem.h (190):
+
+    188:     */
+    189:     printf ("\n::%d::\n", delta);
+=>  190:     double exp = log10 (delta);
+    191:     double mantissa = delta / (pow (10, ceil (exp)));
+    192: 
+
+# 6 0x000000000042EF04 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: drawAxis() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Q_CoordinatSystem.h (144):
+
+    142: 
+    143:     Vector roundDelta = {$(humanRound ($ (($ (finishPosPix_.x) - $ (startPosPix_.x))) * $ (intepretK_.x)) / $ (nDelta.x)),
+=>  144:                          $(humanRound ($ (($ (finishPosPix_.y) - $ (startPosPix_.y))) * $ (intepretK_.y)) / $ (nDelta.y))
+    145:                         };
+    146: 
+
+# 7 0x000000000042F61B in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: drawPar() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Array.cpp (218):
+
+    216: 	txLine (sys.x1, sys.y2 - halfy, sys.x2, sys.y2 - halfy);
+    217: 	 */
+=>  218: 	sys.drawAxis ({10, 10});
+    219: 
+    220: 	for (double x = 0; x < sys.startPosPix_.x + sys.scalePix_.x; x += 0.1)
+
+# 8 0x000000000042F51D in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: main() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Array.cpp (106):
+
+    104: 	//int arr[1000] = {};
+    105: 	//randomfill (arr, 1000);
+=>  106: 	drawPar (sys);
+    107: 	//drawBubleEfficiency (arr, 1000, sys);
+    108: 	//bubleSort (arr, 1000);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Mar 21 2021 21:24:50, GNU g++ 9.2.0, std=201103L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Mar 21 2021 21:24:54
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe,
+
+ВНЕЗАПНО: Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00007FF92D5DD759 в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x000000000057D8E0 (64-bit), Flags: CMdRe0, Thread: 0x69C (Main), GetLastError(): 187 (Не найдено указанное имя системного семафора). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF92D5DD759 in C:\Windows\System32\KERNELBASE.dll: RaiseException()
+# 2 0x00007FF92E3A1DC2 in C:\Windows\System32\msvcrt.dll: tanhf()
+# 3 0x00007FF92E3A164C in C:\Windows\System32\msvcrt.dll: tanhf()
+# 4 0x00007FF92E39EFB5 in C:\Windows\System32\msvcrt.dll: log10()
+
+# 5 0x000000000042F1A5 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: humanRound() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Q_CoordinatSystem.h (190):
+
+    188:     */
+    189:     printf ("\n::%d::\n", delta);
+=>  190:     double exp = log10 (delta);
+    191:     double mantissa = delta / (pow (10, ceil (exp)));
+    192: 
+
+# 6 0x000000000042EF04 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: drawAxis() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Q_CoordinatSystem.h (144):
+
+    142: 
+    143:     Vector roundDelta = {$(humanRound ($ (($ (finishPosPix_.x) - $ (startPosPix_.x))) * $ (intepretK_.x)) / $ (nDelta.x)),
+=>  144:                          $(humanRound ($ (($ (finishPosPix_.y) - $ (startPosPix_.y))) * $ (intepretK_.y)) / $ (nDelta.y))
+    145:                         };
+    146: 
+
+# 7 0x000000000042F61B in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: drawPar() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Array.cpp (218):
+
+    216: 	txLine (sys.x1, sys.y2 - halfy, sys.x2, sys.y2 - halfy);
+    217: 	 */
+=>  218: 	sys.drawAxis ({10, 10});
+    219: 
+    220: 	for (double x = 0; x < sys.startPosPix_.x + sys.scalePix_.x; x += 0.1)
+
+# 8 0x000000000042F51D in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: main() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Array.cpp (106):
+
+    104: 	//int arr[1000] = {};
+    105: 	//randomfill (arr, 1000);
+=>  106: 	drawPar (sys);
+    107: 	//drawBubleEfficiency (arr, 1000, sys);
+    108: 	//bubleSort (arr, 1000);
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in void coordinatSys::drawAxis(Vector) at C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h (139):
+
+    137: {
+    138:     txLine (nullCoor_.x, finishPosPix_.y, nullCoor_.x, startPosPix_.y);
+=>  139:     txLine (startPosPix_.x, nullCoor_.y, finishPosPix_.x, nullCoor_.y);
+    140: 
+    141: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Mar 21 2021 21:24:50, GNU g++ 9.2.0, std=201103L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Mar 21 2021 21:26:22
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00007FF92D5DD759 в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x000000000057D8E0 (64-bit), Flags: CMdRe0, Thread: 0x69C (Main), GetLastError(): 187 (Не найдено указанное имя системного семафора). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF92D5DD759 in C:\Windows\System32\KERNELBASE.dll: RaiseException()
+# 2 0x00007FF92E3A1DC2 in C:\Windows\System32\msvcrt.dll: tanhf()
+# 3 0x00007FF92E3A164C in C:\Windows\System32\msvcrt.dll: tanhf()
+# 4 0x00007FF92E39EFB5 in C:\Windows\System32\msvcrt.dll: log10()
+
+# 5 0x000000000042F1A5 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: humanRound() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Q_CoordinatSystem.h (190):
+
+    188:     */
+    189:     printf ("\n::%d::\n", delta);
+=>  190:     double exp = log10 (delta);
+    191:     double mantissa = delta / (pow (10, ceil (exp)));
+    192: 
+
+# 6 0x000000000042EF04 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: drawAxis() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Q_CoordinatSystem.h (144):
+
+    142: 
+    143:     Vector roundDelta = {$(humanRound ($ (($ (finishPosPix_.x) - $ (startPosPix_.x))) * $ (intepretK_.x)) / $ (nDelta.x)),
+=>  144:                          $(humanRound ($ (($ (finishPosPix_.y) - $ (startPosPix_.y))) * $ (intepretK_.y)) / $ (nDelta.y))
+    145:                         };
+    146: 
+
+# 7 0x000000000042F61B in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: drawPar() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Array.cpp (218):
+
+    216: 	txLine (sys.x1, sys.y2 - halfy, sys.x2, sys.y2 - halfy);
+    217: 	 */
+=>  218: 	sys.drawAxis ({10, 10});
+    219: 
+    220: 	for (double x = 0; x < sys.startPosPix_.x + sys.scalePix_.x; x += 0.1)
+
+# 8 0x000000000042F51D in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: main() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Array.cpp (106):
+
+    104: 	//int arr[1000] = {};
+    105: 	//randomfill (arr, 1000);
+=>  106: 	drawPar (sys);
+    107: 	//drawBubleEfficiency (arr, 1000, sys);
+    108: 	//bubleSort (arr, 1000);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Mar 21 2021 21:24:50, GNU g++ 9.2.0, std=201103L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Mar 21 2021 21:26:22
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe,
+
+ВНЕЗАПНО: Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00007FF92D5DD759 в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x000000000057D8E0 (64-bit), Flags: CMdRe0, Thread: 0x652C (Main), GetLastError(): 187 (Не найдено указанное имя системного семафора). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF92D5DD759 in C:\Windows\System32\KERNELBASE.dll: RaiseException()
+# 2 0x00007FF92E3A1DC2 in C:\Windows\System32\msvcrt.dll: tanhf()
+# 3 0x00007FF92E3A164C in C:\Windows\System32\msvcrt.dll: tanhf()
+# 4 0x00007FF92E39EFB5 in C:\Windows\System32\msvcrt.dll: log10()
+
+# 5 0x000000000042F1A5 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: humanRound() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Q_CoordinatSystem.h (190):
+
+    188:     */
+    189:     printf ("\n::%d::\n", delta);
+=>  190:     double exp = log10 (delta);
+    191:     double mantissa = delta / (pow (10, ceil (exp)));
+    192: 
+
+# 6 0x000000000042EF04 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: drawAxis() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Q_CoordinatSystem.h (144):
+
+    142: 
+    143:     Vector roundDelta = {(humanRound ($($ (($ (finishPosPix_.x) - $ (startPosPix_.x))) * $ (intepretK_.x)) / $ (nDelta.x))),
+=>  144:                          $(humanRound ($ (($ (finishPosPix_.y) - $ (startPosPix_.y))) * $ (intepretK_.y)) / $ (nDelta.y))
+    145:                         };
+    146: 
+
+# 7 0x000000000042F61B in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: drawPar() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Array.cpp (218):
+
+    216: 	txLine (sys.x1, sys.y2 - halfy, sys.x2, sys.y2 - halfy);
+    217: 	 */
+=>  218: 	sys.drawAxis ({10, 10});
+    219: 
+    220: 	for (double x = 0; x < sys.startPosPix_.x + sys.scalePix_.x; x += 0.1)
+
+# 8 0x000000000042F51D in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: main() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Array.cpp (106):
+
+    104: 	//int arr[1000] = {};
+    105: 	//randomfill (arr, 1000);
+=>  106: 	drawPar (sys);
+    107: 	//drawBubleEfficiency (arr, 1000, sys);
+    108: 	//bubleSort (arr, 1000);
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in void coordinatSys::drawAxis(Vector) at C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h (139):
+
+    137: {
+    138:     txLine (nullCoor_.x, finishPosPix_.y, nullCoor_.x, startPosPix_.y);
+=>  139:     txLine (startPosPix_.x, nullCoor_.y, finishPosPix_.x, nullCoor_.y);
+    140: 
+    141: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Mar 21 2021 21:27:51, GNU g++ 9.2.0, std=201103L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Mar 21 2021 21:27:55
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00007FF92D5DD759 в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x000000000057D8E0 (64-bit), Flags: CMdRe0, Thread: 0x652C (Main), GetLastError(): 187 (Не найдено указанное имя системного семафора). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF92D5DD759 in C:\Windows\System32\KERNELBASE.dll: RaiseException()
+# 2 0x00007FF92E3A1DC2 in C:\Windows\System32\msvcrt.dll: tanhf()
+# 3 0x00007FF92E3A164C in C:\Windows\System32\msvcrt.dll: tanhf()
+# 4 0x00007FF92E39EFB5 in C:\Windows\System32\msvcrt.dll: log10()
+
+# 5 0x000000000042F1A5 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: humanRound() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Q_CoordinatSystem.h (190):
+
+    188:     */
+    189:     printf ("\n::%d::\n", delta);
+=>  190:     double exp = log10 (delta);
+    191:     double mantissa = delta / (pow (10, ceil (exp)));
+    192: 
+
+# 6 0x000000000042EF04 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: drawAxis() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Q_CoordinatSystem.h (144):
+
+    142: 
+    143:     Vector roundDelta = {(humanRound ($($ (($ (finishPosPix_.x) - $ (startPosPix_.x))) * $ (intepretK_.x)) / $ (nDelta.x))),
+=>  144:                          $(humanRound ($ (($ (finishPosPix_.y) - $ (startPosPix_.y))) * $ (intepretK_.y)) / $ (nDelta.y))
+    145:                         };
+    146: 
+
+# 7 0x000000000042F61B in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: drawPar() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Array.cpp (218):
+
+    216: 	txLine (sys.x1, sys.y2 - halfy, sys.x2, sys.y2 - halfy);
+    217: 	 */
+=>  218: 	sys.drawAxis ({10, 10});
+    219: 
+    220: 	for (double x = 0; x < sys.startPosPix_.x + sys.scalePix_.x; x += 0.1)
+
+# 8 0x000000000042F51D in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: main() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Array.cpp (106):
+
+    104: 	//int arr[1000] = {};
+    105: 	//randomfill (arr, 1000);
+=>  106: 	drawPar (sys);
+    107: 	//drawBubleEfficiency (arr, 1000, sys);
+    108: 	//bubleSort (arr, 1000);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Mar 21 2021 21:27:51, GNU g++ 9.2.0, std=201103L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Mar 21 2021 21:27:55
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe,
+
+ВНЕЗАПНО: Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00007FF92D5DD759 в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x000000000057D8E0 (64-bit), Flags: CMdRe0, Thread: 0x6428 (Main), GetLastError(): 187 (Не найдено указанное имя системного семафора). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF92D5DD759 in C:\Windows\System32\KERNELBASE.dll: RaiseException()
+# 2 0x00007FF92E3A1DC2 in C:\Windows\System32\msvcrt.dll: tanhf()
+# 3 0x00007FF92E3A164C in C:\Windows\System32\msvcrt.dll: tanhf()
+# 4 0x00007FF92E39EFB5 in C:\Windows\System32\msvcrt.dll: log10()
+
+# 5 0x000000000042EFE6 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: humanRound() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Q_CoordinatSystem.h (190):
+
+    188:     */
+    189:     printf ("\n::%d::\n", delta);
+=>  190:     double exp = log10 (delta);
+    191:     double mantissa = delta / (pow (10, ceil (exp)));
+    192: 
+
+# 6 0x000000000042EDB8 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: drawAxis() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Q_CoordinatSystem.h (144):
+
+    142: 
+    143:     Vector roundDelta = {(humanRound ($((($ (finishPosPix_.x) - $ (startPosPix_.x)) * $ (intepretK_.x)) / $ (nDelta.x)))),
+=>  144:                          (humanRound ( (( (finishPosPix_.y) -  (startPosPix_.y))) *  (intepretK_.y)) /  (nDelta.y))
+    145:                         };
+    146: 
+
+# 7 0x000000000042F45B in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: drawPar() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Array.cpp (218):
+
+    216: 	txLine (sys.x1, sys.y2 - halfy, sys.x2, sys.y2 - halfy);
+    217: 	 */
+=>  218: 	sys.drawAxis ({10, 10});
+    219: 
+    220: 	for (double x = 0; x < sys.startPosPix_.x + sys.scalePix_.x; x += 0.1)
+
+# 8 0x000000000042F35D in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: main() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Array.cpp (106):
+
+    104: 	//int arr[1000] = {};
+    105: 	//randomfill (arr, 1000);
+=>  106: 	drawPar (sys);
+    107: 	//drawBubleEfficiency (arr, 1000, sys);
+    108: 	//bubleSort (arr, 1000);
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in void coordinatSys::drawAxis(Vector) at C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h (139):
+
+    137: {
+    138:     txLine (nullCoor_.x, finishPosPix_.y, nullCoor_.x, startPosPix_.y);
+=>  139:     txLine (startPosPix_.x, nullCoor_.y, finishPosPix_.x, nullCoor_.y);
+    140: 
+    141: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Mar 21 2021 21:32:01, GNU g++ 9.2.0, std=201103L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Mar 21 2021 21:32:05
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00007FF92D5DD759 в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x000000000057D8E0 (64-bit), Flags: CMdRe0, Thread: 0x6428 (Main), GetLastError(): 187 (Не найдено указанное имя системного семафора). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF92D5DD759 in C:\Windows\System32\KERNELBASE.dll: RaiseException()
+# 2 0x00007FF92E3A1DC2 in C:\Windows\System32\msvcrt.dll: tanhf()
+# 3 0x00007FF92E3A164C in C:\Windows\System32\msvcrt.dll: tanhf()
+# 4 0x00007FF92E39EFB5 in C:\Windows\System32\msvcrt.dll: log10()
+
+# 5 0x000000000042EFE6 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: humanRound() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Q_CoordinatSystem.h (190):
+
+    188:     */
+    189:     printf ("\n::%d::\n", delta);
+=>  190:     double exp = log10 (delta);
+    191:     double mantissa = delta / (pow (10, ceil (exp)));
+    192: 
+
+# 6 0x000000000042EDB8 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: drawAxis() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Q_CoordinatSystem.h (144):
+
+    142: 
+    143:     Vector roundDelta = {(humanRound ($((($ (finishPosPix_.x) - $ (startPosPix_.x)) * $ (intepretK_.x)) / $ (nDelta.x)))),
+=>  144:                          (humanRound ( (( (finishPosPix_.y) -  (startPosPix_.y))) *  (intepretK_.y)) /  (nDelta.y))
+    145:                         };
+    146: 
+
+# 7 0x000000000042F45B in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: drawPar() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Array.cpp (218):
+
+    216: 	txLine (sys.x1, sys.y2 - halfy, sys.x2, sys.y2 - halfy);
+    217: 	 */
+=>  218: 	sys.drawAxis ({10, 10});
+    219: 
+    220: 	for (double x = 0; x < sys.startPosPix_.x + sys.scalePix_.x; x += 0.1)
+
+# 8 0x000000000042F35D in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: main() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Array.cpp (106):
+
+    104: 	//int arr[1000] = {};
+    105: 	//randomfill (arr, 1000);
+=>  106: 	drawPar (sys);
+    107: 	//drawBubleEfficiency (arr, 1000, sys);
+    108: 	//bubleSort (arr, 1000);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Mar 21 2021 21:32:01, GNU g++ 9.2.0, std=201103L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Mar 21 2021 21:32:05
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe,
+
+ВНЕЗАПНО: Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00007FF92D5DD759 в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x000000000057D8E0 (64-bit), Flags: CMdRe0, Thread: 0x5BD0 (Main), GetLastError(): 187 (Не найдено указанное имя системного семафора). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF92D5DD759 in C:\Windows\System32\KERNELBASE.dll: RaiseException()
+# 2 0x00007FF92E3A1DC2 in C:\Windows\System32\msvcrt.dll: tanhf()
+# 3 0x00007FF92E3A164C in C:\Windows\System32\msvcrt.dll: tanhf()
+# 4 0x00007FF92E39EFB5 in C:\Windows\System32\msvcrt.dll: log10()
+
+# 5 0x000000000042EFE6 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: humanRound() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Q_CoordinatSystem.h (190):
+
+    188:     */
+    189:     printf ("\n::%d::\n", delta);
+=>  190:     double exp = log10 (delta);
+    191:     double mantissa = delta / (pow (10, ceil (exp)));
+    192: 
+
+# 6 0x000000000042EDB8 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: drawAxis() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Q_CoordinatSystem.h (144):
+
+    142: 
+    143:     Vector roundDelta = {(humanRound ($((($ (finishPosPix_.x) - $ (startPosPix_.x)) * $ (intepretK_.x)) / $ (nDelta.x)))),
+=>  144:                          (humanRound ( (( (finishPosPix_.y) -  (startPosPix_.y))) *  (intepretK_.y)) /  (nDelta.y))
+    145:                         };
+    146: 
+
+# 7 0x000000000042F45B in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: drawPar() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Array.cpp (218):
+
+    216: 	txLine (sys.x1, sys.y2 - halfy, sys.x2, sys.y2 - halfy);
+    217: 	 */
+=>  218: 	sys.drawAxis ({10, 10});
+    219: 
+    220: 	for (double x = 0; x < sys.startPosPix_.x + sys.scalePix_.x; x += 0.1)
+
+# 8 0x000000000042F35D in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: main() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Array.cpp (106):
+
+    104: 	//int arr[1000] = {};
+    105: 	//randomfill (arr, 1000);
+=>  106: 	drawPar (sys);
+    107: 	//drawBubleEfficiency (arr, 1000, sys);
+    108: 	//bubleSort (arr, 1000);
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in void coordinatSys::drawAxis(Vector) at C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h (139):
+
+    137: {
+    138:     txLine (nullCoor_.x, finishPosPix_.y, nullCoor_.x, startPosPix_.y);
+=>  139:     txLine (startPosPix_.x, nullCoor_.y, finishPosPix_.x, nullCoor_.y);
+    140: 
+    141: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Mar 21 2021 21:32:01, GNU g++ 9.2.0, std=201103L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Mar 21 2021 21:33:06
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00007FF92D5DD759 в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x000000000057D8E0 (64-bit), Flags: CMdRe0, Thread: 0x5BD0 (Main), GetLastError(): 187 (Не найдено указанное имя системного семафора). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF92D5DD759 in C:\Windows\System32\KERNELBASE.dll: RaiseException()
+# 2 0x00007FF92E3A1DC2 in C:\Windows\System32\msvcrt.dll: tanhf()
+# 3 0x00007FF92E3A164C in C:\Windows\System32\msvcrt.dll: tanhf()
+# 4 0x00007FF92E39EFB5 in C:\Windows\System32\msvcrt.dll: log10()
+
+# 5 0x000000000042EFE6 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: humanRound() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Q_CoordinatSystem.h (190):
+
+    188:     */
+    189:     printf ("\n::%d::\n", delta);
+=>  190:     double exp = log10 (delta);
+    191:     double mantissa = delta / (pow (10, ceil (exp)));
+    192: 
+
+# 6 0x000000000042EDB8 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: drawAxis() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Q_CoordinatSystem.h (144):
+
+    142: 
+    143:     Vector roundDelta = {(humanRound ($((($ (finishPosPix_.x) - $ (startPosPix_.x)) * $ (intepretK_.x)) / $ (nDelta.x)))),
+=>  144:                          (humanRound ( (( (finishPosPix_.y) -  (startPosPix_.y))) *  (intepretK_.y)) /  (nDelta.y))
+    145:                         };
+    146: 
+
+# 7 0x000000000042F45B in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: drawPar() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Array.cpp (218):
+
+    216: 	txLine (sys.x1, sys.y2 - halfy, sys.x2, sys.y2 - halfy);
+    217: 	 */
+=>  218: 	sys.drawAxis ({10, 10});
+    219: 
+    220: 	for (double x = 0; x < sys.startPosPix_.x + sys.scalePix_.x; x += 0.1)
+
+# 8 0x000000000042F35D in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: main() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Array.cpp (106):
+
+    104: 	//int arr[1000] = {};
+    105: 	//randomfill (arr, 1000);
+=>  106: 	drawPar (sys);
+    107: 	//drawBubleEfficiency (arr, 1000, sys);
+    108: 	//bubleSort (arr, 1000);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Mar 21 2021 21:32:01, GNU g++ 9.2.0, std=201103L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Mar 21 2021 21:33:06
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe,
+
+ВНЕЗАПНО: Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00007FF92D5DD759 в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x000000000057D8E0 (64-bit), Flags: CMdRe0, Thread: 0x41F4 (Main), GetLastError(): 187 (Не найдено указанное имя системного семафора). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF92D5DD759 in C:\Windows\System32\KERNELBASE.dll: RaiseException()
+# 2 0x00007FF92E3A1DC2 in C:\Windows\System32\msvcrt.dll: tanhf()
+# 3 0x00007FF92E3A164C in C:\Windows\System32\msvcrt.dll: tanhf()
+# 4 0x00007FF92E39EFB5 in C:\Windows\System32\msvcrt.dll: log10()
+
+# 5 0x000000000042F11C in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: humanRound() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Q_CoordinatSystem.h (190):
+
+    188:     */
+    189:     printf ("\n::%d::\n", delta);
+=>  190:     double exp = log10 (delta);
+    191:     double mantissa = delta / (pow (10, ceil (exp)));
+    192: 
+
+# 6 0x000000000042EEF3 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: drawAxis() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Q_CoordinatSystem.h (144):
+
+    142: 
+    143:     Vector roundDelta = {(humanRound ($((($ (finishPosPix_.x) - $ (startPosPix_.x)) * $ (intepretK_.x)) / $ (nDelta.x)))),
+=>  144:                          (humanRound ($((($ (finishPosPix_.y) - $ (startPosPix_.y)) * $ (intepretK_.y)) / $ (nDelta.y))))
+    145:                         };
+    146: 
+
+# 7 0x000000000042F591 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: drawPar() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Array.cpp (218):
+
+    216: 	txLine (sys.x1, sys.y2 - halfy, sys.x2, sys.y2 - halfy);
+    217: 	 */
+=>  218: 	sys.drawAxis ({10, 10});
+    219: 
+    220: 	for (double x = 0; x < sys.startPosPix_.x + sys.scalePix_.x; x += 0.1)
+
+# 8 0x000000000042F493 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: main() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Array.cpp (106):
+
+    104: 	//int arr[1000] = {};
+    105: 	//randomfill (arr, 1000);
+=>  106: 	drawPar (sys);
+    107: 	//drawBubleEfficiency (arr, 1000, sys);
+    108: 	//bubleSort (arr, 1000);
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in void coordinatSys::drawAxis(Vector) at C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h (139):
+
+    137: {
+    138:     txLine (nullCoor_.x, finishPosPix_.y, nullCoor_.x, startPosPix_.y);
+=>  139:     txLine (startPosPix_.x, nullCoor_.y, finishPosPix_.x, nullCoor_.y);
+    140: 
+    141: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Mar 21 2021 21:34:28, GNU g++ 9.2.0, std=201103L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Mar 21 2021 21:34:31
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00007FF92D5DD759 в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x000000000057D8E0 (64-bit), Flags: CMdRe0, Thread: 0x41F4 (Main), GetLastError(): 187 (Не найдено указанное имя системного семафора). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF92D5DD759 in C:\Windows\System32\KERNELBASE.dll: RaiseException()
+# 2 0x00007FF92E3A1DC2 in C:\Windows\System32\msvcrt.dll: tanhf()
+# 3 0x00007FF92E3A164C in C:\Windows\System32\msvcrt.dll: tanhf()
+# 4 0x00007FF92E39EFB5 in C:\Windows\System32\msvcrt.dll: log10()
+
+# 5 0x000000000042F11C in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: humanRound() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Q_CoordinatSystem.h (190):
+
+    188:     */
+    189:     printf ("\n::%d::\n", delta);
+=>  190:     double exp = log10 (delta);
+    191:     double mantissa = delta / (pow (10, ceil (exp)));
+    192: 
+
+# 6 0x000000000042EEF3 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: drawAxis() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Q_CoordinatSystem.h (144):
+
+    142: 
+    143:     Vector roundDelta = {(humanRound ($((($ (finishPosPix_.x) - $ (startPosPix_.x)) * $ (intepretK_.x)) / $ (nDelta.x)))),
+=>  144:                          (humanRound ($((($ (finishPosPix_.y) - $ (startPosPix_.y)) * $ (intepretK_.y)) / $ (nDelta.y))))
+    145:                         };
+    146: 
+
+# 7 0x000000000042F591 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: drawPar() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Array.cpp (218):
+
+    216: 	txLine (sys.x1, sys.y2 - halfy, sys.x2, sys.y2 - halfy);
+    217: 	 */
+=>  218: 	sys.drawAxis ({10, 10});
+    219: 
+    220: 	for (double x = 0; x < sys.startPosPix_.x + sys.scalePix_.x; x += 0.1)
+
+# 8 0x000000000042F493 in C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe: main() at C:/Users/Алехандро/Desktop/AlexProjects/ALGORITHMICPROJECT/Array.cpp (106):
+
+    104: 	//int arr[1000] = {};
+    105: 	//randomfill (arr, 1000);
+=>  106: 	drawPar (sys);
+    107: 	//drawBubleEfficiency (arr, 1000, sys);
+    108: 	//bubleSort (arr, 1000);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Mar 21 2021 21:34:28, GNU g++ 9.2.0, std=201103L, MinGW-W64 Runtime 7.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Mar 21 2021 21:34:32
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
