@@ -1,0 +1,1811 @@
+abort() has been called
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe, файл: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp, строка: 322, функция: void __cdecl drawEfficiency(int [],int,void (__cdecl *)(int [],int),class coordinatSys,class coordinatSys,unsigned long,double),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "isSorted (arr, i)".
+
+#1: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF755E42F08 (64-bit), Flags: CMdRe0, Thread: 0x37A8 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 7 0x00007FF8851D7034 in C:\Windows\System32\KERNEL32.dll: BaseThreadInitThunk()
+# 8 0x00007FF886C82651 in C:\Windows\SYSTEM32\ntdll.dll: RtlUserThreadStart()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Mar 31 2021 21:57:46, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Mar 31 2021 21:58:02
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe, файл: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h, строка: 12914, функция: struct HBRUSH__ *__cdecl `anonymous-namespace'::TX::txSetFillColor(unsigned long,struct HDC__ *),
+
+Сообщение: Окно рисования не создано или не в порядке.
+
+#1: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF6EC592F08 (64-bit), Flags: Cmdre0, Thread: 0x955C (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 8 0x00007FFEE59C7034 in C:\Windows\System32\KERNEL32.dll: BaseThreadInitThunk()
+# 9 0x00007FFEE6462651 in C:\Windows\SYSTEM32\ntdll.dll: RtlUserThreadStart()
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in struct HBRUSH__ *__cdecl `anonymous-namespace'::TX::txSetFillColor(unsigned long,struct HDC__ *) at C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h (12914):
+
+  12912: HBRUSH txSetFillColor (COLORREF color, HDC dc /*= txDC()*/)
+  12913:     {
+=>12914: $1  if (_TX_DEFAULT_HDC_FAILED (dc)) return NULL;
+  12915: 
+  12916: $   HBRUSH brush = (color == TX_TRANSPARENT)? (HBRUSH) Win32::GetStockObject (HOLLOW_BRUSH) : Win32::CreateSolidBrush (color);
+
+# 1 in (null) at C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h (179):
+
+    177: void coordinatSys::drawAxis (Vector nDelta)
+    178: {
+=>  179:     txSetFillColor (RGB (240, 240, 240));
+    180:     txRectangle (startPosPix_.x, startPosPix_.y, finishPosPix_.x, finishPosPix_.y);
+    181: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Apr  7 2021 19:30:59, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Apr  7 2021 19:31:15
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe,
+
+ВНЕЗАПНО: Деление на ноль при операции с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_DIVIDE_BY_ZERO (0xC000008E) при выполнении кода по адресу 0x00007FFEE3BAD759 в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF766653F08 (64-bit), Flags: CMdRe0, Thread: 0x31B8 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FFEE3BAD759 in C:\Windows\System32\KERNELBASE.dll: RaiseException()
+# 1 0x00007FFE79E04D0B in C:\Windows\SYSTEM32\ucrtbased.dll: except1()
+# 2 0x00007FFE79E0481D in C:\Windows\SYSTEM32\ucrtbased.dll: except1()
+# 3 0x00007FFE79E46BC5 in C:\Windows\SYSTEM32\ucrtbased.dll: hypotf()
+# 4 0x00007FFE79E515E5 in C:\Windows\SYSTEM32\ucrtbased.dll: log2()
+# 5 0x00007FFE79E5148D in C:\Windows\SYSTEM32\ucrtbased.dll: log2()
+# 6 0x00007FFE79E091C6 in C:\Windows\SYSTEM32\ucrtbased.dll: log10()
+#14 0x00007FFEE59C7034 in C:\Windows\System32\KERNEL32.dll: BaseThreadInitThunk()
+#15 0x00007FFEE6462651 in C:\Windows\SYSTEM32\ntdll.dll: RtlUserThreadStart()
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in (null) at C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h (189):
+
+    187:     txLine (startPosPix_.x, nullCoor_.y, finishPosPix_.x, nullCoor_.y);
+    188:     drawArrows ({finishPosPix_.x - startPosPix_.x, -nullCoor_.y + nullCoor_.y}, {finishPosPix_.x, nullCoor_.y});
+=>  189:     txSetColor (RGB (200, 200, 200), 1);
+    190: 
+    191: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Apr  7 2021 21:15:31, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Apr  7 2021 21:15:46
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe,
+
+ВНЕЗАПНО: signal (8, 0x83): SIGFPE: Грубая ошибка в вычислениях. _FPE_ZERODIVIDE: Деление на ноль. 
+
+Деление на ноль при операции с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_DIVIDE_BY_ZERO (0xC000008E) при выполнении кода по адресу 0x00007FFEE3BAD759 в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF766653F08 (64-bit), Flags: CMdRe0, Thread: 0x31B8 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FFEE3BAD759 in C:\Windows\System32\KERNELBASE.dll: RaiseException()
+# 1 0x00007FFE79E04D0B in C:\Windows\SYSTEM32\ucrtbased.dll: except1()
+# 2 0x00007FFE79E0481D in C:\Windows\SYSTEM32\ucrtbased.dll: except1()
+# 3 0x00007FFE79E46BC5 in C:\Windows\SYSTEM32\ucrtbased.dll: hypotf()
+# 4 0x00007FFE79E515E5 in C:\Windows\SYSTEM32\ucrtbased.dll: log2()
+# 5 0x00007FFE79E5148D in C:\Windows\SYSTEM32\ucrtbased.dll: log2()
+# 6 0x00007FFE79E091C6 in C:\Windows\SYSTEM32\ucrtbased.dll: log10()
+#14 0x00007FFEE59C7034 in C:\Windows\System32\KERNEL32.dll: BaseThreadInitThunk()
+#15 0x00007FFEE6462651 in C:\Windows\SYSTEM32\ntdll.dll: RtlUserThreadStart()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Apr  7 2021 21:15:31, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Apr  7 2021 21:15:46
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe,
+
+ВНЕЗАПНО: Деление на ноль при операции с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_DIVIDE_BY_ZERO (0xC000008E) при выполнении кода по адресу 0x00007FFEE3BAD759 в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF7F5223F08 (64-bit), Flags: CMdRe0, Thread: 0x868C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FFEE3BAD759 in C:\Windows\System32\KERNELBASE.dll: RaiseException()
+# 1 0x00007FFE79E04D0B in C:\Windows\SYSTEM32\ucrtbased.dll: except1()
+# 2 0x00007FFE79E0481D in C:\Windows\SYSTEM32\ucrtbased.dll: except1()
+# 3 0x00007FFE79E46BC5 in C:\Windows\SYSTEM32\ucrtbased.dll: hypotf()
+# 4 0x00007FFE79E515E5 in C:\Windows\SYSTEM32\ucrtbased.dll: log2()
+# 5 0x00007FFE79E5148D in C:\Windows\SYSTEM32\ucrtbased.dll: log2()
+# 6 0x00007FFE79E091C6 in C:\Windows\SYSTEM32\ucrtbased.dll: log10()
+#14 0x00007FFEE59C7034 in C:\Windows\System32\KERNEL32.dll: BaseThreadInitThunk()
+#15 0x00007FFEE6462651 in C:\Windows\SYSTEM32\ntdll.dll: RtlUserThreadStart()
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in (null) at C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h (189):
+
+    187:     txLine (startPosPix_.x, nullCoor_.y, finishPosPix_.x, nullCoor_.y);
+    188:     drawArrows ({finishPosPix_.x - startPosPix_.x, -nullCoor_.y + nullCoor_.y}, {finishPosPix_.x, nullCoor_.y});
+=>  189:     txSetColor (RGB (200, 200, 200), 1);
+    190: 
+    191: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Apr  7 2021 21:16:30, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Apr  7 2021 21:16:46
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe,
+
+ВНЕЗАПНО: signal (8, 0x83): SIGFPE: Грубая ошибка в вычислениях. _FPE_ZERODIVIDE: Деление на ноль. 
+
+Деление на ноль при операции с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_DIVIDE_BY_ZERO (0xC000008E) при выполнении кода по адресу 0x00007FFEE3BAD759 в функции RaiseException(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF7F5223F08 (64-bit), Flags: CMdRe0, Thread: 0x868C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FFEE3BAD759 in C:\Windows\System32\KERNELBASE.dll: RaiseException()
+# 1 0x00007FFE79E04D0B in C:\Windows\SYSTEM32\ucrtbased.dll: except1()
+# 2 0x00007FFE79E0481D in C:\Windows\SYSTEM32\ucrtbased.dll: except1()
+# 3 0x00007FFE79E46BC5 in C:\Windows\SYSTEM32\ucrtbased.dll: hypotf()
+# 4 0x00007FFE79E515E5 in C:\Windows\SYSTEM32\ucrtbased.dll: log2()
+# 5 0x00007FFE79E5148D in C:\Windows\SYSTEM32\ucrtbased.dll: log2()
+# 6 0x00007FFE79E091C6 in C:\Windows\SYSTEM32\ucrtbased.dll: log10()
+#14 0x00007FFEE59C7034 in C:\Windows\System32\KERNEL32.dll: BaseThreadInitThunk()
+#15 0x00007FFEE6462651 in C:\Windows\SYSTEM32\ntdll.dll: RtlUserThreadStart()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Apr  7 2021 21:16:30, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Apr  7 2021 21:16:46
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe, файл: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp, строка: 340, функция: int __cdecl binarySearch(int [],int,int),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "0 < len / (2 * 1) && len / (2 * 1) < len".
+
+#1: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF76CAD3F08 (64-bit), Flags: CMdRe0, Thread: 0x2058 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 9 0x00007FFEE59C7034 in C:\Windows\System32\KERNEL32.dll: BaseThreadInitThunk()
+#10 0x00007FFEE6462651 in C:\Windows\SYSTEM32\ntdll.dll: RtlUserThreadStart()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Apr  7 2021 21:38:46, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Apr  7 2021 21:39:01
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe,
+
+ВНЕЗАПНО: Ю-ху! Переполнение стека!
+
+#1: Исключение EXCEPTION_STACK_OVERFLOW (0xC00000FD) при выполнении кода по адресу 0x00007FF72BBDBB0E. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF72BC93F08 (64-bit), Flags: CMdRe0, Thread: 0x3D74 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 3 0x00007FFEE6488A4C in C:\Windows\SYSTEM32\ntdll.dll: RtlDeleteAce()
+# 4 0x00007FFEE6461276 in C:\Windows\SYSTEM32\ntdll.dll: RtlRaiseException()
+# 5 0x00007FFEE64B0A9E in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in (null) at C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp (116):
+
+    114: 	 //humanRound (1);
+    115: 
+=>  116: 	txCreateWindow (400, 800);
+    117: 	unittestSorted (&simpleInsertion, "simpleInsertion");
+    118: 	unittestSorted (&bubleSort, "bubleSort");
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Apr  7 2021 21:40:01, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Apr  7 2021 21:40:16
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe,
+
+ВНЕЗАПНО: Ю-ху! Переполнение стека!
+
+#1: Исключение EXCEPTION_STACK_OVERFLOW (0xC00000FD) при выполнении кода по адресу 0x00007FF72BBDBB0E. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции _set_se_translator() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF72BC93F08 (64-bit), Flags: CMdRe0, Thread: 0x3D74 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 3 0x00007FFEE6488A4C in C:\Windows\SYSTEM32\ntdll.dll: RtlDeleteAce()
+# 4 0x00007FFEE6461276 in C:\Windows\SYSTEM32\ntdll.dll: RtlRaiseException()
+# 5 0x00007FFEE64B0A9E in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in (null) at C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp (116):
+
+    114: 	 //humanRound (1);
+    115: 
+=>  116: 	txCreateWindow (400, 800);
+    117: 	unittestSorted (&simpleInsertion, "simpleInsertion");
+    118: 	unittestSorted (&bubleSort, "bubleSort");
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Apr  7 2021 21:40:01, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Apr  7 2021 21:40:17
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF6577F0643. Попытка прочесть данные по адресу 0x000000A8A26C3A28. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF6578D3F08 (64-bit), Flags: CMdRe0, Thread: 0x8B9C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 8 0x00007FFBE17D7034 in C:\Windows\System32\KERNEL32.dll: BaseThreadInitThunk()
+# 9 0x00007FFBE2AE2651 in C:\Windows\SYSTEM32\ntdll.dll: RtlUserThreadStart()
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in (null) at C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp (116):
+
+    114: 	 //humanRound (1);
+    115: 	
+=>  116: 	txCreateWindow (400, 800);
+    117: 	unittestSorted (&simpleInsertion, "simpleInsertion");
+    118: 	unittestSorted (&bubleSort, "bubleSort");
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Apr 11 2021 13:46:11, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Apr 11 2021 13:46:39
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe,
+
+ВНЕЗАПНО: signal (11, 0x5AC76160): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF6577F0643. Попытка прочесть данные по адресу 0x000000A8A26C3A28. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF6578D3F08 (64-bit), Flags: CMdRe0, Thread: 0x8B9C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 8 0x00007FFBE17D7034 in C:\Windows\System32\KERNEL32.dll: BaseThreadInitThunk()
+# 9 0x00007FFBE2AE2651 in C:\Windows\SYSTEM32\ntdll.dll: RtlUserThreadStart()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Apr 11 2021 13:46:11, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Apr 11 2021 13:46:38
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x000000630AF109C0. Попытка исполнить код по адресу 0x000000630AF109C0. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF70AFF3F08 (64-bit), Flags: Cmdre0, Thread: 0x5B48 (Main), GetLastError(): 187 (Не найдено указанное имя системного семафора). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 3 0x00007FFBE2B08A4C in C:\Windows\SYSTEM32\ntdll.dll: RtlDeleteAce()
+# 4 0x00007FFBE2AE1276 in C:\Windows\SYSTEM32\ntdll.dll: RtlRaiseException()
+# 5 0x00007FFBE2B30A9E in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Apr 14 2021 19:47:10, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Apr 14 2021 19:47:26
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe, файл: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp, строка: 287, функция: void __cdecl divideArr(int [],int),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "0 <= (mid) && (mid) < len".
+
+#1: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF73F553F08 (64-bit), Flags: Cmdre0, Thread: 0x754 (Main), GetLastError(): 187 (Не найдено указанное имя системного семафора). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 7 0x00007FFBE17D7034 in C:\Windows\System32\KERNEL32.dll: BaseThreadInitThunk()
+# 8 0x00007FFBE2AE2651 in C:\Windows\SYSTEM32\ntdll.dll: RtlUserThreadStart()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Apr 14 2021 19:50:44, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Apr 14 2021 19:50:59
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe, файл: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp, строка: 287, функция: void __cdecl divideArr(int [],int),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "0 <= (mid) && (mid) < len".
+
+#1: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF6F4CE3F08 (64-bit), Flags: Cmdre0, Thread: 0x561C (Main), GetLastError(): 187 (Не найдено указанное имя системного семафора). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 7 0x00007FFBE17D7034 in C:\Windows\System32\KERNEL32.dll: BaseThreadInitThunk()
+# 8 0x00007FFBE2AE2651 in C:\Windows\SYSTEM32\ntdll.dll: RtlUserThreadStart()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Apr 14 2021 19:51:27, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Apr 14 2021 19:51:42
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe, файл: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp, строка: 287, функция: void __cdecl divideArr(int [],int),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "0 <= (mid) && (mid) < len".
+
+#1: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF7F0A63F08 (64-bit), Flags: Cmdre0, Thread: 0x5384 (Main), GetLastError(): 187 (Не найдено указанное имя системного семафора). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 7 0x00007FFBE17D7034 in C:\Windows\System32\KERNEL32.dll: BaseThreadInitThunk()
+# 8 0x00007FFBE2AE2651 in C:\Windows\SYSTEM32\ntdll.dll: RtlUserThreadStart()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Apr 14 2021 21:04:17, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Apr 14 2021 21:04:33
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe, файл: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp, строка: 301, функция: void __cdecl divideArr(int [],int),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "0 <= (mid) && (mid) < len".
+
+#1: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF708FB3F08 (64-bit), Flags: Cmdre0, Thread: 0x171C (Main), GetLastError(): 187 (Не найдено указанное имя системного семафора). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 7 0x00007FFBE17D7034 in C:\Windows\System32\KERNEL32.dll: BaseThreadInitThunk()
+# 8 0x00007FFBE2AE2651 in C:\Windows\SYSTEM32\ntdll.dll: RtlUserThreadStart()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Apr 14 2021 21:17:31, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Apr 14 2021 21:17:47
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe, файл: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp, строка: 303, функция: void __cdecl divideArr(int [],int),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "0 <= (mid) && (mid) < len".
+
+#1: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF75FE03F08 (64-bit), Flags: Cmdre0, Thread: 0x2D70 (Main), GetLastError(): 187 (Не найдено указанное имя системного семафора). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 7 0x00007FFBE17D7034 in C:\Windows\System32\KERNEL32.dll: BaseThreadInitThunk()
+# 8 0x00007FFBE2AE2651 in C:\Windows\SYSTEM32\ntdll.dll: RtlUserThreadStart()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Apr 14 2021 21:19:51, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Apr 14 2021 21:20:07
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe, файл: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp, строка: 307, функция: void __cdecl divideArr(int [],int),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "0 <= (mid) && (mid) < len".
+
+#1: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF64CBC3F08 (64-bit), Flags: Cmdre0, Thread: 0x843C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 7 0x00007FFBE17D7034 in C:\Windows\System32\KERNEL32.dll: BaseThreadInitThunk()
+# 8 0x00007FFBE2AE2651 in C:\Windows\SYSTEM32\ntdll.dll: RtlUserThreadStart()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Apr 14 2021 21:24:16, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Apr 14 2021 21:24:32
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe, файл: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp, строка: 307, функция: void __cdecl divideArr(int [],int),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "0 <= (mid) && (mid) < len".
+
+#1: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF748273F08 (64-bit), Flags: Cmdre0, Thread: 0x720 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 7 0x00007FFBE17D7034 in C:\Windows\System32\KERNEL32.dll: BaseThreadInitThunk()
+# 8 0x00007FFBE2AE2651 in C:\Windows\SYSTEM32\ntdll.dll: RtlUserThreadStart()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Apr 14 2021 21:25:36, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Apr 14 2021 21:25:52
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe, файл: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp, строка: 307, функция: void __cdecl divideArr(int [],int),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "0 <= (mid) && (mid) < len".
+
+#1: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF6C1813F08 (64-bit), Flags: Cmdre0, Thread: 0x8CE8 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 7 0x00007FFBE17D7034 in C:\Windows\System32\KERNEL32.dll: BaseThreadInitThunk()
+# 8 0x00007FFBE2AE2651 in C:\Windows\SYSTEM32\ntdll.dll: RtlUserThreadStart()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Apr 14 2021 21:35:39, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Apr 14 2021 21:35:54
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe, файл: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp, строка: 307, функция: void __cdecl divideArr(int [],int),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "0 <= (mid) && (mid) < len".
+
+#1: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF761543F08 (64-bit), Flags: Cmdre0, Thread: 0x7E6C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 7 0x00007FFBE17D7034 in C:\Windows\System32\KERNEL32.dll: BaseThreadInitThunk()
+# 8 0x00007FFBE2AE2651 in C:\Windows\SYSTEM32\ntdll.dll: RtlUserThreadStart()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Apr 14 2021 21:38:14, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Apr 14 2021 21:38:30
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe, файл: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp, строка: 310, функция: void __cdecl divideArr(int [],int),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "0 <= (mid) && (mid) < len".
+
+#1: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF6D7B23F08 (64-bit), Flags: Cmdre0, Thread: 0xA714 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 7 0x00007FFBE17D7034 in C:\Windows\System32\KERNEL32.dll: BaseThreadInitThunk()
+# 8 0x00007FFBE2AE2651 in C:\Windows\SYSTEM32\ntdll.dll: RtlUserThreadStart()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Apr 14 2021 21:46:17, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Apr 14 2021 21:46:32
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe, файл: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp, строка: 310, функция: void __cdecl divideArr(int [],int),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "0 <= (mid) && (mid) < len".
+
+#1: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF7851A3F08 (64-bit), Flags: Cmdre0, Thread: 0x5CBC (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 7 0x00007FFBE17D7034 in C:\Windows\System32\KERNEL32.dll: BaseThreadInitThunk()
+# 8 0x00007FFBE2AE2651 in C:\Windows\SYSTEM32\ntdll.dll: RtlUserThreadStart()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Apr 14 2021 21:48:44, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Apr 14 2021 21:48:59
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe,
+
+ВНЕЗАПНО: Отладчик получил сигнал прерывания Control+Break.
+
+#1: Исключение DBG_CONTROL_BREAK (0x40010008) при выполнении кода по адресу 0x00007FFBE056D81B в функции TlsGetValue(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF7DD473F08 (64-bit), Flags: Cmdre0, Thread: 0x5B08. 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FFBE056D81B in C:\Windows\System32\KERNELBASE.dll: TlsGetValue()
+# 1 0x00007FFBE17D7034 in C:\Windows\System32\KERNEL32.dll: BaseThreadInitThunk()
+# 2 0x00007FFBE2AE2651 in C:\Windows\SYSTEM32\ntdll.dll: RtlUserThreadStart()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Apr 14 2021 22:04:54, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Apr 14 2021 22:05:09
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe,
+
+ВНЕЗАПНО: Отладчик получил сигнал прерывания Control+Break.
+
+#1: Исключение DBG_CONTROL_BREAK (0x40010008) при выполнении кода по адресу 0x00007FFBE056D81B в функции TlsGetValue(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции _set_se_translator() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF7DD473F08 (64-bit), Flags: Cmdre0, Thread: 0x5B08. 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FFBE056D81B in C:\Windows\System32\KERNELBASE.dll: TlsGetValue()
+# 1 0x00007FFBE17D7034 in C:\Windows\System32\KERNEL32.dll: BaseThreadInitThunk()
+# 2 0x00007FFBE2AE2651 in C:\Windows\SYSTEM32\ntdll.dll: RtlUserThreadStart()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Apr 14 2021 22:04:54, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Apr 14 2021 22:05:09
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe,
+
+ВНЕЗАПНО: Отладчик получил сигнал прерывания Control+Break.
+
+#1: Исключение DBG_CONTROL_BREAK (0x40010008) при выполнении кода по адресу 0x00007FFBE056D81B в функции TlsGetValue(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF708183F08 (64-bit), Flags: Cmdre0, Thread: 0x6EC. 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FFBE056D81B in C:\Windows\System32\KERNELBASE.dll: TlsGetValue()
+# 1 0x00007FFBE17D7034 in C:\Windows\System32\KERNEL32.dll: BaseThreadInitThunk()
+# 2 0x00007FFBE2AE2651 in C:\Windows\SYSTEM32\ntdll.dll: RtlUserThreadStart()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Apr 14 2021 22:07:32, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Apr 14 2021 22:07:48
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe,
+
+ВНЕЗАПНО: Отладчик получил сигнал прерывания Control+Break.
+
+#1: Исключение DBG_CONTROL_BREAK (0x40010008) при выполнении кода по адресу 0x00007FFBE056D81B в функции TlsGetValue(). Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции _set_se_translator() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF708183F08 (64-bit), Flags: Cmdre0, Thread: 0x6EC. 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FFBE056D81B in C:\Windows\System32\KERNELBASE.dll: TlsGetValue()
+# 1 0x00007FFBE17D7034 in C:\Windows\System32\KERNEL32.dll: BaseThreadInitThunk()
+# 2 0x00007FFBE2AE2651 in C:\Windows\SYSTEM32\ntdll.dll: RtlUserThreadStart()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Apr 14 2021 22:07:32, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Apr 14 2021 22:07:48
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe,
+
+ВНЕЗАПНО: Ю-ху! Переполнение стека!
+
+#1: Исключение EXCEPTION_STACK_OVERFLOW (0xC00000FD) при выполнении кода по адресу 0x00007FF74203BF98. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF7420F3F08 (64-bit), Flags: Cmdre0, Thread: 0x967C (Main), GetLastError(): 187 (Не найдено указанное имя системного семафора). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 3 0x00007FFE1B448A4C in C:\Windows\SYSTEM32\ntdll.dll: RtlDeleteAce()
+# 4 0x00007FFE1B421276 in C:\Windows\SYSTEM32\ntdll.dll: RtlRaiseException()
+# 5 0x00007FFE1B470BAE in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Apr 21 2021 18:39:59, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Apr 21 2021 18:40:15
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe,
+
+ВНЕЗАПНО: Ю-ху! Переполнение стека!
+
+#1: Исключение EXCEPTION_STACK_OVERFLOW (0xC00000FD) при выполнении кода по адресу 0x00007FF74203BF98. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции _set_se_translator() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF7420F3F08 (64-bit), Flags: Cmdre0, Thread: 0x967C (Main), GetLastError(): 187 (Не найдено указанное имя системного семафора). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 3 0x00007FFE1B448A4C in C:\Windows\SYSTEM32\ntdll.dll: RtlDeleteAce()
+# 4 0x00007FFE1B421276 in C:\Windows\SYSTEM32\ntdll.dll: RtlRaiseException()
+# 5 0x00007FFE1B470BAE in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Apr 21 2021 18:39:59, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Apr 21 2021 18:40:15
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe, файл: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp, строка: 385, функция: void __cdecl divideArr(int [],int,int,int),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "0 <= (i) && (i) < len".
+
+#1: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF6B6283F08 (64-bit), Flags: Cmdre0, Thread: 0x7180 (Main), GetLastError(): 187 (Не найдено указанное имя системного семафора). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 9 0x00007FFE1A967034 in C:\Windows\System32\KERNEL32.dll: BaseThreadInitThunk()
+#10 0x00007FFE1B422651 in C:\Windows\SYSTEM32\ntdll.dll: RtlUserThreadStart()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Apr 21 2021 18:54:59, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Apr 21 2021 18:55:15
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe,
+
+ВНЕЗАПНО: Ю-ху! Переполнение стека!
+
+#1: Исключение EXCEPTION_STACK_OVERFLOW (0xC00000FD) при выполнении кода по адресу 0x00007FF6C563C4F8. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF6C56F3F08 (64-bit), Flags: Cmdre0, Thread: 0x9390 (Main), GetLastError(): 187 (Не найдено указанное имя системного семафора). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 3 0x00007FFE1B448A4C in C:\Windows\SYSTEM32\ntdll.dll: RtlDeleteAce()
+# 4 0x00007FFE1B421276 in C:\Windows\SYSTEM32\ntdll.dll: RtlRaiseException()
+# 5 0x00007FFE1B470BAE in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Apr 21 2021 18:56:16, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Apr 21 2021 18:56:31
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe,
+
+ВНЕЗАПНО: Ю-ху! Переполнение стека!
+
+#1: Исключение EXCEPTION_STACK_OVERFLOW (0xC00000FD) при выполнении кода по адресу 0x00007FF6C563C4F8. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции _set_se_translator() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF6C56F3F08 (64-bit), Flags: Cmdre0, Thread: 0x9390 (Main), GetLastError(): 187 (Не найдено указанное имя системного семафора). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 3 0x00007FFE1B448A4C in C:\Windows\SYSTEM32\ntdll.dll: RtlDeleteAce()
+# 4 0x00007FFE1B421276 in C:\Windows\SYSTEM32\ntdll.dll: RtlRaiseException()
+# 5 0x00007FFE1B470BAE in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Apr 21 2021 18:56:16, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Apr 21 2021 18:56:32
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe, файл: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp, строка: 385, функция: void __cdecl divideArr(int [],int,int,int),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "0 <= (i) && (i) < len".
+
+#1: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF6C56F3F08 (64-bit), Flags: Cmdre0, Thread: 0x46CC (Main), GetLastError(): 187 (Не найдено указанное имя системного семафора). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 9 0x00007FFE1A967034 in C:\Windows\System32\KERNEL32.dll: BaseThreadInitThunk()
+#10 0x00007FFE1B422651 in C:\Windows\SYSTEM32\ntdll.dll: RtlUserThreadStart()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Apr 21 2021 18:56:16, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Apr 21 2021 18:56:49
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe, файл: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp, строка: 412, функция: void __cdecl divideArr(int [],int,int,int),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "0 <= (i) && (i) < len".
+
+#1: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF604243F08 (64-bit), Flags: Cmdre0, Thread: 0x47DC (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+#11 0x00007FFE1A967034 in C:\Windows\System32\KERNEL32.dll: BaseThreadInitThunk()
+#12 0x00007FFE1B422651 in C:\Windows\SYSTEM32\ntdll.dll: RtlUserThreadStart()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Apr 21 2021 21:12:04, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Apr 21 2021 21:12:21
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe, файл: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp, строка: 467, функция: void __cdecl divideArr(int [],int,int,int),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "0 <= (mid) && (mid) < len".
+
+#1: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF68F553F08 (64-bit), Flags: Cmdre0, Thread: 0x7BE8 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 9 0x00007FFE1A967034 in C:\Windows\System32\KERNEL32.dll: BaseThreadInitThunk()
+#10 0x00007FFE1B422651 in C:\Windows\SYSTEM32\ntdll.dll: RtlUserThreadStart()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Apr 21 2021 21:48:31, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Apr 21 2021 21:48:46
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe, файл: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp, строка: 450, функция: void __cdecl divideArr(int [],int,int,int),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "0 <= (i) && (i) < len".
+
+#1: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF75ED63F08 (64-bit), Flags: Cmdre0, Thread: 0x4C2C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 9 0x00007FFE1A967034 in C:\Windows\System32\KERNEL32.dll: BaseThreadInitThunk()
+#10 0x00007FFE1B422651 in C:\Windows\SYSTEM32\ntdll.dll: RtlUserThreadStart()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Apr 21 2021 21:50:08, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Apr 21 2021 21:50:24
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe, файл: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp, строка: 453, функция: void __cdecl divideArr(int [],int,int,int),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "0 <= (i) && (i) < len".
+
+#1: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF68DFB3F08 (64-bit), Flags: Cmdre0, Thread: 0x1524 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 8 0x00007FFE1A967034 in C:\Windows\System32\KERNEL32.dll: BaseThreadInitThunk()
+# 9 0x00007FFE1B422651 in C:\Windows\SYSTEM32\ntdll.dll: RtlUserThreadStart()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Apr 21 2021 21:53:52, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Apr 21 2021 21:54:07
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe, файл: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp, строка: 453, функция: void __cdecl divideArr(int [],int,int,int),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "0 <= (i) && (i) < len".
+
+#1: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF7A0033F08 (64-bit), Flags: Cmdre0, Thread: 0x4A84 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 8 0x00007FFE1A967034 in C:\Windows\System32\KERNEL32.dll: BaseThreadInitThunk()
+# 9 0x00007FFE1B422651 in C:\Windows\SYSTEM32\ntdll.dll: RtlUserThreadStart()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Apr 21 2021 21:54:51, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Apr 21 2021 21:56:22
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe, файл: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp, строка: 453, функция: void __cdecl divideArr(int [],int,int,int),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "0 <= (i) && (i) < len".
+
+#1: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF6F7BD3F08 (64-bit), Flags: Cmdre0, Thread: 0x74BC (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 8 0x00007FFE1A967034 in C:\Windows\System32\KERNEL32.dll: BaseThreadInitThunk()
+# 9 0x00007FFE1B422651 in C:\Windows\SYSTEM32\ntdll.dll: RtlUserThreadStart()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Apr 21 2021 21:58:39, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Apr 21 2021 21:58:55
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe, файл: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp, строка: 470, функция: void __cdecl divideArr(int [],int,int,int),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "0 <= (mid) && (mid) < len".
+
+#1: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF7628A3F08 (64-bit), Flags: Cmdre0, Thread: 0x3328 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 8 0x00007FFE1A967034 in C:\Windows\System32\KERNEL32.dll: BaseThreadInitThunk()
+# 9 0x00007FFE1B422651 in C:\Windows\SYSTEM32\ntdll.dll: RtlUserThreadStart()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Apr 21 2021 22:03:35, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Apr 21 2021 22:03:51
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe, файл: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp, строка: 402, функция: void __cdecl divideArr(int [],int,int,int),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "0 <= (j) && (j) < 7".
+
+#1: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF636813F08 (64-bit), Flags: Cmdre0, Thread: 0x4C88 (Main), GetLastError(): 187 (Не найдено указанное имя системного семафора). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 8 0x00007FFEA2D97034 in C:\Windows\System32\KERNEL32.dll: BaseThreadInitThunk()
+# 9 0x00007FFEA4BC2651 in C:\Windows\SYSTEM32\ntdll.dll: RtlUserThreadStart()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Apr 27 2021 19:23:02, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Apr 27 2021 19:23:17
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe,
+
+ВНЕЗАПНО: Ю-ху! Переполнение стека!
+
+#2: Исключение EXCEPTION_STACK_OVERFLOW (0xC00000FD) при выполнении кода по адресу 0x00007FF7285BF759. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF7286B3F08 (64-bit), Flags: Cmdre0, Thread: 0x6CA4 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 4 0x00007FFEA4BE8A4C in C:\Windows\SYSTEM32\ntdll.dll: RtlDeleteAce()
+# 5 0x00007FFEA4BC1276 in C:\Windows\SYSTEM32\ntdll.dll: RtlRaiseException()
+# 6 0x00007FFEA4C10BAE in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char *__cdecl `anonymous-namespace'::TX::_txCaptureStackBackTrace(int,bool,struct _CONTEXT *,struct _EXCEPTION_POINTERS *,void *) at C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h (11698):
+
+  11696: 
+  11697: $   static void* capture [maxFrames] = {};
+=>11698: $   int frames = _txStackWalk (framesToSkip + !context, sizearr (capture), capture, context, thread);
+  11699: 
+  11700: $   memset (trace, 0, sizeof (trace));
+
+# 1 in long __cdecl `anonymous-namespace'::TX::_txOnExceptionSEH(struct _EXCEPTION_POINTERS *,const char []) at C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h (11213):
+
+  11211: $       unsigned err = GetLastError();
+  11212: 
+=>11213: $       const char* stackTrace = _txCaptureStackBackTrace (0, true, exc->ContextRecord, exc);
+  11214: 
+  11215: $       _txDumpExceptionSEH (_txDumpSE,  (intptr_t) sizeof (_txDumpSE)  - 1, exc->ExceptionRecord, func);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Apr 27 2021 19:23:51, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Apr 27 2021 19:24:06
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe,
+
+ВНЕЗАПНО: Ю-ху! Переполнение стека!
+
+#2: Исключение EXCEPTION_STACK_OVERFLOW (0xC00000FD) при выполнении кода по адресу 0x00007FF7285BF759. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции _set_se_translator() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF7286B3F08 (64-bit), Flags: Cmdre0, Thread: 0x6CA4 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 4 0x00007FFEA4BE8A4C in C:\Windows\SYSTEM32\ntdll.dll: RtlDeleteAce()
+# 5 0x00007FFEA4BC1276 in C:\Windows\SYSTEM32\ntdll.dll: RtlRaiseException()
+# 6 0x00007FFEA4C10BAE in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char *__cdecl `anonymous-namespace'::TX::_txCaptureStackBackTrace(int,bool,struct _CONTEXT *,struct _EXCEPTION_POINTERS *,void *) at C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h (11698):
+
+  11696: 
+  11697: $   static void* capture [maxFrames] = {};
+=>11698: $   int frames = _txStackWalk (framesToSkip + !context, sizearr (capture), capture, context, thread);
+  11699: 
+  11700: $   memset (trace, 0, sizeof (trace));
+
+# 1 in long __cdecl `anonymous-namespace'::TX::_txOnExceptionSEH(struct _EXCEPTION_POINTERS *,const char []) at C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h (11213):
+
+  11211: $       unsigned err = GetLastError();
+  11212: 
+=>11213: $       const char* stackTrace = _txCaptureStackBackTrace (0, true, exc->ContextRecord, exc);
+  11214: 
+  11215: $       _txDumpExceptionSEH (_txDumpSE,  (intptr_t) sizeof (_txDumpSE)  - 1, exc->ExceptionRecord, func);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Apr 27 2021 19:23:51, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Apr 27 2021 19:24:05
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe,
+
+ВНЕЗАПНО: Ю-ху! Переполнение стека!
+
+#2: Исключение EXCEPTION_STACK_OVERFLOW (0xC00000FD) при выполнении кода по адресу 0x00007FF78E83F759. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF78E933F08 (64-bit), Flags: Cmdre0, Thread: 0x2C64 (Main), GetLastError(): 187 (Не найдено указанное имя системного семафора). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 4 0x00007FFEA4BE8A4C in C:\Windows\SYSTEM32\ntdll.dll: RtlDeleteAce()
+# 5 0x00007FFEA4BC1276 in C:\Windows\SYSTEM32\ntdll.dll: RtlRaiseException()
+# 6 0x00007FFEA4C10BAE in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char *__cdecl `anonymous-namespace'::TX::_txCaptureStackBackTrace(int,bool,struct _CONTEXT *,struct _EXCEPTION_POINTERS *,void *) at C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h (11698):
+
+  11696: 
+  11697: $   static void* capture [maxFrames] = {};
+=>11698: $   int frames = _txStackWalk (framesToSkip + !context, sizearr (capture), capture, context, thread);
+  11699: 
+  11700: $   memset (trace, 0, sizeof (trace));
+
+# 1 in long __cdecl `anonymous-namespace'::TX::_txOnExceptionSEH(struct _EXCEPTION_POINTERS *,const char []) at C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h (11213):
+
+  11211: $       unsigned err = GetLastError();
+  11212: 
+=>11213: $       const char* stackTrace = _txCaptureStackBackTrace (0, true, exc->ContextRecord, exc);
+  11214: 
+  11215: $       _txDumpExceptionSEH (_txDumpSE,  (intptr_t) sizeof (_txDumpSE)  - 1, exc->ExceptionRecord, func);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Apr 27 2021 19:27:37, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Apr 27 2021 19:27:53
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe,
+
+ВНЕЗАПНО: Ю-ху! Переполнение стека!
+
+#2: Исключение EXCEPTION_STACK_OVERFLOW (0xC00000FD) при выполнении кода по адресу 0x00007FF78E83F759. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции _set_se_translator() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF78E933F08 (64-bit), Flags: Cmdre0, Thread: 0x2C64 (Main), GetLastError(): 187 (Не найдено указанное имя системного семафора). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 4 0x00007FFEA4BE8A4C in C:\Windows\SYSTEM32\ntdll.dll: RtlDeleteAce()
+# 5 0x00007FFEA4BC1276 in C:\Windows\SYSTEM32\ntdll.dll: RtlRaiseException()
+# 6 0x00007FFEA4C10BAE in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char *__cdecl `anonymous-namespace'::TX::_txCaptureStackBackTrace(int,bool,struct _CONTEXT *,struct _EXCEPTION_POINTERS *,void *) at C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h (11698):
+
+  11696: 
+  11697: $   static void* capture [maxFrames] = {};
+=>11698: $   int frames = _txStackWalk (framesToSkip + !context, sizearr (capture), capture, context, thread);
+  11699: 
+  11700: $   memset (trace, 0, sizeof (trace));
+
+# 1 in long __cdecl `anonymous-namespace'::TX::_txOnExceptionSEH(struct _EXCEPTION_POINTERS *,const char []) at C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h (11213):
+
+  11211: $       unsigned err = GetLastError();
+  11212: 
+=>11213: $       const char* stackTrace = _txCaptureStackBackTrace (0, true, exc->ContextRecord, exc);
+  11214: 
+  11215: $       _txDumpExceptionSEH (_txDumpSE,  (intptr_t) sizeof (_txDumpSE)  - 1, exc->ExceptionRecord, func);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Apr 27 2021 19:27:37, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Apr 27 2021 19:27:52
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe,
+
+ВНЕЗАПНО: Ю-ху! Переполнение стека!
+
+#2: Исключение EXCEPTION_STACK_OVERFLOW (0xC00000FD) при выполнении кода по адресу 0x00007FF65527F759. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF655373F08 (64-bit), Flags: Cmdre0, Thread: 0x6F04 (Main), GetLastError(): 187 (Не найдено указанное имя системного семафора). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 4 0x00007FFEA4BE8A4C in C:\Windows\SYSTEM32\ntdll.dll: RtlDeleteAce()
+# 5 0x00007FFEA4BC1276 in C:\Windows\SYSTEM32\ntdll.dll: RtlRaiseException()
+# 6 0x00007FFEA4C10BAE in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char *__cdecl `anonymous-namespace'::TX::_txCaptureStackBackTrace(int,bool,struct _CONTEXT *,struct _EXCEPTION_POINTERS *,void *) at C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h (11698):
+
+  11696: 
+  11697: $   static void* capture [maxFrames] = {};
+=>11698: $   int frames = _txStackWalk (framesToSkip + !context, sizearr (capture), capture, context, thread);
+  11699: 
+  11700: $   memset (trace, 0, sizeof (trace));
+
+# 1 in long __cdecl `anonymous-namespace'::TX::_txOnExceptionSEH(struct _EXCEPTION_POINTERS *,const char []) at C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h (11213):
+
+  11211: $       unsigned err = GetLastError();
+  11212: 
+=>11213: $       const char* stackTrace = _txCaptureStackBackTrace (0, true, exc->ContextRecord, exc);
+  11214: 
+  11215: $       _txDumpExceptionSEH (_txDumpSE,  (intptr_t) sizeof (_txDumpSE)  - 1, exc->ExceptionRecord, func);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Apr 27 2021 19:27:37, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Apr 28 2021 18:23:12
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe,
+
+ВНЕЗАПНО: Ю-ху! Переполнение стека!
+
+#2: Исключение EXCEPTION_STACK_OVERFLOW (0xC00000FD) при выполнении кода по адресу 0x00007FF65527F759. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции _set_se_translator() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400], Instance: 0x00007FF655373F08 (64-bit), Flags: Cmdre0, Thread: 0x6F04 (Main), GetLastError(): 187 (Не найдено указанное имя системного семафора). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 4 0x00007FFEA4BE8A4C in C:\Windows\SYSTEM32\ntdll.dll: RtlDeleteAce()
+# 5 0x00007FFEA4BC1276 in C:\Windows\SYSTEM32\ntdll.dll: RtlRaiseException()
+# 6 0x00007FFEA4C10BAE in C:\Windows\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in const char *__cdecl `anonymous-namespace'::TX::_txCaptureStackBackTrace(int,bool,struct _CONTEXT *,struct _EXCEPTION_POINTERS *,void *) at C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h (11698):
+
+  11696: 
+  11697: $   static void* capture [maxFrames] = {};
+=>11698: $   int frames = _txStackWalk (framesToSkip + !context, sizearr (capture), capture, context, thread);
+  11699: 
+  11700: $   memset (trace, 0, sizeof (trace));
+
+# 1 in long __cdecl `anonymous-namespace'::TX::_txOnExceptionSEH(struct _EXCEPTION_POINTERS *,const char []) at C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h (11213):
+
+  11211: $       unsigned err = GetLastError();
+  11212: 
+=>11213: $       const char* stackTrace = _txCaptureStackBackTrace (0, true, exc->ContextRecord, exc);
+  11214: 
+  11215: $       _txDumpExceptionSEH (_txDumpSE,  (intptr_t) sizeof (_txDumpSE)  - 1, exc->ExceptionRecord, func);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 169, Date: 2021-01-23 10:12:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h
+Compiled:	Apr 27 2021 19:27:37, MSVS 1927, std=199711L, MSVC Runtime, 64-bit, DEBUG
+Started:	Apr 28 2021 18:23:11
+
+Run file:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+Directory:	C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT
+
+--------------------------------------------------

@@ -1,0 +1,4 @@
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe.lastcodeanalysissucceeded
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\NativeCodeAnalysis.read.1.tlog
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.exe
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\x64\Debug\AlgoritmicProject.pdb

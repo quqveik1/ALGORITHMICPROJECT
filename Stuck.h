@@ -765,7 +765,7 @@ uint64_t hashCalc (const void *address, const size_t size)
 
 uint64_t hashing2 (int array, uint64_t HASH)
 {
-	unsigned int Hashlast2Bit = HASH & 0b11;
+	uint64_t Hashlast2Bit = HASH & 0b11;
 	HASH >>= 2;
 	HASH |= Hashlast2Bit << 62;
 	HASH ^= array;

@@ -3,10 +3,18 @@
 //#include "Q_Vector.h"
 #include "TXLib.h"
 #include "Q_Vector.h"
+#include "math.h"
 //#include "Config.h"
 //#include "Q_Ball.h"
 
 double humanRound (double delta);
+Vector makePerpendikularLine(const Vector &mainVector);
+void drawArrows (const Vector &mainVector, const Vector &startArrowPoint);
+
+struct coordinatSysConfig 
+{
+    int font = 20;
+};
 
 
 struct Rect
@@ -24,18 +32,21 @@ struct Rect
 class coordinatSys
 {
 
-    public: Vector startPosPix_;
-    public: Vector finishPosPix_;
-    public: Vector coorSize_;
-	public: Vector scalePix_;
-    public: Vector nullCoor_;
+    public:
+        Vector startPosPix_;
+        Vector finishPosPix_;
+        Vector coorSize_;
+	    Vector scalePix_;
+        Vector nullCoor_;
+        coordinatSysConfig config_;
 
     private: Rect   sysBorderPix_ = {startPosPix_, scalePix_};
 
-    private: Vector intepretK_ = {1, 1}; //= scalePix / coorSize;
+    public: Vector intepretK_ = {1, 1}; //= scalePix / coorSize;
 
     public: coordinatSys ();
     public: coordinatSys (Vector startPosPix, Vector finishPosPix, Vector nullCoor);
+            Vector drawFunc (const char *func);
 
 
 
@@ -109,6 +120,36 @@ void coordinatSys::drawLine (Vector startLPos, Vector finishLPos, COLORREF color
 
 }
 
+/*
+Vector coordinatSys::drawFunc (const char *func)
+{
+    int l = strlen (func);
+    double y = 0;
+    int temp = 0;
+
+    for (int x = 0; x < (finishPosPix_ - nullCoor_).x; x++)
+    {
+
+        for (int i = 0; i < l; i++)
+        {
+            if (func[i] == 'x')
+            {
+                if (func[i + 1] == '^')
+                {
+                    sscanf ((char *)func[i + 2], "%lf", temp);
+                    y += pow (x, temp);
+                }
+                if (func[i + 1] == '*')
+                {
+                    sscanf ((char *)func[i + 2], "%lf", temp);
+                }
+            }
+        }
+    }
+}
+*/
+ 
+
 Vector coordinatSys::drawCircle (Vector vector, double r)
 {
     //Vector intepretK = {}; //= scalePix / coorSize;
@@ -135,8 +176,18 @@ Vector coordinatSys::drawCircle (Vector vector, double r)
 
 void coordinatSys::drawAxis (Vector nDelta)
 {
+    txSetFillColor (RGB (240, 240, 240));
+    txRectangle (startPosPix_.x, startPosPix_.y, finishPosPix_.x, finishPosPix_.y);
+
+    txSetColor (RGB (120, 120, 120), 3);
+    txSetFillColor (RGB (120, 120, 120));
     txLine (nullCoor_.x, finishPosPix_.y, nullCoor_.x, startPosPix_.y);
+    drawArrows ({nullCoor_.x - nullCoor_.x, startPosPix_.y - finishPosPix_.y}, {nullCoor_.x, startPosPix_.y});
+
     txLine (startPosPix_.x, nullCoor_.y, finishPosPix_.x, nullCoor_.y);
+    drawArrows ({finishPosPix_.x - startPosPix_.x, -nullCoor_.y + nullCoor_.y}, {finishPosPix_.x, nullCoor_.y});
+    txSetColor (RGB (200, 200, 200), 1);
+
 
 
     /*
@@ -145,21 +196,29 @@ void coordinatSys::drawAxis (Vector nDelta)
                         };
                         */
 
-    Vector roundDelta = {(humanRound (((( (finishPosPix_.x) -  (startPosPix_.x)) *  (intepretK_.x)) /  (nDelta.x)))),
-                         (humanRound (((( (finishPosPix_.y) -  (startPosPix_.y)) *  (intepretK_.y)) /  (nDelta.y))))
+    Vector roundDelta = {(humanRound (((( (finishPosPix_.x) -  (startPosPix_.x))) /  (nDelta.x)))),
+                         (humanRound (((( (finishPosPix_.y) -  (startPosPix_.y))) /  (nDelta.y))))
                         };
 
     char text[20] = {};
 
 
-    txSelectFont ("Arial", 14);
+    txSelectFont ("Arial", config_.font);
 
     Vector num = {};
     for (int x = 0; x < nDelta.x * 10; x++)
     {
         sprintf (text, "%lg", num.x);
         if (nullCoor_.x + (num.x * intepretK_.x) < finishPosPix_.x && startPosPix_.x < nullCoor_.x + (num.x * intepretK_.x))
+        {
+            txLine (nullCoor_.x + (num.x * intepretK_.x), finishPosPix_.y, nullCoor_.x + (num.x * intepretK_.x), startPosPix_.y);
             txTextOut (nullCoor_.x + (num.x * intepretK_.x), nullCoor_.y, text);
+        }
+        if (nullCoor_.x - (num.x * intepretK_.x) < finishPosPix_.x && startPosPix_.x < nullCoor_.x - (num.x * intepretK_.x))
+        {
+            txLine (nullCoor_.x - (num.x * intepretK_.x), finishPosPix_.y, nullCoor_.x - (num.x * intepretK_.x), startPosPix_.y);
+            txTextOut (nullCoor_.x - (num.x * intepretK_.x), nullCoor_.y, text);
+        }
         num.x += roundDelta.x;
     }
 
@@ -167,10 +226,44 @@ void coordinatSys::drawAxis (Vector nDelta)
     {
         sprintf (text, "%lg", num.y);
         if (nullCoor_.y + (num.y * intepretK_.y) < finishPosPix_.y && startPosPix_.y < nullCoor_.y + (num.y * intepretK_.y))
+        {
             txTextOut (nullCoor_.x, nullCoor_.y + (num.y * intepretK_.y), text);
+            txLine (startPosPix_.x,  nullCoor_.y + (num.y * intepretK_.y), finishPosPix_.x, nullCoor_.y + (num.y * intepretK_.y));
+        }
+
+        if (nullCoor_.y - (num.y * intepretK_.y) < finishPosPix_.y && startPosPix_.y < nullCoor_.y - (num.y * intepretK_.y))
+        {
+            txTextOut (nullCoor_.x, nullCoor_.y - (num.y * intepretK_.y), text);
+            txLine (startPosPix_.x,  nullCoor_.y - (num.y * intepretK_.y), finishPosPix_.x, nullCoor_.y - (num.y * intepretK_.y));
+        }
+
         num.y += roundDelta.y;
     }
 
+}
+
+void drawArrows (const Vector &mainVector, const Vector &finishPoint)
+{
+    Vector perpendicular1 = makePerpendikularLine (mainVector);
+    Vector perpendicular2 = perpendicular1 * -1;
+
+    Vector arrow1 = perpendicular1 * 0.01 - mainVector * 0.02;
+    Vector arrow2 = perpendicular2 * 0.01 - mainVector * 0.02;
+
+    Vector arrow1finishPoint = ((arrow1) + finishPoint);
+    Vector arrow2finishPoint = ((arrow2) + finishPoint);
+
+    txLine (finishPoint.x, finishPoint.y, arrow1finishPoint.x, arrow1finishPoint.y);
+    txLine (finishPoint.x, finishPoint.y, arrow2finishPoint.x, arrow2finishPoint.y);
+}
+
+Vector makePerpendikularLine(const Vector &mainVector)
+{
+    Vector perpendikularLine = {};
+    perpendikularLine.x =   mainVector.y;
+    perpendikularLine.y = -(mainVector.x);
+
+    return perpendikularLine;
 }
 
 
