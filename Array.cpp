@@ -16,10 +16,10 @@ int Exchange = 0;
 
 
 
-//! @brief Стуктура сделанная для того чтобы детальные данные при вызове dump() было проще смотреть
+//! @brief Г‘ГІГіГЄГІГіГ°Г  Г±Г¤ГҐГ«Г Г­Г­Г Гї Г¤Г«Гї ГІГ®ГЈГ® Г·ГІГ®ГЎГ» Г¤ГҐГІГ Г«ГјГ­Г»ГҐ Г¤Г Г­Г­Г»ГҐ ГЇГ°ГЁ ГўГ»Г§Г®ГўГҐ dump() ГЎГ»Г«Г® ГЇГ°Г®Г№ГҐ Г±Г¬Г®ГІГ°ГҐГІГј
 
 
-//! @brief Пространство имен, чтобы было проще передавать метод распечатки
+//! @brief ГЏГ°Г®Г±ГІГ°Г Г­Г±ГІГўГ® ГЁГ¬ГҐГ­, Г·ГІГ®ГЎГ» ГЎГ»Г«Г® ГЇГ°Г®Г№ГҐ ГЇГҐГ°ГҐГ¤Г ГўГ ГІГј Г¬ГҐГІГ®Г¤ Г°Г Г±ГЇГҐГ·Г ГІГЄГЁ
 
 enum PrintModes
 {
@@ -32,7 +32,7 @@ enum PrintModes
 
 
 
-//! @brief Цвета для распечатки
+//! @brief Г–ГўГҐГІГ  Г¤Г«Гї Г°Г Г±ГЇГҐГ·Г ГІГЄГЁ
 
 
 
@@ -102,10 +102,10 @@ void unittestSorted ();
 void unittestSorted (void (*func) (int arr[], int len), const char *name);
 
 
-//! @brief Макрос для того, чтобы было удобно передавать данные на счет распечатки
+//! @brief ГЊГ ГЄГ°Г®Г± Г¤Г«Гї ГІГ®ГЈГ®, Г·ГІГ®ГЎГ» ГЎГ»Г«Г® ГіГ¤Г®ГЎГ­Г® ГЇГҐГ°ГҐГ¤Г ГўГ ГІГј Г¤Г Г­Г­Г»ГҐ Г­Г  Г±Г·ГҐГІ Г°Г Г±ГЇГҐГ·Г ГІГЄГЁ
 #define POSINFO {__FILE__, __LINE__, __FUNCSIG__}
 #define NAMEINFO
-//! @brief Макрос для того, чтобы распечатывать некие переменные
+//! @brief ГЊГ ГЄГ°Г®Г± Г¤Г«Гї ГІГ®ГЈГ®, Г·ГІГ®ГЎГ» Г°Г Г±ГЇГҐГ·Г ГІГ»ГўГ ГІГј Г­ГҐГЄГЁГҐ ГЇГҐГ°ГҐГ¬ГҐГ­Г­Г»ГҐ
 #define printArr(name, length, ...) _printArr (name, length, POSINFO, ##__VA_ARGS__);
 //#define printArr(arr,)
 #define $(x, length) assert (0 <= (x) && (x) < length);
@@ -128,7 +128,7 @@ int main (int argc, const char *argv[])
 	 //humanRound (16.14);
 	 //humanRound (0.14);
 	 //humanRound (1);
-	/*
+	
 	txCreateWindow (400, 800);
 	unittestSorted (&simpleInsertion, "simpleInsertion");
 	unittestSorted (&bubleSort, "bubleSort");
@@ -175,16 +175,16 @@ int main (int argc, const char *argv[])
 
 	txSetFillColor (TX_LIGHTRED);
 	txSetColor (TX_LIGHTRED);
-	txTextOut (220, 340, "Сортировка выбором");
+	txTextOut (220, 340, "Г‘Г®Г°ГІГЁГ°Г®ГўГЄГ  ГўГ»ГЎГ®Г°Г®Г¬");
 
 	txSetFillColor (TX_LIGHTCYAN);
 	txSetColor (TX_LIGHTCYAN);
-	txTextOut (220, 355, "Сортировка пузырьком");
+	txTextOut (220, 355, "Г‘Г®Г°ГІГЁГ°Г®ГўГЄГ  ГЇГіГ§Г»Г°ГјГЄГ®Г¬");
 
 	txSetFillColor (TX_LIGHTGREEN);
 	txSetColor (TX_LIGHTGREEN);
-	txTextOut (180, 370, "Сортировка простыми вставками");
-	 */
+	txTextOut (180, 370, "Г‘Г®Г°ГІГЁГ°Г®ГўГЄГ  ГЇГ°Г®Г±ГІГ»Г¬ГЁ ГўГ±ГІГ ГўГЄГ Г¬ГЁ");
+	 
 
 	
 	//int arr [1] = {8}; 
@@ -193,11 +193,12 @@ int main (int argc, const char *argv[])
 	//divideArr (arr, 1);
 	//_printArr (arr, 5); 0:|021913|  1:|031876|  2:|022926|  3:|005946|  4:|016715|  5:|013711|  6:|000000|
 	//unittestThreeFill ();
-
+	/*
 	int arr[7] = {21913, 31876, 22926, 5946, 16715, 13711, 0};
 	divideArr (arr, 0, 6, 7);
 	unittestDivided ();
 	//printArr (arr, 7);
+	*/
 	
 	//unittestDivided ();
 	
@@ -1048,12 +1049,12 @@ void fill123654var2 (int arr[], const int len)
 
 
   /*
-//!	@brief Устанавливает цвет, который вы пожелаете
+//!	@brief Г“Г±ГІГ Г­Г ГўГ«ГЁГўГ ГҐГІ Г¶ГўГҐГІ, ГЄГ®ГІГ®Г°Г»Г© ГўГ» ГЇГ®Г¦ГҐГ«Г ГҐГІГҐ
 //!
-//!	@param color Цвет типа Word
+//!	@param color Г–ГўГҐГІ ГІГЁГЇГ  Word
 //!
-//! @return НИЧЕГО и не надо:)
-//! @note Для него подходит пространство имен цветов Colors
+//! @return ГЌГ€Г—Г…ГѓГЋ ГЁ Г­ГҐ Г­Г Г¤Г®:)
+//! @note Г„Г«Гї Г­ГҐГЈГ® ГЇГ®Г¤ГµГ®Г¤ГЁГІ ГЇГ°Г®Г±ГІГ°Г Г­Г±ГІГўГ® ГЁГ¬ГҐГ­ Г¶ГўГҐГІГ®Гў Colors
 //!
 //! @usage @code setConsoleColor (_GRAY_);
 //!
