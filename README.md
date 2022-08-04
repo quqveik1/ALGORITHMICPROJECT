@@ -17,9 +17,11 @@
 По оси Y - количество сравнений/обменов соответсвенно.
 
 <img src="https://user-images.githubusercontent.com/64206443/182865197-5ccfeaa1-01f8-4ea9-aa79-9471089e16df.png" width="500">
+
 -----------------------------------------
+
 Чтобы запустить программу необходимо скачать её собранную версию из вкладки релизы(https://github.com/quqveik1/ALGORITHMICPROJECT/releases/tag/v1.0),
 при запуске надо игнорировать сообщения антивирусов о том что в файле содержится вирус.
 В таком окне следует нажать "Подробнее" и будет доступно выбрать "Выполнить в любом случае".
 
-![image](https://user-images.githubusercontent.com/64206443/182923283-fd1b8d6a-3b5a-4577-84be-2df09d006b6b.png)
+<img src="https://user-images.githubusercontent.com/64206443/182923283-fd1b8d6a-3b5a-4577-84be-2df09d006b6b.png" width="500">
