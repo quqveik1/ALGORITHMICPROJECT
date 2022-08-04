@@ -13,4 +13,4 @@
 По оси X - длина сортируемого массива.
 По оси Y - количество сравнений/обменов соответсвенно.
 
-![image](https://user-images.githubusercontent.com/64206443/182862752-d175241d-6754-44cf-a277-fd79fa8abe92.png)
+![image](https://user-images.githubusercontent.com/64206443/182865197-5ccfeaa1-01f8-4ea9-aa79-9471089e16df.png)
