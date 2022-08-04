@@ -25,4 +25,4 @@
 В таком окне следует нажать "Подробнее" и будет доступно выбрать "Выполнить в любом случае".
 
 
-<img src="https://user-images.githubusercontent.com/64206443/182945554-ed4d18c6-a25d-4d0d-a331-e268643b3031.png" width="500">
+<img src="https://user-images.githubusercontent.com/64206443/182945554-ed4d18c6-a25d-4d0d-a331-e268643b3031.png" width="400">
