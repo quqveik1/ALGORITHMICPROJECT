@@ -1,0 +1,673 @@
+﻿  AlgoritmicProject.cpp
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(1008,27): warning C4100: 'kOfPush': unreferenced formal parameter
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Structure.cpp(13,34): warning C4100: 'argv': unreferenced formal parameter
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Structure.cpp(13,16): warning C4100: 'argc': unreferenced formal parameter
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(376,1): warning C4005: 'POSINFO': macro redefinition
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(25): message : see previous definition of 'POSINFO'
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(399,1): warning C4005: '$': macro redefinition
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h(15477): message : see previous definition of '$'
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(408,33): warning C4100: 'argv': unreferenced formal parameter
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(408,15): warning C4100: 'argc': unreferenced formal parameter
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(727,8): warning C4189: 'newArr': local variable is initialized but not referenced
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(738,34): warning C4100: 'len': unreferenced formal parameter
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(738,23): warning C4100: 'arr': unreferenced formal parameter
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(747,6): warning C4189: 'lastI': local variable is initialized but not referenced
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(899,8): warning C4189: 'finalMerge': local variable is initialized but not referenced
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(974,32): warning C4390: ';': empty controlled statement found; is this the intent?
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(993,32): warning C4390: ';': empty controlled statement found; is this the intent?
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1338,2): warning C4456: declaration of 'arr' hides previous local declaration
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1309,6): message : see declaration of 'arr'
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1339,2): warning C4456: declaration of 'arr' hides previous local declaration
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1309,6): message : see declaration of 'arr'
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1340,2): warning C4456: declaration of 'arr' hides previous local declaration
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1309,6): message : see declaration of 'arr'
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1341,2): warning C4456: declaration of 'arr' hides previous local declaration
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1309,6): message : see declaration of 'arr'
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1342,2): warning C4456: declaration of 'arr' hides previous local declaration
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1309,6): message : see declaration of 'arr'
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1343,2): warning C4456: declaration of 'arr' hides previous local declaration
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1309,6): message : see declaration of 'arr'
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1452,32): warning C4100: 'len': unreferenced formal parameter
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1689,15): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2189,13): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  Generating code
+  2 of 350 functions ( 0.6%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    6 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  AlgoritmicProject.vcxproj -> C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Release\AlgoritmicProject.exe
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(189): warning C26496: The variable 'lastNum' does not change after construction, mark it as const (con.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(190): warning C26496: The variable 'prelastNum' does not change after construction, mark it as const (con.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(189): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(190): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(189): warning C26482: Only index into arrays using constant expressions (bounds.2).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(190): warning C26482: Only index into arrays using constant expressions (bounds.2).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(206): warning C26496: The variable 'lastNum' does not change after construction, mark it as const (con.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(207): warning C26496: The variable 'prelastNum' does not change after construction, mark it as const (con.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(206): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(207): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(206): warning C26482: Only index into arrays using constant expressions (bounds.2).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(207): warning C26482: Only index into arrays using constant expressions (bounds.2).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(223): warning C26496: The variable 'lastNum' does not change after construction, mark it as const (con.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(224): warning C26496: The variable 'prelastNum' does not change after construction, mark it as const (con.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(223): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(224): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(223): warning C26482: Only index into arrays using constant expressions (bounds.2).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(224): warning C26482: Only index into arrays using constant expressions (bounds.2).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(240): warning C26496: The variable 'lastNum' does not change after construction, mark it as const (con.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(241): warning C26496: The variable 'prelastNum' does not change after construction, mark it as const (con.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(240): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(241): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(240): warning C26482: Only index into arrays using constant expressions (bounds.2).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(241): warning C26482: Only index into arrays using constant expressions (bounds.2).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(278): warning C26440: Function 'Stack::unittestHash' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(305): warning C26440: Function 'Stack::unittestCanary' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(358): warning C26496: The variable 'oldHash' does not change after construction, mark it as const (con.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(373): warning C26496: The variable 'hashCopy' does not change after construction, mark it as const (con.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(375): warning C26496: The variable 'newHash' does not change after construction, mark it as const (con.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(460): warning C6386: Buffer overrun while writing to 'this->stack':  the writable size is '20' bytes, but 'lastPos' bytes might be written.
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(460): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(75): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(77): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(460): warning C26482: Only index into arrays using constant expressions (bounds.2).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(489): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(489): warning C26482: Only index into arrays using constant expressions (bounds.2).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(588): warning C26496: The variable 'errorCode' does not change after construction, mark it as const (con.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(591): warning C26818: Switch statement does not cover all cases. Consider adding a 'default' label (es.79).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(653): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(657): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(576): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(632): warning C26485: Expression 'this->stack': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(653): warning C26482: Only index into arrays using constant expressions (bounds.2).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(657): warning C26482: Only index into arrays using constant expressions (bounds.2).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(723): warning C26496: The variable 'lastBit' does not change after construction, mark it as const (con.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(716): warning C26429: Symbol 'addr' is never tested for nullness, it can be marked as not_null (f.23).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(700): warning C26440: Function 'hashCalc' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(716): warning C26493: Don't use C-style casts (type.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(721): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(766): warning C26440: Function 'hashing2' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(871): warning C26440: Function 'setConsoleColor' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(873): warning C26493: Don't use C-style casts (type.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(883): warning C26440: Function 'clearConsoleColor' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(912): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(912): warning C26482: Only index into arrays using constant expressions (bounds.2).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(946): warning C26496: The variable 'copy' does not change after construction, mark it as const (con.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(946): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(947): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(947): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(948): warning C26446: Prefer to use gsl::at() instead of unchecked subscript operator (bounds.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(946): warning C26482: Only index into arrays using constant expressions (bounds.2).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(947): warning C26482: Only index into arrays using constant expressions (bounds.2).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(948): warning C26482: Only index into arrays using constant expressions (bounds.2).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(1044): warning C26429: Symbol 'stat' is never tested for nullness, it can be marked as not_null (f.23).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(1044): warning C26440: Function 'statText' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(1057): warning C26493: Don't use C-style casts (type.4).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\stuck.h(1044): warning C26485: Expression 'stat': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(1052): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(1057): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(1063): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(1065): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(1092): warning C6340: Mismatch on sign: 'unsigned int' passed as _Param_(2) when some signed type is required in call to 'printf'.
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(1086): warning C26440: Function 'tenTo2' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(1131): warning C26496: The variable 'readRights' does not change after construction, mark it as const (con.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(1125): warning C26440: Function 'checkPtr' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Lib\Q_Locale.h(18): warning C26440: Function 'setRussianLocale' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Structure.cpp(13): warning C26487: Don't return a pointer '(*argv)' that may be invalid (lifetime.4).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\structure.cpp(13): warning C26485: Expression 'argv': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h(2038): warning C26457: (void) should not be used to ignore return values, use 'std::ignore =' instead (es.48).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h(2038): warning C26457: (void) should not be used to ignore return values, use 'std::ignore =' instead (es.48).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h(2038): warning C26457: (void) should not be used to ignore return values, use 'std::ignore =' instead (es.48).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h(2038): warning C26457: (void) should not be used to ignore return values, use 'std::ignore =' instead (es.48).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h(2038): warning C26457: (void) should not be used to ignore return values, use 'std::ignore =' instead (es.48).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h(2038): warning C26457: (void) should not be used to ignore return values, use 'std::ignore =' instead (es.48).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h(8172): warning C26457: (void) should not be used to ignore return values, use 'std::ignore =' instead (es.48).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h(8480): warning C26457: (void) should not be used to ignore return values, use 'std::ignore =' instead (es.48).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h(8928): warning C26457: (void) should not be used to ignore return values, use 'std::ignore =' instead (es.48).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h(8979): warning C26457: (void) should not be used to ignore return values, use 'std::ignore =' instead (es.48).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h(10247): warning C26457: (void) should not be used to ignore return values, use 'std::ignore =' instead (es.48).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h(10431): warning C26457: (void) should not be used to ignore return values, use 'std::ignore =' instead (es.48).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h(10438): warning C26457: (void) should not be used to ignore return values, use 'std::ignore =' instead (es.48).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h(11638): warning C26473: Don't cast between pointer types where the source type and the target type are the same (type.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h(12195): warning C26457: (void) should not be used to ignore return values, use 'std::ignore =' instead (es.48).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h(13939): warning C26457: (void) should not be used to ignore return values, use 'std::ignore =' instead (es.48).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h(13940): warning C26457: (void) should not be used to ignore return values, use 'std::ignore =' instead (es.48).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h(14372): warning C26457: (void) should not be used to ignore return values, use 'std::ignore =' instead (es.48).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\TXLib.h(14600): warning C26457: (void) should not be used to ignore return values, use 'std::ignore =' instead (es.48).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_Vector.h(26): warning C26440: Function 'operator*' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_Vector.h(35): warning C26440: Function 'operator/' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_Vector.h(44): warning C26440: Function 'operator+' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_Vector.h(53): warning C26440: Function 'operator-' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_Vector.h(59): warning C26440: Function 'operator+=' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_Vector.h(73): warning C26440: Function 'operator*=' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_Vector.h(80): warning C26440: Function 'operator/' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_Vector.h(87): warning C26440: Function 'operator^' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_Vector.h(99): warning C26440: Function 'lining' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_Vector.h(104): warning C26440: Function 'operator>' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_Vector.h(118): warning C26440: Function 'operator<' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_Vector.h(132): warning C26440: Function 'Vector::operator double' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(25): warning C26440: Function 'Rect::left' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(26): warning C26440: Function 'Rect::top' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(27): warning C26440: Function 'Rect::right' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(28): warning C26440: Function 'Rect::bottom' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(61): warning C26440: Function 'coordinatSys::coordinatSys' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(61): warning C26495: Variable 'coordinatSys::scalePix_' is uninitialized. Always initialize a member variable (type.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(68): warning C26455: Default constructor may not throw. Declare it 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(70): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(70): warning C26493: Don't use C-style casts (type.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(70): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(70): warning C26493: Don't use C-style casts (type.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(72): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(72): warning C26493: Don't use C-style casts (type.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(72): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(72): warning C26493: Don't use C-style casts (type.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(71): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(71): warning C26493: Don't use C-style casts (type.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(71): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(71): warning C26493: Don't use C-style casts (type.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(73): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(73): warning C26493: Don't use C-style casts (type.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(73): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(73): warning C26493: Don't use C-style casts (type.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(111): warning C26496: The variable 'startLPixPos' does not change after construction, mark it as const (con.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(113): warning C26496: The variable 'finishLPixPos' does not change after construction, mark it as const (con.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(117): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(119): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(162): warning C26496: The variable 'rScale' does not change after construction, mark it as const (con.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(169): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(179): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(180): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(182): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(183): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(184): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(187): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(189): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(206): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(214): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(215): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(219): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(220): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(233): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(234): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(239): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(240): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(211): warning C26485: Expression 'text': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(215): warning C26485: Expression 'text': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(220): warning C26485: Expression 'text': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(230): warning C26485: Expression 'text': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(233): warning C26485: Expression 'text': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(239): warning C26485: Expression 'text': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(259): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(260): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(263): warning C26440: Function 'makePerpendikularLine' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(296): warning C26496: The variable 'exp' does not change after construction, mark it as const (con.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Q_CoordinatSystem.h(273): warning C26440: Function 'humanRound' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(26): warning C26440: Function 'MYINT::operator=' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(33): warning C26432: If you define or delete any default operation in the type 'struct MYINT', define or delete them all (c.21).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(33): warning C26440: Function 'MYINT::operator=' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(69): warning C26440: Function 'operator!=' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(79): warning C26440: Function 'operator==' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(89): warning C26440: Function 'operator>' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(99): warning C26440: Function 'operator>=' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(109): warning C26440: Function 'operator<' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(119): warning C26440: Function 'operator<=' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(149): warning C26440: Function 'operator>' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(159): warning C26440: Function 'operator>=' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(169): warning C26440: Function 'operator<' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(179): warning C26440: Function 'operator<=' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(190): warning C26440: Function 'operator!=' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(200): warning C26440: Function 'operator==' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(210): warning C26440: Function 'operator>' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(220): warning C26440: Function 'operator>=' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(230): warning C26440: Function 'operator<' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(240): warning C26440: Function 'operator<=' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(428): warning C26496: The variable 'conf' does not change after construction, mark it as const (con.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(443): warning C26496: The variable 'textStartPosLeft' does not change after construction, mark it as const (con.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(412): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(414): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(443): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(445): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(446): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(447): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(448): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(450): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(451): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(452): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(454): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(455): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(456): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(458): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(459): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(460): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(462): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(463): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(464): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(466): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(467): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(468): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(470): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(471): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(472): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(474): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(475): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(476): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(408): warning C26487: Don't return a pointer '(*argv)' that may be invalid (lifetime.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(483): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(484): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(486): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(488): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(490): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(492): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(493): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(494): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(505): warning C26409: Avoid calling new and delete explicitly, use std::make_unique<T> instead (r.11).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(505): warning C26400: Do not assign the result of an allocation or a function call with an owner<T> return value to a raw pointer, use owner<T> instead (i.11).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(507): warning C26401: Do not delete a raw pointer that is not an owner<T> (i.11).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(507): warning C26409: Avoid calling new and delete explicitly, use std::make_unique<T> instead (r.11).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(503): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(512): warning C26496: The variable 'len' does not change after construction, mark it as const (con.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(510): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(510): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(524): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(526): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(532): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(544): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(552): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(559): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(366): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(657): warning C26496: The variable 'len' does not change after construction, mark it as const (con.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(660): warning C26496: The variable 'midIndex' does not change after construction, mark it as const (con.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(661): warning C26496: The variable 'midNum' does not change after construction, mark it as const (con.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(655): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(367): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(661): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(673): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(675): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(684): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(708): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(692): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(694): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(700): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(732): warning C6031: Return value ignored: '_getch'.
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(727): warning C26462: The value pointed to by 'newArr' is assigned only once, mark it as a pointer to const (con.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(727): warning C26409: Avoid calling new and delete explicitly, use std::make_unique<T> instead (r.11).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(727): warning C26400: Do not assign the result of an allocation or a function call with an owner<T> return value to a raw pointer, use owner<T> instead (i.11).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(723): warning C26494: Variable 'arr' is uninitialized. Always initialize an object (type.5).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(726): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(729): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(731): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(738): warning C26440: Function 'mergeSort' can be declared 'noexcept' (f.6).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(738): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(743): warning C26461: The pointer argument 'arr' for function 'merge' can be marked as a pointer to const (con.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(747): warning C26496: The variable 'lastI' does not change after construction, mark it as const (con.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(743): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(743): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(761): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(766): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(770): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(770): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(771): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(826): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(826): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(828): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(837): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(838): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(839): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(840): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(841): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(899): warning C26496: The variable 'finalMerge' does not change after construction, mark it as const (con.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(850): warning C26409: Avoid calling new and delete explicitly, use std::make_unique<T> instead (r.11).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(850): warning C26400: Do not assign the result of an allocation or a function call with an owner<T> return value to a raw pointer, use owner<T> instead (i.11).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(848): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(894): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(357): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(876): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(878): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(353): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(989): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1070): warning C26496: The variable 'middle' does not change after construction, mark it as const (con.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1008): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(362): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1093): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1099): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1104): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1106): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1111): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1120): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1219): warning C26496: The variable 'middle' does not change after construction, mark it as const (con.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1157): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1157): warning C26440: Function 'merge' can be declared 'noexcept' (f.6).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(363): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1242): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1248): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1253): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1255): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1260): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1268): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1338): warning C6246: Local declaration of 'arr' hides declaration of the same name in outer scope. For additional information, see previous declaration at line '1309' of 'c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp'.
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1339): warning C6246: Local declaration of 'arr' hides declaration of the same name in outer scope. For additional information, see previous declaration at line '1309' of 'c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp'.
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1340): warning C6246: Local declaration of 'arr' hides declaration of the same name in outer scope. For additional information, see previous declaration at line '1309' of 'c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp'.
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1341): warning C6246: Local declaration of 'arr' hides declaration of the same name in outer scope. For additional information, see previous declaration at line '1309' of 'c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp'.
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1342): warning C6246: Local declaration of 'arr' hides declaration of the same name in outer scope. For additional information, see previous declaration at line '1309' of 'c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp'.
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1343): warning C6246: Local declaration of 'arr' hides declaration of the same name in outer scope. For additional information, see previous declaration at line '1309' of 'c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp'.
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1309): warning C26494: Variable 'arr' is uninitialized. Always initialize an object (type.5).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1312): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1313): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1314): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1322): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1323): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1331): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1332): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1338): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1339): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1340): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1341): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1342): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1343): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1346): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(350): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1348): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1350): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1352): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1354): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1356): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1358): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1362): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(351): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1364): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1366): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1368): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1370): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1372): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1374): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1378): warning C26440: Function 'bitSort' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1397): warning C26496: The variable 'arr' does not change after construction, mark it as const (con.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1389): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1395): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1401): warning C26461: The pointer argument 'arr' for function 'isDivided' can be marked as a pointer to const (con.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1401): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1401): warning C26440: Function 'isDivided' can be declared 'noexcept' (f.6).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(1401): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1405): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1412): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1425): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1449): warning C6031: Return value ignored: '_getch'.
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1432): warning C26461: The pointer argument 'arr' for function 'printSort' can be marked as a pointer to const (con.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1432): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1437): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1438): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1439): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1440): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1446): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(1432): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1444): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1469): warning C6031: Return value ignored: '_getch'.
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1452): warning C26461: The pointer argument 'arr' for function 'printSort' can be marked as a pointer to const (con.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1452): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1457): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1458): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1459): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1460): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1466): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(1452): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1464): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(1472): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1478): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(341): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1489): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1491): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1500): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1504): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1523): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1529): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1531): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1546): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1548): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1576): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1582): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1586): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1603): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1606): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1623): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1623): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1625): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1650): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1658): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1667): warning C26461: The pointer argument 'arr2' for function 'equal' can be marked as a pointer to const (con.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1667): warning C26429: Symbol 'arr2' is never tested for nullness, it can be marked as not_null (f.23).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(347): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1671): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1672): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1677): warning C26461: The pointer argument 'arr2' for function 'equal' can be marked as a pointer to const (con.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1677): warning C26429: Symbol 'arr2' is never tested for nullness, it can be marked as not_null (f.23).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1677): warning C26440: Function 'equal' can be declared 'noexcept' (f.6).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(1677): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1681): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1682): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1686): warning C26440: Function '____TheVSTROeNNAYaFUnKZIjJaSKOKORAZRYADOVvV______' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1710): warning C6031: Return value ignored: '_getch'.
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1704): warning C26496: The variable 'sort' does not change after construction, mark it as const (con.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1702): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1704): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1709): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1732): warning C6031: Return value ignored: '_getch'.
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1725): warning C26496: The variable 'sort' does not change after construction, mark it as const (con.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1716): warning C26429: Symbol 'func' is never tested for nullness, it can be marked as not_null (f.23).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(372): warning C26485: Expression 'func': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1723): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1724): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1725): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1731): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1825): warning C26496: The variable 'biggerNum' does not change after construction, mark it as const (con.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1820): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(1820): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1825): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1839): warning C26496: The variable 'biggerNum' does not change after construction, mark it as const (con.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1835): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(1835): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1839): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1845): warning C26461: The pointer argument 'arr' for function 'binarySearch' can be marked as a pointer to const (con.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1874): warning C26496: The variable 'mid' does not change after construction, mark it as const (con.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1845): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(336): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1877): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1893): warning C26496: The variable 'copy' does not change after construction, mark it as const (con.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1890): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(369): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1893): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1896): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1899): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1903): warning C26461: The pointer argument 'arr' for function 'lessThen' can be marked as a pointer to const (con.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1903): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(329): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1907): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1916): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(1916): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1923): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1928): warning C26461: The pointer argument 'arr' for function 'findTheBiggest' can be marked as a pointer to const (con.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1928): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(335): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1933): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1942): warning C26461: The pointer argument 'arr' for function 'findTheLess' can be marked as a pointer to const (con.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1942): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1942): warning C26440: Function 'findTheLess' can be declared 'noexcept' (f.6).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(1942): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1948): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(324): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1999): warning C26496: The variable 'copy' does not change after construction, mark it as const (con.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1989): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(1989): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1996): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1999): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2000): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2001): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2009): warning C26461: The pointer argument 'arr' for function 'isSorted' can be marked as a pointer to const (con.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2009): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(334): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2014): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2019): warning C26461: The pointer argument 'arr' for function 'isSorted' can be marked as a pointer to const (con.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2019): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2019): warning C26440: Function 'isSorted' can be declared 'noexcept' (f.6).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(333): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2023): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2029): warning C26429: Symbol 'comparisionFunc1' is never tested for nullness, it can be marked as not_null (f.23).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2037): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2038): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2039): warning C26493: Don't use C-style casts (type.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2039): warning C26493: Don't use C-style casts (type.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2040): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2041): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2042): warning C26493: Don't use C-style casts (type.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2042): warning C26493: Don't use C-style casts (type.4).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(332): warning C26485: Expression 'comparisionFunc1': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2069): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2070): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2072): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2073): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(2046): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2095): warning C26496: The variable 'f' does not change after construction, mark it as const (con.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2096): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2097): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2109): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2109): warning C26440: Function 'randomfill' can be declared 'noexcept' (f.6).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(321): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2113): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2117): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2117): warning C26440: Function 'randomfill' can be declared 'noexcept' (f.6).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(322): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2121): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2131): warning C26429: Symbol 'n2' is never tested for nullness, it can be marked as not_null (f.23).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2131): warning C26440: Function 'exchange' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2141): warning C26496: The variable 'copy' does not change after construction, mark it as const (con.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2148): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2148): warning C26440: Function 'fill135642var1' can be declared 'noexcept' (f.6).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(2148): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2156): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2157): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2162): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2162): warning C26440: Function 'fill135642var2' can be declared 'noexcept' (f.6).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(2162): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2168): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2172): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2172): warning C26440: Function 'fill123654var1' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2178): warning C26493: Don't use C-style casts (type.4).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(2172): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2177): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2178): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2185): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2185): warning C26440: Function 'fill123654var2' can be declared 'noexcept' (f.6).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(2185): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2191): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2192): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2221): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2221): warning C26440: Function 'fill123var1' can be declared 'noexcept' (f.6).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(2221): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2225): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2229): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2229): warning C26440: Function 'fill123var2' can be declared 'noexcept' (f.6).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(2229): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2233): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2238): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2242): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2246): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2246): warning C26440: Function 'fill123var3' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2251): warning C26493: Don't use C-style casts (type.4).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2252): warning C26493: Don't use C-style casts (type.4).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(2246): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2248): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2251): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2252): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2257): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2257): warning C26440: Function 'fill123var4' can be declared 'noexcept' (f.6).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(2257): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2261): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2262): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2263): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2267): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2267): warning C26440: Function 'fill123var5' can be declared 'noexcept' (f.6).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(2267): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2269): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2270): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2271): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2275): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2276): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2277): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2281): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2281): warning C26440: Function 'fill123var6' can be declared 'noexcept' (f.6).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(2281): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2285): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2289): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2289): warning C26440: Function 'fill123var7' can be declared 'noexcept' (f.6).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(2289): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2355): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2360): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2366): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2367): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2369): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2377): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2377): warning C26440: Function 'fill123321var1' can be declared 'noexcept' (f.6).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(2377): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2381): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2386): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2391): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2391): warning C26440: Function 'fill123321var2' can be declared 'noexcept' (f.6).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(2391): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2395): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2396): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2397): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2398): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2399): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2400): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2404): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2404): warning C26440: Function 'fill123321var3' can be declared 'noexcept' (f.6).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(2404): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2408): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2409): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2410): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2420): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2424): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2425): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2427): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2433): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2433): warning C26440: Function 'fill123321var4' can be declared 'noexcept' (f.6).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2437): warning C26493: Don't use C-style casts (type.4).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(2433): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2439): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2443): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2450): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2450): warning C26440: Function 'fill123321var5' can be declared 'noexcept' (f.6).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(2450): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2521): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2522): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2523): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2524): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2525): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2526): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2535): warning C26461: The pointer argument 'arr' for function '_printArr' can be marked as a pointer to const (con.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2535): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(2535): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2553): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2565): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2573): warning C26461: The pointer argument 'arr' for function '_printArr' can be marked as a pointer to const (con.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2573): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2577): warning C26477: Use 'nullptr' rather than 0 or NULL (es.47).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(292): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2582): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2587): warning C26461: The pointer argument 'arr' for function '_printArr' can be marked as a pointer to const (con.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2587): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(291): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2609): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2616): warning C26461: The pointer argument 'arr' for function '_printArr' can be marked as a pointer to const (con.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2616): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(2616): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2634): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2646): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2656): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2656): warning C26440: Function 'fillArithmeticProg' can be declared 'noexcept' (f.6).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(2656): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2658): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2661): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2666): warning C26429: Symbol 'arr' is never tested for nullness, it can be marked as not_null (f.23).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2666): warning C26440: Function 'fillGeometricProg' can be declared 'noexcept' (f.6).
+c:\users\алехандро\desktop\alexprojects\algorithmicproject\array.cpp(2666): warning C26485: Expression 'arr': No array to pointer decay (bounds.3).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2668): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2671): warning C26481: Don't use pointer arithmetic. Use span instead (bounds.1).

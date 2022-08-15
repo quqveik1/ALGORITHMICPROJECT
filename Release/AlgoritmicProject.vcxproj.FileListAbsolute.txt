@@ -1,0 +1,3 @@
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Release\AlgoritmicProject.exe.lastcodeanalysissucceeded
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Release\NativeCodeAnalysis.read.1.tlog
+C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Release\AlgoritmicProject.exe

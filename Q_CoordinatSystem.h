@@ -1,7 +1,7 @@
 #pragma once
 
 //#include "Q_Vector.h"
-#include "TXLib.h"
+//#include "TXLib.h"
 #include "Q_Vector.h"
 #include "math.h"
 //#include "Config.h"
@@ -219,8 +219,11 @@ void coordinatSys::drawAxis (Vector nDelta)
             txLine (nullCoor_.x - (num.x * intepretK_.x), finishPosPix_.y, nullCoor_.x - (num.x * intepretK_.x), startPosPix_.y);
             txTextOut (nullCoor_.x - (num.x * intepretK_.x), nullCoor_.y, text);
         }
+        
         num.x += roundDelta.x;
     }
+
+    //txTextOut (nullCoor_.x + ((num.x - roundDelta.x) * intepretK_.x), nullCoor_.y, text);
 
     for (int y = 0; y < nDelta.y * 10; y++)
     {

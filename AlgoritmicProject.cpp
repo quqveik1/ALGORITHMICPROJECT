@@ -1,6 +1,5 @@
 ﻿
 
-//#include "argv.cpp"
-#include "Structure.cpp"
+#include "Array.cpp"
 
 
