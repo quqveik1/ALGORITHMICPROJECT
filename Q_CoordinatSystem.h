@@ -2,7 +2,8 @@
 
 //#include "Q_Vector.h"
 //#include "TXLib.h"
-#include "Q_Vector.h"
+#include <Q_Vector.h>
+#include <Q_Rect.h>
 #include "math.h"
 //#include "Config.h"
 //#include "Q_Ball.h"
@@ -17,18 +18,6 @@ struct coordinatSysConfig
 };
 
 
-struct Rect
-{
-    Vector pos;
-    Vector size;
-
-    double left  () const { return this->pos.x; }
-    double top   () const { return this->pos.y; }
-    double right () const { return this->size.x + this->pos.x; }
-    double bottom() const { return this->size.y + this->pos.y; }
-};
-
-
 class coordinatSys
 {
 
@@ -38,9 +27,12 @@ class coordinatSys
         Vector coorSize_;
 	    Vector scalePix_;
         Vector nullCoor_;
+        Vector nullPoint; // координата в нуле
         coordinatSysConfig config_;
-
+        const char* xName;
+        const char* yName;
     private: Rect   sysBorderPix_ = {startPosPix_, scalePix_};
+           Vector lastNDelta = {};
 
     public: Vector intepretK_ = {1, 1}; //= scalePix / coorSize;
 
@@ -51,10 +43,15 @@ class coordinatSys
 
 
 	//public: Vector drawCircle (Ball ball);
-    public: Vector drawCircle (Vector vector, double r = 10);
-    public: void drawLine (Vector startLPos, Vector finishLPos, COLORREF color = 1);
-    public: Vector interpret (Vector vector);
-    public: void drawAxis (Vector nDelta);
+    public: Vector drawCircle (const Vector& vector, double r = 10);
+            void drawLine (Vector startLPos, Vector finishLPos, COLORREF color = 1);
+            Vector interpret (Vector vector);
+            Vector convertFromPixels (Vector vector);
+            void drawAxis (Vector nDelta);
+            void clean ();
+            Vector getXBound();
+            Vector getYBound();
+
 };
 
 
@@ -70,7 +67,10 @@ coordinatSys::coordinatSys () :
     finishPosPix_ ({(double) txGetExtentX (), (double) txGetExtentY ()}),
     scalePix_ ({(double) txGetExtentX (), (double) txGetExtentY ()}),
     coorSize_ ({(double) txGetExtentX (), (double) txGetExtentY ()}),
-    nullCoor_ ({(double) txGetExtentX ()/2, (double) txGetExtentY ()/2})
+    nullCoor_ ({(double) txGetExtentX ()/2, (double) txGetExtentY ()/2}),
+    nullPoint({}),
+    xName(NULL),
+    yName(NULL)
 {
     intepretK_.x = 1;
     intepretK_.y = -1;
@@ -105,6 +105,8 @@ Vector coordinatSys::drawCircle (Ball ball)
 
 }
 */
+
+
 
 void coordinatSys::drawLine (Vector startLPos, Vector finishLPos, COLORREF color)
 {
@@ -150,7 +152,7 @@ Vector coordinatSys::drawFunc (const char *func)
 */
  
 
-Vector coordinatSys::drawCircle (Vector vector, double r)
+Vector coordinatSys::drawCircle (const Vector& vector, double r/* = 1*/)
 {
     //Vector intepretK = {}; //= scalePix / coorSize;
 
@@ -159,7 +161,7 @@ Vector coordinatSys::drawCircle (Vector vector, double r)
 
     Vector pixPos = interpret(vector);
 
-    double rScale = r;//(intepretK_.x + intepretK_.y) / 2;
+    double rScale = 1;//(intepretK_.x + intepretK_.y) / 2;
 
     //if (pixPos.x > sysBorderPix_.left() && pixPos.y > sysBorderPix_.top() && pixPos.x < sysBorderPix_.right() && pixPos.y < sysBorderPix_.bottom())
     if (pixPos < finishPosPix_)
@@ -174,8 +176,14 @@ Vector coordinatSys::drawCircle (Vector vector, double r)
 
 }
 
+void coordinatSys::clean()
+{
+    drawAxis(lastNDelta);
+}
+
 void coordinatSys::drawAxis (Vector nDelta)
 {
+    lastNDelta = nDelta;
     txSetFillColor (RGB (240, 240, 240));
     txRectangle (startPosPix_.x, startPosPix_.y, finishPosPix_.x, finishPosPix_.y);
 
@@ -205,19 +213,20 @@ void coordinatSys::drawAxis (Vector nDelta)
 
     txSelectFont ("Arial", config_.font);
 
-    Vector num = {};
+    Vector num = nullPoint;
     for (int x = 0; x < nDelta.x * 10; x++)
     {
-        sprintf (text, "%lg", num.x);
-        if (nullCoor_.x + (num.x * intepretK_.x) < finishPosPix_.x && startPosPix_.x < nullCoor_.x + (num.x * intepretK_.x))
+        if (nullCoor_.x + ((num.x - nullPoint.x) * intepretK_.x) < finishPosPix_.x && startPosPix_.x < nullCoor_.x + ((num.x - nullPoint.x) * intepretK_.x))
         {
-            txLine (nullCoor_.x + (num.x * intepretK_.x), finishPosPix_.y, nullCoor_.x + (num.x * intepretK_.x), startPosPix_.y);
-            txTextOut (nullCoor_.x + (num.x * intepretK_.x), nullCoor_.y, text);
+            sprintf(text, "%lg", num.x);
+            txLine (nullCoor_.x + ((num.x - nullPoint.x) * intepretK_.x), finishPosPix_.y, nullCoor_.x + ((num.x - nullPoint.x) * intepretK_.x), startPosPix_.y);
+            txTextOut (nullCoor_.x + ((num.x - nullPoint.x) * intepretK_.x), nullCoor_.y, text);
         }
-        if (nullCoor_.x - (num.x * intepretK_.x) < finishPosPix_.x && startPosPix_.x < nullCoor_.x - (num.x * intepretK_.x))
+        if (nullCoor_.x - ((num.x - nullPoint.x) * intepretK_.x) < finishPosPix_.x && startPosPix_.x < nullCoor_.x - ((num.x - nullPoint.x) * intepretK_.x))
         {
-            txLine (nullCoor_.x - (num.x * intepretK_.x), finishPosPix_.y, nullCoor_.x - (num.x * intepretK_.x), startPosPix_.y);
-            txTextOut (nullCoor_.x - (num.x * intepretK_.x), nullCoor_.y, text);
+            sprintf(text, "%lg", -num.x);
+            txLine (nullCoor_.x - ((num.x - nullPoint.x) * intepretK_.x), finishPosPix_.y, nullCoor_.x - ((num.x - nullPoint.x) * intepretK_.x), startPosPix_.y);
+            txTextOut (nullCoor_.x - ((num.x - nullPoint.x) * intepretK_.x), nullCoor_.y, text);
         }
         
         num.x += roundDelta.x;
@@ -227,20 +236,38 @@ void coordinatSys::drawAxis (Vector nDelta)
 
     for (int y = 0; y < nDelta.y * 10; y++)
     {
-        sprintf (text, "%lg", num.y);
-        if (nullCoor_.y + (num.y * intepretK_.y) < finishPosPix_.y && startPosPix_.y < nullCoor_.y + (num.y * intepretK_.y))
+        
+        if (nullCoor_.y + ((num.y- nullPoint.y) * intepretK_.y) < finishPosPix_.y && startPosPix_.y < nullCoor_.y + ((num.y- nullPoint.y) * intepretK_.y))
         {
-            txTextOut (nullCoor_.x, nullCoor_.y + (num.y * intepretK_.y), text);
-            txLine (startPosPix_.x,  nullCoor_.y + (num.y * intepretK_.y), finishPosPix_.x, nullCoor_.y + (num.y * intepretK_.y));
+            sprintf(text, "%lg", num.y);
+            txTextOut (nullCoor_.x, nullCoor_.y + ((num.y- nullPoint.y) * intepretK_.y), text);
+            txLine (startPosPix_.x,  nullCoor_.y + ((num.y- nullPoint.y) * intepretK_.y), finishPosPix_.x, nullCoor_.y + ((num.y- nullPoint.y) * intepretK_.y));
         }
 
-        if (nullCoor_.y - (num.y * intepretK_.y) < finishPosPix_.y && startPosPix_.y < nullCoor_.y - (num.y * intepretK_.y))
+        if (nullCoor_.y - ((num.y- nullPoint.y) * intepretK_.y) < finishPosPix_.y && startPosPix_.y < nullCoor_.y - ((num.y- nullPoint.y) * intepretK_.y))
         {
-            txTextOut (nullCoor_.x, nullCoor_.y - (num.y * intepretK_.y), text);
-            txLine (startPosPix_.x,  nullCoor_.y - (num.y * intepretK_.y), finishPosPix_.x, nullCoor_.y - (num.y * intepretK_.y));
+            sprintf(text, "%lg", num.y);
+            txTextOut (nullCoor_.x, nullCoor_.y - ((num.y- nullPoint.y) * intepretK_.y), text);
+            txLine (startPosPix_.x,  nullCoor_.y - ((num.y- nullPoint.y) * intepretK_.y), finishPosPix_.x, nullCoor_.y - ((num.y- nullPoint.y) * intepretK_.y));
         }
 
         num.y += roundDelta.y;
+    }
+
+    if (xName)
+    {
+        txSetTextAlign(TA_RIGHT);
+        txSetColor(TX_BLACK);
+        txSetFillColor(TX_BLACK);
+        txTextOut(finishPosPix_.x - 5, nullCoor_.y + 5, xName);
+    }
+
+    if (yName)
+    {
+        txSetTextAlign(TA_RIGHT);
+        txSetColor(TX_BLACK);
+        txSetFillColor(TX_BLACK);
+        txTextOut(nullCoor_.x - 5, startPosPix_.y, yName);
     }
 
 }
@@ -315,5 +342,39 @@ double humanRound (double delta)
 
 Vector coordinatSys::interpret (Vector vector)
 {
-    return nullCoor_ + (intepretK_ * vector);
+    return nullCoor_ + (intepretK_ * (vector - nullPoint));
 }
+
+Vector coordinatSys::convertFromPixels(Vector vector)
+{
+    Vector answer = {};
+    answer = ((vector - nullCoor_) / intepretK_) + nullPoint;
+    return answer;
+}
+
+
+
+
+Vector coordinatSys::getXBound()
+{
+    Vector minAnswer = convertFromPixels(startPosPix_);
+    Vector maxAnswer = convertFromPixels(finishPosPix_);
+
+    Vector answer = {};
+    answer.x = min (minAnswer.x, maxAnswer.x);
+    answer.y = max(minAnswer.x, maxAnswer.x);
+    return answer;
+}
+
+
+Vector coordinatSys::getYBound()
+{
+    Vector minAnswer = convertFromPixels(startPosPix_);
+    Vector maxAnswer = convertFromPixels(finishPosPix_);
+
+    Vector answer = {};
+    answer.x = min(minAnswer.y, maxAnswer.y);
+    answer.y = max(minAnswer.y, maxAnswer.y);
+    return answer;
+}
+

@@ -31,9 +31,9 @@ C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(14
 C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(1689,15): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
 C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Array.cpp(2189,13): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
   Generating code
-  2 of 350 functions ( 0.6%) were compiled, the rest were copied from previous compilation.
+  1 of 350 functions ( 0.3%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    6 functions had inline decision re-evaluated but remain unchanged
+    7 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   AlgoritmicProject.vcxproj -> C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Release\AlgoritmicProject.exe
 C:\Users\Алехандро\Desktop\AlexProjects\ALGORITHMICPROJECT\Stuck.h(189): warning C26496: The variable 'lastNum' does not change after construction, mark it as const (con.4).
