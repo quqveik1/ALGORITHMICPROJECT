@@ -2,8 +2,8 @@
 
 //#include "Q_Vector.h"
 //#include "TXLib.h"
-#include <Q_Vector.h>
-#include <Q_Rect.h>
+#include "..\TESTWIN32_GRAPHICAPP\Q_Vector.h"
+#include "..\TESTWIN32_GRAPHICAPP\Q_Rect.h"
 #include "math.h"
 //#include "Config.h"
 //#include "Q_Ball.h"
@@ -361,8 +361,8 @@ Vector coordinatSys::getXBound()
     Vector maxAnswer = convertFromPixels(finishPosPix_);
 
     Vector answer = {};
-    answer.x = min (minAnswer.x, maxAnswer.x);
-    answer.y = max(minAnswer.x, maxAnswer.x);
+    answer.x = std::min (minAnswer.x, maxAnswer.x);
+    answer.y = std::max(minAnswer.x, maxAnswer.x);
     return answer;
 }
 
@@ -373,8 +373,8 @@ Vector coordinatSys::getYBound()
     Vector maxAnswer = convertFromPixels(finishPosPix_);
 
     Vector answer = {};
-    answer.x = min(minAnswer.y, maxAnswer.y);
-    answer.y = max(minAnswer.y, maxAnswer.y);
+    answer.x = std::min(minAnswer.y, maxAnswer.y);
+    answer.y = std::max(minAnswer.y, maxAnswer.y);
     return answer;
 }
 
